@@ -52,8 +52,7 @@
                         {if $links}
                           {foreach $links as $k => $item}
                             <tr>
-                            <?php var_dump($item)?>
-                                <th>{$item.id}</th>
+                                <th>{$item}</th>
                                 <th>{$item.type}</th>
                                 <th>{$item.name}</th>
                                 <th>{$item.position}</th>
