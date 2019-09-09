@@ -27,7 +27,8 @@ class LinkController extends AdminController {
     }
 
     public function actionEdit() {
-
+        echo "hello";
+        die();
         $this->setErrors('Cập nhật thành công','success');
         $this->redirect(Yii::app()->createUrl('admin/link/'));
     }
@@ -68,5 +69,4 @@ class LinkController extends AdminController {
             'err' => $this->_err,
         ));
     }
-
 }
