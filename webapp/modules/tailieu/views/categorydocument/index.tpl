@@ -81,7 +81,7 @@
                 </div>
 
                 <div class="subpage-menu-toggleBox">
-                    <span class="lg-subpage-filter-sort-title xs-hide">:</span>
+                    <span class="lg-subpage-filter-sort-title xs-hide" style="width: 120px;">Danh mục con:</span>
                     <div class="subpage-menu-box new-subpage-menu-box">
 
                         {if $data['parent_id'] > 0 && isset($category['sub_category'][$data['parent_id']])}
