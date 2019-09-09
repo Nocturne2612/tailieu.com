@@ -10,10 +10,9 @@
     </ol>
   </div>
 </div>
-
 <!--Fillter-->
 <a href="{Yii::app()->createUrl("admin/link/create/")}">  
-    <div class="alert alert-info"> Thêm Link </div>                
+    <div class="alert alert-info"> Thêm Link </div>
 </a>
 
 <div class="row">

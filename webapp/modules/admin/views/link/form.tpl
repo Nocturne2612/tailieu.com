@@ -12,7 +12,7 @@
   </div>
 </div>
 <a href="{$link_create}">
-<div class="alert alert-info"> Thêm,sửa Link </div>
+<div class="alert alert-info"> Thêm Footer Link </div>
 </a>
 <div class="panel panel-default">
   <div class="panel-body">
@@ -32,13 +32,13 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="desc" class="col-sm-2 control-label">Text hiển thị:</label>
+        <label for="desc" class="col-sm-2 control-label">Text hiển thị(*):</label>
         <div class="col-sm-9">
           <input type="text" class="form-control" id="name" name="name" value="{$data.name}">
         </div>
       </div>
       <div class="form-group">
-        <label for="desc" class="col-sm-2 control-label">Vị trí:</label>
+        <label for="desc" class="col-sm-2 control-label">Vị trí(*):</label>
         <div class="col-sm-9">
           <input type="text" class="form-control" id="position" name="position" value="{$data.position}">
         </div>

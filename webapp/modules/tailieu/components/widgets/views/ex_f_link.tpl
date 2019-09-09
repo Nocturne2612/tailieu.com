@@ -3,10 +3,12 @@
         <div class="xs-contain">
             <div class="xs-footer-box">
                 <a href="/about" rel="nofollow">
-                    ABOUT                </a>
+                    ABOUT
+                </a>
                 <span></span>
                 <a href="javascript:;" rel="nofollow" onclick="$('.side-contact').trigger('click')" class="contact-foot">
-                    Contact us                </a>
+                    Contact us
+                </a>
             </div>
         </div>
         <div class="foot-inner">
@@ -40,7 +42,7 @@
             </div>
             <div class="foot-item foot-follow">
                 <dl>
-                    <dt>FOLLOW</dt>
+                    <dt>THEO DÕI</dt>
                     <dd>
                         <a target="_blank" href="https://www.facebook.com/Pngtree-366522263734176" rel="nofollow" class="foot-btn foot-btn-fb bg-facebook">
                             <i class="iconfont icon-facebook"></i>
