@@ -59,7 +59,7 @@
                                 <th>{$item.link}</th>
                                 <th style="width:250px;">
                                 <div class="col-sm-3" style="padding: 0px;">
-                                    <input class="form-control no-right-border form-focus-purple" type="text" value="{$item.stt}" name="stt[]">
+                                    <input class="form-control no-right-border form-focus-purple" type="text" value="{$item.id}" name="id[]">
                                 </div>
                                 <input type="hidden" value="{$item.id}" name="ids[]">
                                 <span class="input-group-btn">                                   
