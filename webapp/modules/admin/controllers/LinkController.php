@@ -22,8 +22,8 @@ class LinkController extends AdminController {
         $this->render('index', array(
             'link_action' => Yii::app()->createUrl('admin/link/edit'),
             'links' => $data,
-            'error' => $this->_modes->_getError(),
-            'success' => $this->_modes->_getSuccess())
+            'error' => $this->_model->_getError(),
+            'success' => $this->_model->_getSuccess())
         );
     }
 
