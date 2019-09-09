@@ -57,7 +57,7 @@ class LinkController extends AdminController {
         }
         $this->render('form', array(
             'data' => $data,
-            'link_account' => Yii::app()->createUrl('admin/link'),
+            'link_home' => Yii::app()->createUrl('admin/link/'),
             'err' => $this->_err,
         ));
     }
