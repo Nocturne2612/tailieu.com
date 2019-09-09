@@ -48,7 +48,7 @@
                             </tr>
                         </thead>
                         <tbody class="table-hover">
-                        {if $data}
+                        {if $links}
                           {foreach $links as $k => $item}
                             <tr>
                                 <th>{$item.id}</th>
