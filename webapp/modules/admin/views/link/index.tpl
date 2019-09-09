@@ -52,7 +52,7 @@
                         {if $links}
                           {foreach $links as $k => $item}
                             <tr>
-                                <th>{$item}</th>
+                                <th>1</th>
                                 <th>{$item.type}</th>
                                 <th>{$item.name}</th>
                                 <th>{$item.position}</th>
