@@ -24,7 +24,11 @@
       <div class="form-group">
         <label for="title" class="col-sm-2 control-label">Cột:</label>
         <div class="col-sm-9">
-          <input type="text" class="form-control" id="type" name="type" value="{$data.type}">
+          <select name="type" id="type" style="width: " class="form-control">
+            <option  {if !$data.type}selected{/if}>---Chọn cột hiển thị---</option>
+            <option value="1" {if $data.type == 1}selected{/if}>TRANG</option>
+            <option value="2" {if $data.type == 2}selected{/if}>TRỢ GIÚP</option>
+            <option value="3" {if $data.type == 3}selected{/if}>PHÁP LÝ</option></select>
         </div>
       </div>
       <div class="form-group">

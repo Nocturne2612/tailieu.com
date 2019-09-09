@@ -54,7 +54,7 @@ class LinkController extends AdminController {
             }
             $update = $mol->updateData($params, $id);
             if ($update) {
-                echo Strings::alert('Bạn cập nhật thành công', Yii::app()->createUrl('admin/permission'));
+                echo Strings::alert('Bạn cập nhật thành công', Yii::app()->createUrl('admin/link'));
             } else {
                 $this->_err = 'Cập nhật không thành công.';
             }

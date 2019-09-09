@@ -53,23 +53,24 @@
                           {foreach $links as $k => $item}
                             <tr>
                                 <th>{$item.id}</th>
-                                <th>{$item.type}</th>
+                                <th>
+                                    {if $item.type == 1}
+                                        TRANG
+                                    {elseif}
+                                        TRỢ GIÚP
+                                    {else}
+                                        PHÁP LÝ
+                                    {/if}
+                                </th>
                                 <th>{$item.name}</th>
                                 <th>{$item.position}</th>
                                 <th>{$item.link}</th>
                                 <th style="width:250px;">
-                                <div class="col-sm-3" style="padding: 0px;">
-                                    <input class="form-control no-right-border form-focus-purple" type="text" value="{$item.id}" name="id[]">
-                                </div>
-                                <input type="hidden" value="{$item.id}" name="ids[]">
                                 <span class="input-group-btn">                                   
-                                    <button class="btn btn-purple" name="save" type="submit" value="save">Lưu</button>                                        
                                     <a class="btn btn-warning" href='{Yii::app()->createUrl("admin/link/edit/",['id'=>$item.id])}' >Sửa</a>
                                     <a class="btn btn-red" onclick="return confirm('Bạn có chắc chắn xoá');" href='{Yii::app()->createUrl("admin/link/del/",['id'=>$item.id])}'>Xóa</a>
                                 </span>
-
                                 </th>
-
                             </tr>
                           {/foreach}
                         {else} 
