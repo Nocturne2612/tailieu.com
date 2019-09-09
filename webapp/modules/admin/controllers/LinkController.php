@@ -36,17 +36,21 @@ class LinkController extends AdminController {
 
         if (Yii::app()->request->isPostRequest) {
 
+            $type = ObjInput::get('type', 'int', 1);
+            if ($type <> "") {
+                $params["type"] = $type;
+            }
             $name = ObjInput::get("name", "str", "");
             if ($name <> "") {
                 $params["name"] = $name;
             }
-            $value = ObjInput::get("value", "str", "");
-            if ($value <> "") {
-                $params["value"] = $value;
-            }
-            $type = ObjInput::get("type", "str", "");
+            $position = ObjInput::get('position', 'int', 1);
             if ($type <> "") {
-                $params["type"] = $type;
+                $params["position"] = $position;
+            }
+            $link = ObjInput::get("link", "str", "");
+            if ($name <> "") {
+                $params["link"] = $link;
             }
             $update = $mol->updateData($params, $id);
             if ($update) {
