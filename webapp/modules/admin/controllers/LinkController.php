@@ -22,22 +22,55 @@ class LinkController extends AdminController {
         $this->render('index', array(
             'link_action' => Yii::app()->createUrl('admin/link/edit'),
             'links' => $data)
-            // 'error' => $this->_getError(),
-            // 'success' => $this->_getSuccess())
         );
     }
 
     public function actionEdit() {
 
-        $file_path = Yii::getPathOfAlias("webroot") . "/webapp/modules/tailieu/components/widgets/views/";
-        if (ObjInput::get('ex_top_link', 'def', '') <> '') {
-            $this->makeCache('ex_link.tpl', $file_path, ObjInput::get('ex_top_link', 'def', ''));
-        }
-        if (ObjInput::get('ex_top_link', 'def', '') <> '') {
-            $this->makeCache('ex_f_link.tpl', $file_path, ObjInput::get('f_link', 'def', ''));
-        }
         $this->setErrors('Cập nhật thành công','success');
         $this->redirect(Yii::app()->createUrl('admin/link/'));
+    }
+
+    public function actionCreate() {
+
+        $Model = new Link();
+        $err = '';
+        $type = ObjInput::get('type', 'int', 1);
+        $name = ObjInput::get('name', 'str', '');
+        $position = ObjInput::get('position', 'int', 0);
+        $link = ObjInput::get('link', 'str', '');
+        $data = array(
+            'type' => $type,
+            'name' => $name,
+            'position' => $position,
+            'link' => $link,
+        );
+
+        if (Yii::app()->request->isPostRequest) {
+            if ($name != '') {
+                $id_u = $Model->insertData($data);
+                if ($id_u > 0) {
+                    echo Strings::alert('Thêm mới thành công', Yii::app()->createUrl('admin/link/'));
+                    die();
+                } else {
+                    $this->_err = 'Có lỗi trong quá trình xử lý';
+                }
+            } else {
+                $this->_err = 'Tiêu đề không được để trống';
+            }
+        }
+        $fck_n = new FCKeditor('short');
+        $fck_n->Value = $short;
+        $fck_n->Height = 300;
+        $this->render('form', array(
+            'data' => $data,
+            'link_home' => Yii::app()->createUrl('admin/categoryproducts/'),
+            'link_create' => Yii::app()->createUrl('admin/categoryproducts/create/'),
+            'combo_parent' => $Model->getParentCategory_Option($parent_id),
+            'err' => $this->_err,
+            'combo_status' => Strings::combobox('status', $this->_arrStatus, $status, '', 'class="form-control"'),
+            'fck_short' => $fck_n->CreateHtml(),
+        ));
     }
 
 }

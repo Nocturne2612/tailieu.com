@@ -41,7 +41,8 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Kiểu</th>
+                                <th>Cột</th>
+                                <th>Text hiển thị</th>
                                 <th>Vị trí</th>
                                 <th>Link</th>
                                 <th>Thao tác</th>
@@ -53,6 +54,7 @@
                             <tr>
                                 <th>{$item.id}</th>
                                 <th>{$item.type}</th>
+                                <th>{$item.name}</th>
                                 <th>{$item.position}</th>
                                 <th>{$item.link}</th>
                                 <th style="width:250px;">
