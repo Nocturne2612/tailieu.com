@@ -21,7 +21,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title"> 
-                    <div class="pull-left">Có <strong class="blueFont">{count($links)}</strong> danh mục</div>
+                    <div class="pull-left">Có <strong class="blueFont">{$counts}</strong> danh mục</div>
                 </h3>
                 <div class="panel-options">
                     <a data-toggle="panel" href="#">
