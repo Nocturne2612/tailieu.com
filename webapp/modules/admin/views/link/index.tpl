@@ -20,30 +20,16 @@
       {if $success <> false}
       <div class="alert alert-success">{$success}</div>
       {/if}
-      <div class="row"> {CHtml::beginForm($link_action,'post',['role' => 'form','class'=>'form-horizontal','enctype'=>'multipart/form-data'])}
-        {if $error <> false}
+      {if $error <> false}
         <div class="alert alert-danger">
           <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
           {$error}</div>
         {/if}
-        <div class="form-group">
-          <label class="col-sm-3 control-label">Link top:</label>
-          <div class="col-sm-9"> 
-          	{$fck_tomtat}
-          </div>
-        </div>
-          <div class="form-group">
-          <label class="col-sm-3 control-label">Footer:</label>
-          <div class="col-sm-9"> {$fck_noidung}  </div>
-        </div>
-        
-        <div class="form-group">
-          <label class="col-sm-3  control-label"></label>
-          <div class="col-sm-9">
-            <button type="submit" class="btn btn-warning" name="submit">Cập nhật</button>
-          </div>
-        </div>
-        {CHtml::endForm()} </div>
+      <div class="row">
+        {
+          $data
+        }
+      </div>
     </div>
   </div>
 </div>
