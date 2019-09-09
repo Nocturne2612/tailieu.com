@@ -28,8 +28,8 @@ class Link extends CFormModel {
     }
 
     public function getOne($ID) {
-        $newsData = DataHelper::selectOne($this->tableName(), "*", " id = " . intval($ID));
-        return $newsData;
+        $data = DataHelper::selectOne($this->tableName(), "*", " id = " . intval($ID));
+        return $data;
     }
 
     public function insertData($data) {

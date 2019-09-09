@@ -27,8 +27,39 @@ class LinkController extends AdminController {
     }
 
     public function actionEdit() {
-        $this->setErrors('Cập nhật thành công','success');
-        $this->redirect(Yii::app()->createUrl('admin/link/'));
+        $id = ObjInput::get('id', 'int', 0);
+        $mol = new Link();
+        $data = $mol->getOne($id);
+        if (!$data) {
+            echo Strings::alert('Không tồn tại', Yii::app()->createUrl('admin/link'));
+        }
+
+        if (Yii::app()->request->isPostRequest) {
+
+            $name = ObjInput::get("name", "str", "");
+            if ($name <> "") {
+                $params["name"] = $name;
+            }
+            $value = ObjInput::get("value", "str", "");
+            if ($value <> "") {
+                $params["value"] = $value;
+            }
+            $type = ObjInput::get("type", "str", "");
+            if ($type <> "") {
+                $params["type"] = $type;
+            }
+            $update = $mol->updateData($params, $id);
+            if ($update) {
+                echo Strings::alert('Bạn cập nhật thành công', Yii::app()->createUrl('admin/permission'));
+            } else {
+                $this->_err = 'Cập nhật không thành công.';
+            }
+        }
+        $this->render('form', array(
+            'data' => $data,
+            'link_account' => Yii::app()->createUrl('admin/link'),
+            'err' => $this->_err,
+        ));
     }
 
     public function actionDel() {
