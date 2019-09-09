@@ -18,41 +18,13 @@ class Link extends CFormModel {
     }
 
     public function getLink() {
-        // $CLinkData = DataHelper::selectAll($this->tableName(), "*", " 1 = 1 ", 'id ASC');
-        // $parent_category = $sub_category = $counts = false;
-        // if ($CNewsData) {
-        //     foreach ($CLinkData as $k => $v) {
-        //         if ($v['parent_id'] == '0') {
-        //             $parent_category[$v['id']] = array(
-        //                 'id' => $v['id'],
-        //                 'title' => $v['title'],
-        //                 'acsii' => $v['acsii'],
-        //                 'status' => $v['status'],
-        //                 'stt' => $v['stt'],
-        //                 'parent_id' => (int) $v['parent_id'],
-        //                 'create_time' => $v['create_time'],
-        //             );
-        //         }
-        //         if ($v['parent_id'] != '0') {
-        //             $sub_category[$v['parent_id']][] = array(
-        //                 'id' => $v['id'],
-        //                 'title' => $v['title'],
-        //                 'acsii' => $v['acsii'],
-        //                 'status' => $v['status'],
-        //                 'parent_id' => $v['parent_id'],
-        //                 'stt' => $v['stt'],
-        //                 'create_time' => $v['create_time']);
-        //         }
-        //     }
-        //     $counts = count($CNewsData);
-        // }
+        $CLinkData = DataHelper::selectAll($this->tableName(), "*", " 1 = 1 ", 'id ASC');
+        $counts = count($CLinkData);
 
-        // return array(
-        //     'parent_category' => $parent_category,
-        //     'sub_category' => $sub_category,
-        //     'counts' => (int) $counts
-        // );
-        return array();
+        return array(
+            'links' => $CLinkData,
+            'counts' => (int) $counts
+        );
     }
 
     public function getOne($ID) {
