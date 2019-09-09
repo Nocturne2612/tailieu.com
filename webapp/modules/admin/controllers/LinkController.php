@@ -33,6 +33,13 @@ class LinkController extends AdminController {
         $this->redirect(Yii::app()->createUrl('admin/link/'));
     }
 
+    public function actionDel() {
+        echo "hello";
+        die();
+        $this->setErrors('Cập nhật thành công','success');
+        $this->redirect(Yii::app()->createUrl('admin/link/'));
+    }
+
     public function actionCreate() {
         echo "hello";
         die();
