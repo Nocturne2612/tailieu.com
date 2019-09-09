@@ -13,7 +13,7 @@ class LinkController extends AdminController {
     }
 
     public function init() {
-        $this->_modes = new Link();
+        $this->_model = new Link();
         parent::init();
     }
 
@@ -21,7 +21,7 @@ class LinkController extends AdminController {
         $data = $this->_model->getData();
         $this->render('index', array(
             'link_action' => Yii::app()->createUrl('admin/link/edit'),
-            'data' => $data,
+            'links' => $data,
             'error' => $this->_modes->_getError(),
             'success' => $this->_modes->_getSuccess())
         );
