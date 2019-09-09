@@ -45,6 +45,7 @@ class TailieuController extends Controller {
             ),
         ));
        // Yii::app()->clientScript->registerMetaTag('noindex,noarchive','robots');
+        Yii::app()->getClientScript()->registerCssFile(Yii::app()->baseUrl . '/assets/tailieuv3/css/jquery-ui.min.css');
         Yii::app()->getClientScript()->registerCssFile(Yii::app()->baseUrl . '/assets/tailieuv3/css/base.css');
         Yii::app()->getClientScript()->registerCssFile(Yii::app()->baseUrl . '/assets/tailieuv3/css/iconfont.css?v=201907161059');
         Yii::app()->getClientScript()->registerCssFile(Yii::app()->baseUrl . '/assets/tailieuv3/css/details.css?v=201907161059');
@@ -61,7 +62,8 @@ class TailieuController extends Controller {
         
         Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieuv3/js/base.js?v=201907161059', CClientScript::POS_HEAD);
         Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieuv3/js/jquery-1.7.1.min.js?v=201907161059', CClientScript::POS_HEAD);
-        
+        Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieuv3/js/jquery-ui.min.js?v=201907161059', CClientScript::POS_HEAD);
+
         Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieuv3/js/base-ga.js?v=201907161059', CClientScript::POS_END);
         Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieuv3/js/base-new.js?v=201907161059', CClientScript::POS_END);
         Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieuv3/js/index.js?v=201907161059', CClientScript::POS_END);
