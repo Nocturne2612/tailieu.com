@@ -19,6 +19,7 @@ class LinkController extends AdminController {
 
     public function actionIndex() {
         $data = $this->_model->getData();
+        var_dump($data); die;
         $this->render('index', array(
             'link_action' => Yii::app()->createUrl('admin/link/edit'),
             'links' => $data)
