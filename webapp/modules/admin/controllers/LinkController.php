@@ -8,9 +8,9 @@ class LinkController extends AdminController {
         return array('accessControl');
     }
 
-    public function accessRules() {
-        return AdminRoles::getAccessRules($this->id);
-    }
+    // public function accessRules() {
+    //     return AdminRoles::getAccessRules($this->id);
+    // }
 
     public function init() {
         $this->_model = new Link();
@@ -27,22 +27,16 @@ class LinkController extends AdminController {
     }
 
     public function actionEdit() {
-        echo "hello";
-        die();
         $this->setErrors('Cập nhật thành công','success');
         $this->redirect(Yii::app()->createUrl('admin/link/'));
     }
 
     public function actionDel() {
-        echo "hello";
-        die();
         $this->setErrors('Cập nhật thành công','success');
         $this->redirect(Yii::app()->createUrl('admin/link/'));
     }
 
     public function actionCreate() {
-        echo "hello";
-        die();
         $Model = new Link();
         $err = '';
         $type = ObjInput::get('type', 'int', 1);
