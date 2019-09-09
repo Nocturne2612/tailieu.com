@@ -56,9 +56,9 @@
                                 <th>
                                     {if $item.type == 1}
                                         TRANG
-                                    {elseif}
+                                    {elseif $item.type == 2}
                                         TRỢ GIÚP
-                                    {elseif}
+                                    {else}
                                         PHÁP LÝ
                                     {/if}
                                 </th>
