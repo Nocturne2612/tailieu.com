@@ -27,6 +27,7 @@ class LinkController extends AdminController {
     }
 
     public function actionEdit() {
+        var_dump($this->id);
         echo "hello";
         die();
         $this->setErrors('Cập nhật thành công','success');
