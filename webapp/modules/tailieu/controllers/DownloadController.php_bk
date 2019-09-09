@@ -1,0 +1,164 @@
+<?php
+
+class DownloadController extends TailieuController {
+
+    public $_models;
+
+    public function filters() {
+        return array('accessControl', // perform access control for CRUD operations
+        );
+    }
+
+    public function accessRules() {
+        return TRoles::getAccessRules($this->id);
+    }
+
+    public function init() {
+        $id = ObjInput::get('id', 'int', 0);
+        $title = ObjInput::get('title', 'str', '');
+        if ($id <> 0 && $title <> '') {
+            Session::set('returnUrl', SystemBase::buildUrl('tailieu/download', array('id' => $id, 'title' => $title)));
+        }
+        $this->_models = new Download;
+        parent::init();
+    }
+
+    public function actionIndex() {
+        $id = ObjInput::get('id', 'int', 0);
+        if ($id > 0) {
+            $product = new Product;
+            $product = $product->getDetail($id);
+            if ($product) {
+                $models = new Accounts;
+                $infoAccount = $models->getInfoAccountRealtime();
+                // echo Yii::app()->request->getUserHostAddress();
+                //var_dump($infoAccount);
+                if ($product['proprice'] > 0)
+                    $price = $product['proprice'];
+                else
+                    $price = $product['price'];
+                $flag = 1;
+
+                if ($infoAccount['point'] >= $price) { // Point đủ thanh toán
+                    $flag = 1;
+                } else if ($product['price'] == '0') {
+                    $flag = 1;
+                } else { // Point không đủ thanh toán
+                    $flag = 0;
+                }
+                if ($flag === 1) {
+                    if (Yii::app()->request->isPostRequest) {
+                        $verifyCode = ObjInput::get('verifyCode', 'str', '', 'POST');
+                        $captcha = Yii::app()->getController()->createAction("captcha");
+                        $code = $captcha->verifyCode;
+
+                        if ($verifyCode <> $code) {
+                            $this->setErrors('Mã xác nhận không chính xác');
+                        } else {
+                            $token = md5($id . $infoAccount['email'] . Yii::app()->request->getUserHostAddress() . '_ckk');
+                            Yii::app()->session['token'] = $token;
+                            Yii::app()->session['token_time_' . $id] = time();
+                            //  Yii::app()->session['link_download'] = $product['link_other'];
+                            Yii::app()->session['product'] = $product;
+                            Yii::app()->session['total_pay'] = $price;
+                            $this->redirect(SystemBase::buildUrl('tailieu/download/confirm', array('id' => $id, 'token' => $token)));
+                        }
+                    }
+                }
+                $this->render('index', array(
+                    'product' => $product,
+                    'flag' => $flag,
+                    'errors' => $this->_models->_getError(),
+                    'success' => $this->_models->_getSuccess()
+                ));
+            } else {
+                $this->redirect(Yii::app()->createUrl('tailieu/home'));
+            }
+        } else {
+            $this->redirect(Yii::app()->createUrl('tailieu/home'));
+        }
+    }
+
+    public function actionConfirm() {
+        $models = new Accounts;
+        $infoAccount = $models->getInfoAccountRealtime();
+        $id = ObjInput::get('id', 'int', 0);
+        $token = ObjInput::get('token', 'str', '');
+        $token_make = md5($id . $infoAccount['email'] . Yii::app()->request->getUserHostAddress() . '_ckk');
+        if ($token === Yii::app()->session['token'] && $token === $token_make) {
+            $token_time_out = Yii::app()->session['token_time_' . $id] + SESSION_DOWNLOAD_TIMEOUT;
+            if ($token_time_out > time()) {
+                if (isset(Yii::app()->session['total_pay']) && isset(Yii::app()->session['product'])) {
+                    $product = Yii::app()->session['product'];
+                    if ($product['link_other']) {
+                        //perform -point
+
+                        $fs = $models->minusPoint((int) Yii::app()->session['total_pay'], $infoAccount['id'], $infoAccount['point'], $infoAccount['count_down'], 'Trừ point download tài liệu: ' . $product['title']);
+
+                        if ($fs) {
+                            // Cập nhật số lần download cho sản phẩm
+                            $product_models = new Product;
+                            $product_models->updateData(array('count_down' => $product['count_down'] + 1), 'id=' . $product['id']);
+
+                            $data_insert = array(
+                                'title' => $product['title'],
+                                'id_product' => $product['id'],
+                                'id_account' => $infoAccount['id'],
+                                'category_id' => $product['category_id'],
+                                'price' => Yii::app()->session['total_pay'],
+                                'picture' => $product['picture'],
+                                'short' => $product['short'],
+                                'status' => 1,
+                                'count' => $product['count_down'] + 1,
+                                'time_download' => time()
+                            );
+
+                            // Lưu lịch sử download
+                            $ins = $this->_models->insertData($data_insert);
+                            //redirect link
+
+                            if (preg_match('@id=([^=]*)@', $product['link_other'], $match))
+                                $link_download = 'https://docs.google.com/uc?export=download&id=' . $match[1];
+                            else {
+                                $link_download = $product['link_other'];
+                            }
+                            self::removeSessionDown();
+                            $this->redirect($link_download);
+                        } else {
+                            self::removeSessionDown();
+                            $this->setErrors('Cố lỗi quá trình xử lý cập nhật point');
+                        }
+                    } else {
+                        self::removeSessionDown();
+                        $this->setErrors('Thông tin download tài liệu ở dưới BÀI VIẾT hoặc KHÔNG TỒN TẠI. Vui lòng liên hệ BQT để được hỗ trợ!');
+                    }
+                } else {
+                    self::removeSessionDown();
+                    $this->setErrors('Thông tin tài liệu không tồn tại. Vui lòng liên hệ BQT để được hỗ trợ!');
+                }
+                //$this->redirect( Yii::app()->session['link_download']);
+            } else {
+
+                self::removeSessionDown();
+                $this->setErrors('Thời hạn download tài liệu đã hết.');
+            }
+            //echo Yii::app()->session['token'];
+            // echo Yii::app()->session['token_time_' . $id];
+        } else {
+            self::removeSessionDown();
+            $this->setErrors('Token không tồn tại.');
+            $this->redirect(Yii::app()->createUrl('tailieu/download'));
+        }
+        $this->render('confirm', array('errors' => $this->_models->_getError(),
+            'success' => $this->_models->_getSuccess()));
+    }
+
+    private static function removeSessionDown() {
+        $id = ObjInput::get('id', 'int', 0);
+        unset($_SESSION['token']);
+        unset($_SESSION['token_time_' . $id]);
+        unset($_SESSION['product']);
+        unset($_SESSION['total_pay']);
+    }
+
+}

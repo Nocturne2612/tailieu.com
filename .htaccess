@@ -1,0 +1,107 @@
+RewriteCond %{QUERY_STRING} ^(.*)(?:^|&)fbclid=(?:[^&]*)((?:&|$).*)$ [NC]
+RewriteCond %1%2 (^|&)([^&].*|$)
+RewriteRule ^(.*) /$1?%2 [R=301,L]
+
+
+# Enable mod_rewrite
+RewriteEngine on
+
+RewriteEngine on
+#RewriteCond %{HTTPS} off
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+# Specify the folder in which the application resides.
+# Use / if the application is in the root.
+RewriteBase /
+
+# Rewrite to correct domain to avoid canonicalization problems
+#RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+# Rewrite URLs ending in /index.php or /index.html to /
+RewriteCond %{THE_REQUEST} ^GET\ .*/index\.(php|html?)\ HTTP
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteRule ^(.*)index\.(php|html?)$ $1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteRule ^.*$ index.php [L]
+
+    # BEGIN Compress text files
+    <IfModule mod_deflate.c>
+      <FilesMatch "\.(css|js|x?html?|php)$">
+        SetOutputFilter DEFLATE
+      </FilesMatch>
+    </IfModule>
+    # END Compress text files
+     
+    # BEGIN Expire headers
+    <IfModule mod_expires.c>
+      ExpiresActive On
+      ExpiresDefault "access plus 1 seconds"
+      ExpiresByType image/x-icon "access plus 2592000 seconds"
+      ExpiresByType image/jpeg "access plus 2592000 seconds"
+      ExpiresByType image/png "access plus 2592000 seconds"
+      ExpiresByType image/gif "access plus 2592000 seconds"
+      ExpiresByType application/x-shockwave-flash "access plus 2592000 seconds"
+      ExpiresByType text/css "access plus 604800 seconds"
+      ExpiresByType text/javascript "access plus 216000 seconds"
+      ExpiresByType application/javascript "access plus 216000 seconds"
+      ExpiresByType application/x-javascript "access plus 216000 seconds"
+      ExpiresByType text/html "access plus 600 seconds"
+      ExpiresByType application/xhtml+xml "access plus 600 seconds"
+    </IfModule>
+    # END Expire headers
+     
+    # BEGIN Cache-Control Headers
+    <IfModule mod_headers.c>
+      <FilesMatch "\.(ico|jpe?g|png|gif|swf)$">
+        Header set Cache-Control "max-age=2592000, public"
+      </FilesMatch>
+      <FilesMatch "\.(css)$">
+        Header set Cache-Control "max-age=604800, public"
+      </FilesMatch>
+      <FilesMatch "\.(js)$">
+        Header set Cache-Control "max-age=216000, private"
+      </FilesMatch>
+      <FilesMatch "\.(x?html?|php)$">
+        Header set Cache-Control "max-age=600, private, must-revalidate"
+      </FilesMatch>
+    </IfModule>
+    # END Cache-Control Headers
+     
+    # BEGIN Turn ETags Off
+    <IfModule mod_headers.c>
+      Header unset ETag
+    </IfModule>
+    FileETag None
+    # END Turn ETags Off
+     
+    # BEGIN Remove Last-Modified Header
+    <IfModule mod_headers.c>
+      Header unset Last-Modified
+    </IfModule>
+    # END Remove Last-Modified Header
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+<IfModule php5_module>
+   php_value date.timezone "UTC"
+</IfModule>
+# END cPanel-generated php ini directives, do not edit
