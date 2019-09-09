@@ -13,7 +13,7 @@
 
 <!--Fillter-->
 <a href="{Yii::app()->createUrl("admin/link/create/")}">  
-    <div class="alert alert-info"> Thêm danh mục </div>                
+    <div class="alert alert-info"> Thêm Link </div>                
 </a>
 
 <div class="row">
@@ -21,7 +21,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title"> 
-                    <div class="pull-left">Có <strong class="blueFont">{$category.counts}</strong> danh mục</div>
+                    <div class="pull-left">Có <strong class="blueFont">{count($links)}</strong> danh mục</div>
                 </h3>
                 <div class="panel-options">
                     <a data-toggle="panel" href="#">
