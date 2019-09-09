@@ -12,38 +12,76 @@
 </div>
 
 <!--Fillter-->
+<a href="{Yii::app()->createUrl("admin/link/create/")}">  
+    <div class="alert alert-info"> Thêm Link </div>                
+</a>
+
 <div class="row">
-  <div class="col-md-12">
-    <div class="panel panel-default"> {if $error <> false}
-      <div class="alert alert-danger">{$error}</div>
-      {/if}
-      {if $success <> false}
-      <div class="alert alert-success">{$success}</div>
-      {/if}
-      <div class="row"> {CHtml::beginForm($link_action,'post',['role' => 'form','class'=>'form-horizontal','enctype'=>'multipart/form-data'])}
-        {if $error <> false}
-        <div class="alert alert-danger">
-          <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-          {$error}</div>
-        {/if}
-        <div class="form-group">
-          <label class="col-sm-3 control-label">Link top:</label>
-          <div class="col-sm-9"> 
-          	{$fck_tomtat}
-          </div>
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"> 
+                    <div class="pull-left">Có <strong class="blueFont">{$counts}</strong> danh mục</div>
+                </h3>
+                <div class="panel-options">
+                    <a data-toggle="panel" href="#">
+                        <span class="collapse-icon">&ndash;</span>
+                        <span class="expand-icon">+</span>
+                    </a>
+                </div>
+                <div class="clearfix"></div> 
+            </div>
+
+            <!--fillter-->
+
+            <div class="panel-body">  
+                {CHtml::beginForm(Yii::app()->createUrl("admin/link/edit/"),'post',['role' => 'form','class'=>'form-horizontal'])}
+                <div class="table-responsive">
+                    <table class="table table-small-font table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Cột</th>
+                                <th>Text hiển thị</th>
+                                <th>Vị trí</th>
+                                <th>Link</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-hover">
+                        {if $links}
+                          {foreach $links as $k => $item}
+                            <tr>
+                                <th>{$item.id}</th>
+                                <th>{$item.type}</th>
+                                <th>{$item.name}</th>
+                                <th>{$item.position}</th>
+                                <th>{$item.link}</th>
+                                <th style="width:250px;">
+                                <div class="col-sm-3" style="padding: 0px;">
+                                    <input class="form-control no-right-border form-focus-purple" type="text" value="{$item.id}" name="id[]">
+                                </div>
+                                <input type="hidden" value="{$item.id}" name="ids[]">
+                                <span class="input-group-btn">                                   
+                                    <button class="btn btn-purple" name="save" type="submit" value="save">Lưu</button>                                        
+                                    <a class="btn btn-warning" href='{Yii::app()->createUrl("admin/link/edit/",['id'=>$item.id])}' >Sửa</a>
+                                    <a class="btn btn-red" onclick="return confirm('Bạn có chắc chắn xoá');" href='{Yii::app()->createUrl("admin/link/del/",['id'=>$item.id])}'>Xóa</a>
+                                </span>
+
+                                </th>
+
+                            </tr>
+                          {/foreach}
+                        {else} 
+                            <tr> <td colspan="6" class="alert-danger danger">Không có dữ liệu</td></tr>  
+                        {/if} 
+                        </tbody>
+                    </table>
+                </div>
+                {CHtml::endForm()}     
+            </div>
+
         </div>
-          <div class="form-group">
-          <label class="col-sm-3 control-label">Footer:</label>
-          <div class="col-sm-9"> {$fck_noidung}  </div>
-        </div>
-        
-        <div class="form-group">
-          <label class="col-sm-3  control-label"></label>
-          <div class="col-sm-9">
-            <button type="submit" class="btn btn-warning" name="submit">Cập nhật</button>
-          </div>
-        </div>
-        {CHtml::endForm()} </div>
     </div>
-  </div>
-</div>
+
+</div>    

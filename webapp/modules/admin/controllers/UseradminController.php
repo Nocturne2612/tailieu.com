@@ -13,8 +13,8 @@
  */
 class UseradminController extends AdminController {
 
-    public $_arrAction = '';
-    public $_arrController = '';
+    public $_arrAction = [];
+    public $_arrController = [];
 
     public function filters() {
         return array('accessControl');
@@ -78,7 +78,7 @@ class UseradminController extends AdminController {
             $password = ObjInput::get('password', 'str', '', 'POST');
             $fullname = ObjInput::get('fullname', 'str', '', 'POST');
             // $arr_a = $_POST['a'];
-            $c_update = '';
+            $c_update = [];
             if ($arr_c <> '') {
                 foreach ($arr_c as $c) {
                     if ($arr_a[$c]) {
@@ -137,7 +137,7 @@ class UseradminController extends AdminController {
         $email = ObjInput::get('email', 'str', '', 'POST');
         $fullname = ObjInput::get('fullname', 'str', '', 'POST');
         if ($arr_c <> '') {
-            $c_update = '';
+            $c_update = [];
             foreach ($arr_c as $c) {
                 if ($arr_a[$c]) {
                     $c_update[$c] = $arr_a[$c];

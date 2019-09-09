@@ -2,7 +2,7 @@
 
 class LinkController extends AdminController {
 
-    private $_modes;
+    private $_model;
 
     public function filters() {
         return array('accessControl');
@@ -13,43 +13,67 @@ class LinkController extends AdminController {
     }
 
     public function init() {
-        $this->_modes = new Category();
+        $this->_model = new Link();
         parent::init();
     }
 
     public function actionIndex() {
-        
-        $ex_top_link = SystemFile::readFile(Yii::getPathOfAlias("webroot") . "/webapp/modules/tailieu/components/widgets/views/ex_link.tpl");
-        
-        $ex_f_link = SystemFile::readFile(Yii::getPathOfAlias("webroot") . "/webapp/modules/tailieu/components/widgets/views/ex_f_link.tpl");
-        $fck_n = new FCKeditor('f_link');
-        $fck_n->Value = $ex_f_link;
-        $fck_n->Height = 500;
-        $fck = new FCKeditor('ex_top_link');
-        $fck->Value = $ex_top_link;
-        $fck->Height = 300;
+        $data = $this->_model->getLink();
         $this->render('index', array(
-            'fck_noidung' => $fck_n->CreateHtml(),
-            'fck_tomtat' => $fck->CreateHtml(),
-            'ex_top_link' => $ex_top_link,
-            'ex_f_link' => $ex_f_link,
             'link_action' => Yii::app()->createUrl('admin/link/edit'),
-            'error' => $this->_modes->_getError(),
-            'success' => $this->_modes->_getSuccess())
+            'links' => $data['links'],
+            'counts' => $data['counts'])
         );
     }
 
     public function actionEdit() {
-
-        $file_path = Yii::getPathOfAlias("webroot") . "/webapp/modules/tailieu/components/widgets/views/";
-        if (ObjInput::get('ex_top_link', 'def', '') <> '') {
-            $this->makeCache('ex_link.tpl', $file_path, ObjInput::get('ex_top_link', 'def', ''));
-        }
-        if (ObjInput::get('ex_top_link', 'def', '') <> '') {
-            $this->makeCache('ex_f_link.tpl', $file_path, ObjInput::get('f_link', 'def', ''));
-        }
+        echo "hello";
+        die();
         $this->setErrors('Cập nhật thành công','success');
         $this->redirect(Yii::app()->createUrl('admin/link/'));
     }
 
+    public function actionDel() {
+        echo "hello";
+        die();
+        $this->setErrors('Cập nhật thành công','success');
+        $this->redirect(Yii::app()->createUrl('admin/link/'));
+    }
+
+    public function actionCreate() {
+        echo "hello";
+        die();
+        $Model = new Link();
+        $err = '';
+        $type = ObjInput::get('type', 'int', 1);
+        $name = ObjInput::get('name', 'str', '');
+        $position = ObjInput::get('position', 'int', 0);
+        $link = ObjInput::get('link', 'str', '');
+        $data = array(
+            'type' => $type,
+            'name' => $name,
+            'position' => $position,
+            'link' => $link,
+        );
+
+        if (Yii::app()->request->isPostRequest) {
+            if ($name != '') {
+                $id_u = $Model->insertData($data);
+                if ($id_u > 0) {
+                    echo Strings::alert('Thêm mới thành công', Yii::app()->createUrl('admin/link/'));
+                    die();
+                } else {
+                    $this->_err = 'Có lỗi trong quá trình xử lý';
+                }
+            } else {
+                $this->_err = 'Text hiển thị không được để trống';
+            }
+        }
+        $this->render('form', array(
+            'data' => $data,
+            'link_home' => Yii::app()->createUrl('admin/link/'),
+            'link_create' => Yii::app()->createUrl('admin/link/create/'),
+            'err' => $this->_err,
+        ));
+    }
 }
