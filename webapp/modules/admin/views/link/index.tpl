@@ -64,7 +64,7 @@
                                 </th>
                                 <th>{$item.name}</th>
                                 <th>{$item.position}</th>
-                                <th>{$item.link}</th>
+                                <th><a href="{$item.link}" target="_blank">{$item.link}</a></th>
                                 <th style="width:250px;">
                                 <span class="input-group-btn">                                   
                                     <a class="btn btn-warning" href='{Yii::app()->createUrl("admin/link/edit/",['id'=>$item.id])}' >Sửa</a>

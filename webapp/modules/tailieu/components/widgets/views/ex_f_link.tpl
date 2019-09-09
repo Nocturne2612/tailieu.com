@@ -12,7 +12,7 @@
         <div class="foot-inner">
             <div class="foot-item foot-pngtree xs-hide">
                 <dl>
-                    <dt>PNGTREE.COM</dt>
+                    <dt>TRANG</dt>
                     <dd><a rel="nofollow" href="/about" target="_blank" class="foot-link" data-ga="About">About</a></dd>
                     <dd><a rel="nofollow" href="/parternships" target="_blank" class="foot-link" data-ga="Parternerships">Parternerships</a></dd>
                     <dd><a href="" target="_blank" class="foot-link goole-tags" style="display: none">Popular Tags</a></dd>
@@ -23,20 +23,14 @@
             </div>
             <div class="foot-item foot-help xs-hide">
                 <dl>
-                    <dt>HELP</dt>
+                    <dt>TRỢ GIÚP</dt>
                     <dd><a rel="nofollow" href="/help-center" target="_blank" data-ga="Help_Center" class="foot-link">Help Center</a></dd>
                     <dd><a rel="nofollow" href="javascript:;" onclick="$('.side-contact').trigger('click')" data-ga="Contact_us" class="foot-link contact-foot">Contact us</a></dd>
                 </dl>
             </div>
-
-            <div class="foot-item foot-language">
-                <dl>
-                    <dt>LANGUAGE</dt>
-                </dl>
-            </div>
             <div class="foot-item foot-legal xs-hide">
                 <dl>
-                    <dt>LEGAL</dt>
+                    <dt>PHÁP LÝ</dt>
                     <dd><a rel="nofollow" href="/terms-of-service" target="_blank" data-ga="Terms_of_Service" class="foot-link">Terms of Service</a></dd>
                     <dd><a rel="nofollow" href="/privacy-policy" target="_blank" data-ga="Privacy_Policy" class="foot-link">Privacy Policy</a></dd>
                     <dd><a rel="nofollow" href="/dmca_notification" target="_blank" data-ga="Copyrights_Infringement_Notification" class="foot-link">Copyrights Infringement Notification</a></dd>
