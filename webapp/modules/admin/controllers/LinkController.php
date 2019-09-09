@@ -32,7 +32,8 @@ class LinkController extends AdminController {
     }
 
     public function actionCreate() {
-
+        echo "hello";
+        die();
         $Model = new Link();
         $err = '';
         $type = ObjInput::get('type', 'int', 1);
