@@ -1,0 +1,57 @@
+<div class="page-title">
+  <div class="title-env">
+    <h1 class="title">Thông tin Link</h1>
+    <p class="description">Thêm, sửa link</p>
+  </div>
+  <div class="breadcrumb-env">
+    <ol class="breadcrumb bc-1">
+      <li> <a href="{$smarty.const.BASE_URL_ADMIN}"><i class="fa-home"></i>Trang chủ</a> </li>
+      <li> <a href="{$link_home}">Danh sách Link</a> </li>
+      <li class="active"> <strong>Thông tin Link</strong> </li>
+    </ol>
+  </div>
+</div>
+<a href="{$link_create}">
+<div class="alert alert-info"> Thêm,sửa Link </div>
+</a>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row"> {if $err <> ''}
+      <div class="alert alert-danger" role="alert">{$err}</div>
+      {/if}
+      
+      {CHtml::beginForm('','post',['enctype'=>'multipart/form-data','class'=>'form-horizontal'])}
+      <div class="form-group">
+        <label for="title" class="col-sm-2 control-label">Cột:</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="type" name="type" value="{$data.type}">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="desc" class="col-sm-2 control-label">Text hiển thị:</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="name" name="name" value="{$data.name}">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="desc" class="col-sm-2 control-label">Vị trí:</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="position" name="position" value="{$data.position}">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="desc" class="col-sm-2 control-label">Đường dẫn:</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="link" name="link" value="{$data.link}">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label"></label>
+        <div class="col-sm-9">
+          <button type="submit" class="btn btn-warning" name="submit">Cập nhật</button>
+          <button type="button" class="btn btn-default pull-right" name="reset" value="   " onclick="window.history.back();">Quay lại</button>
+        </div>
+      </div>
+      {CHtml::endForm()} </div>
+  </div>
+</div>

@@ -73,7 +73,7 @@
                             </tr>
                           {/foreach}
                         {else} 
-                            <tr> <td colspan="5" class="alert-danger danger">Không có dữ liệu</td></tr>  
+                            <tr> <td colspan="6" class="alert-danger danger">Không có dữ liệu</td></tr>  
                         {/if} 
                         </tbody>
                     </table>

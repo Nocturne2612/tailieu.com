@@ -56,20 +56,14 @@ class LinkController extends AdminController {
                     $this->_err = 'Có lỗi trong quá trình xử lý';
                 }
             } else {
-                $this->_err = 'Tiêu đề không được để trống';
+                $this->_err = 'Text hiển thị không được để trống';
             }
         }
-        $fck_n = new FCKeditor('short');
-        $fck_n->Value = $short;
-        $fck_n->Height = 300;
         $this->render('form', array(
             'data' => $data,
-            'link_home' => Yii::app()->createUrl('admin/categoryproducts/'),
-            'link_create' => Yii::app()->createUrl('admin/categoryproducts/create/'),
-            'combo_parent' => $Model->getParentCategory_Option($parent_id),
+            'link_home' => Yii::app()->createUrl('admin/link/'),
+            'link_create' => Yii::app()->createUrl('admin/link/create/'),
             'err' => $this->_err,
-            'combo_status' => Strings::combobox('status', $this->_arrStatus, $status, '', 'class="form-control"'),
-            'fck_short' => $fck_n->CreateHtml(),
         ));
     }
 
