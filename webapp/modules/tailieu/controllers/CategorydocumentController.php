@@ -20,7 +20,9 @@ class CategorydocumentController extends TailieuController {
     }
 
     public function actionIndex() {
-		 Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieu/js/custom.js', CClientScript::POS_END);
+        Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieuv3/js/base-new.js', CClientScript::POS_END);
+        Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieu/js/custom.js', CClientScript::POS_END);
+        Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieuv3/js/index.js', CClientScript::POS_END);
         $acii = ObjInput::get('title', 'str', '');
         $array = $output = $outputs = array();
         $array = $this->_model->getDetailCategory($acii);
