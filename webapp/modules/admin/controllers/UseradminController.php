@@ -112,7 +112,6 @@ class UseradminController extends AdminController {
         }
        
         $permission = json_decode($useradmins['permission'], true);
-        echo $useradmins['permission'];die;
         $this->render('view', array(
             'data' => $useradmins,
             'link_account' => Yii::app()->createUrl('admin/useradmin'),
