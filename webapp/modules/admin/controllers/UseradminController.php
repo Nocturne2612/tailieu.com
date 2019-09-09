@@ -13,8 +13,8 @@
  */
 class UseradminController extends AdminController {
 
-    public $_arrAction = '';
-    public $_arrController = '';
+    public $_arrAction = [];
+    public $_arrController = [];
 
     public function filters() {
         return array('accessControl');
