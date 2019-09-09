@@ -58,7 +58,7 @@
                                         TRANG
                                     {elseif}
                                         TRỢ GIÚP
-                                    {else}
+                                    {elseif}
                                         PHÁP LÝ
                                     {/if}
                                 </th>
