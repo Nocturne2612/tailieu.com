@@ -42,7 +42,7 @@
             </div>
             <div class="foot-item foot-follow">
                 <dl>
-                    <dt>THEO DÕI</dt>
+                    <dt>MẠNG XÃ HỘI</dt>
                     <dd>
                         <a target="_blank" href="https://www.facebook.com/Pngtree-366522263734176" rel="nofollow" class="foot-btn foot-btn-fb bg-facebook">
                             <i class="iconfont icon-facebook"></i>
