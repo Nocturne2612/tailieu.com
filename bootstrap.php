@@ -28,6 +28,7 @@ define('IMG_PRODUCT_THUMB', 'images/product/thumbs/');
 
 define('IMG_ADS', 'images/ads/');
 define('IMG_LINK', 'images/links/');
+define('IMG_LINK_2', 'images/links/2/');
 define('DIR_TAILIEU', 'data/tailieu/');
 
 

@@ -103,7 +103,7 @@ class LinkController extends AdminController {
                     $x = '200';
                     $y = '';
                     $imageName = Strings::cut_char(Strings::remove_space(Strings::get_ascii($name)), '30') . '_' . time();
-                    $images = Upload::UploadOne($file, IMG_LINK, IMG_W, IMG_WT, IMG_HT, $imageName);
+                    $images = Upload::UploadOne($file, IMG_LINK, IMG_LINK_2, IMG_W, IMG_WT, IMG_HT, $imageName);
                     $data['image'] = $images;
                 }
                 $id_u = $Model->insertData($data);
