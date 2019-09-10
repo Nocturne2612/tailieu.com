@@ -64,19 +64,15 @@ class LinkController extends AdminController {
                     'link' => ObjInput::get('link', 'str', ''),
                 );
                 if (isset($_FILES['image']) && $_FILES['image']['size'] > 0) {
-                    $file = $_FILES['file'];
-
+                    $file = $_FILES['image'];
                     $name = Strings::cut_char(Strings::remove_space(Strings::get_ascii(ObjInput::get('title', 'str', ''))), '30') . '_' . time();
-                    $images = Upload::UploadOne($_FILES['file'], IMG_LINK, IMG_LINK2, 32, 20, 20, $name);
+                    // $images = Upload::UploadOne($file, IMG_LINK, IMG_LINK2, 32, 20, 20, $name);
+                    $images = Upload::UploadOne($file, IMG_LINK, IMG_LINK_2, IMG_W, IMG_WT, IMG_HT, $name);
                     $data['image'] = $images;
                     @unlink('./' . IMG_LINK_2 . $exits['image']);
                     @unlink('./' . IMG_LINK . $exits['image']);
                 } else {
                     $data['image'] = $exits['image'];
-                }
-                if ($id == $data['parent_id']) {
-                    $this->setErrors('Danh mục bạn cập nhật không thể là danh mục con của chính nó.');
-                    $this->redirect(Yii::app()->createUrl('admin/link/view/', array('id' => $id)));
                 }
                 $update = $this->_model->updateData($data, 'id=' . $id);
                 if ($update) {
