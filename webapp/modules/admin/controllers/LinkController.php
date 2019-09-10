@@ -83,7 +83,7 @@ class LinkController extends AdminController {
     public function actionCreate() {
         $Model = new Link();
         $err = '';
-        $type = ObjInput::get('type', 'int', 1);
+        $type = ObjInput::get('type', 'int', 0);
         $name = ObjInput::get('name', 'str', '');
         $position = ObjInput::get('position', 'int', 0);
         $link = ObjInput::get('link', 'str', '');
@@ -104,8 +104,8 @@ class LinkController extends AdminController {
                     $y = '';
                     $imageName = Strings::cut_char(Strings::remove_space(Strings::get_ascii($name)), '30') . '_' . time();
                     $images = Upload::UploadOne($file, IMG_LINK, IMG_LINK_2, IMG_W, IMG_WT, IMG_HT, $imageName);
-                    var_dump($images);die();
                     $data['image'] = $images;
+                    var_dump($data);die;
                 }
                 $id_u = $Model->insertData($data);
                 if ($id_u > 0) {
