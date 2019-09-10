@@ -58,8 +58,10 @@
                                         TRANG
                                     {elseif $item.type == 2}
                                         TRỢ GIÚP
-                                    {else}
+                                    {elseif $item.type == 3}
                                         PHÁP LÝ
+                                    {else}
+                                        MẠNG XÃ HỘI    
                                     {/if}
                                 </th>
                                 <th>{$item.name}</th>
