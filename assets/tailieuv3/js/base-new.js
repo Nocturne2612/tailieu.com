@@ -114,7 +114,7 @@ $(function () {
     }, Pngtree.BaseFun.captcha = function () {
         $(".verification-code img").prop("src", "/api/captcha/login-file-code?" + Math.random())
     }, Pngtree.BaseFun.RegisterLoadCareer = function (t) {
-        console.log(t);
+        // console.log(t);
         $.ajax({
             url: "/",
             type: "get",
@@ -297,7 +297,7 @@ $(function () {
         n($("#detailsearch-input"), e), $(".detailsearch-select").data("type", e)
     }), $(window).on("scroll", Pngtree.ScrollBar), Pngtree.BaseFun.SearchClick = function (e, t) {
         if ("" != t) {
-            alert(e);
+            // alert(e);
             var n;
             switch (t = (t = t.replace(/\s+/g, "-")).toLowerCase(), e) {
                 case 1:
@@ -312,8 +312,7 @@ $(function () {
             7 == e && Pngtree.BaseFun.pngtree_event("Font-Search-En", 1, t), setTimeout(function () {
                 window.location.href = "/" + n + "/" + t + "/" + e
             }, 10)
-        } else
-            alert("Please enter keywords")
+        }
     }, $(".search-click-btn").on("click", function () {
         var e = $(this).parents(".search-box-outer").find(".search-box-item-li li a.on").data("type"),
                 t = $(this).siblings(".search-box-input").val(),

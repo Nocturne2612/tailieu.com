@@ -7,8 +7,7 @@
         <!-- search -->
         <div class="serach-box">
             <form class="sb-form clearfix">
-                <input type="text" placeholder="Search {$data.title}"
-                       class="sb-input fl-l comment-search-keyword-box-input">
+                <input type="text" placeholder="Tìm kiếm {$data.title}" class="sb-input fl-l comment-search-keyword-box-input">
                 <a href="javascript:;" class="sb-btn fl-l search-box-input-index" data-ga="1">
                     <i class="iconfont icon-sousuo"></i>
                 </a>
