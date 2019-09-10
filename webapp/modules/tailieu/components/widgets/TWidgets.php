@@ -69,6 +69,10 @@ class TWidgets extends CWidget {
     }
 
     public function footer() {
+        $model = new Link();
+        $data = $model->getData();
+        var_dump($data);
+        die();
         $this->render("ex_f_link", array());
     }
 
