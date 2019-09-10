@@ -45,10 +45,10 @@ class LinkController extends AdminController {
     }
 
     public function actionEdit() {
-        die();
         $id = ObjInput::get('id', 'int', 0);
         /** Xóa Ảnh * */
         if (isset($_GET['image']) && $_GET['image'] <> '') {
+            var_dump($id);
             $this->_delImgae($id);
         }
         if (Yii::app()->request->isPostRequest) {
@@ -95,6 +95,11 @@ class LinkController extends AdminController {
     private function _delImgae($id) {
         $image = ObjInput::get('image', 'str', '');
         $id = ObjInput::get('id', 'int', 0);
+        var_dump($image);
+        echo '</br>';
+        var_dump($id);
+        die();
+
         if ($image != '') {
             $image_replace = base64_decode($image);
             $u = $this->_model->updateData(array('image' => ''), 'id='.$id);
