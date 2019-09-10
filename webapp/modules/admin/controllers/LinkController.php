@@ -146,7 +146,6 @@ class LinkController extends AdminController {
                     $imageName = Strings::cut_char(Strings::remove_space(Strings::get_ascii($name)), '30') . '_' . time();
                     $images = Upload::UploadOne($file, IMG_LINK, IMG_LINK_2, IMG_W, IMG_WT, IMG_HT, $imageName);
                     $data['image'] = $images;
-                    var_dump($data);die;
                 }
                 $id_u = $Model->insertData($data);
                 if ($id_u > 0) {
@@ -154,6 +153,8 @@ class LinkController extends AdminController {
                     die();
                 } else {
                     @unlink('./' . IMG_LINK . $data['image']);
+                    echo Strings::alert('Lỗi!!! File tải lên quá lớn', Yii::app()->createUrl('admin/link/create'));
+                    die();
                     $this->_err = 'Có lỗi trong quá trình xử lý';
                 }
             } else {
