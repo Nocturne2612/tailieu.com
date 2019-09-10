@@ -20,7 +20,7 @@
       <div class="alert alert-danger" role="alert">{$err}</div>
       {/if}
       
-      {CHtml::beginForm('','post',['enctype'=>'multipart/form-data','class'=>'form-horizontal'])}
+      {CHtml::beginForm($link_action,'post',['enctype'=>'multipart/form-data','class'=>'form-horizontal'])}
       <div class="form-group">
         <label for="title" class="col-sm-2 control-label">Cột:</label>
         <div class="col-sm-9">
@@ -35,7 +35,7 @@
       <div class="form-group">
         <label class="col-sm-2 control-label">Ảnh nền cho Mạng Xã hội: </label>
         <div class="col-md-9">
-          <input type="file" id="image" name="image" data-bfi-disabled {if $data.type == 4}disabled{/if}>
+          <input type="file" id="image" name="image" data-bfi-disabled {if $data.type != 4}disabled{/if}>
           <br>
           {if isset($data.image) && $data.image != ""}<img src="{$link_images}{$data.image}" height="80"/>
           <br> <a  style="padding-left:10px; " href="{Yii::app()->createUrl("admin/link/edit/",['id'=>$data.id,'image'=>base64_encode($data.image)])}" class="fa-hover"><i class="fa fa-trash"></i></a>

@@ -39,6 +39,7 @@ class LinkController extends AdminController {
             'link_home' => Yii::app()->createUrl('admin/link/'),
             'link_create' => Yii::app()->createUrl('admin/link/create/'),
             'link_images' => Yii::app()->request->baseUrl . DS . IMG_LINK,
+            'link_action' => Yii::app()->createUrl('admin/link/edit/', array('id' => $id)),
             'err' => $this->_err,
         ));
     }
@@ -162,7 +163,8 @@ class LinkController extends AdminController {
             'data' => $data,
             'link_home' => Yii::app()->createUrl('admin/link/'),
             'link_create' => Yii::app()->createUrl('admin/link/create/'),
-            'link_images' => Yii::app()->request->baseUrl . DS . IMG_LINK,            
+            'link_images' => Yii::app()->request->baseUrl . DS . IMG_LINK,
+            'link_action' => Yii::app()->createUrl('admin/link/create'),
             'err' => $this->_err,
         ));
     }
