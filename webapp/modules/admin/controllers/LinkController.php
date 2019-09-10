@@ -27,38 +27,12 @@ class LinkController extends AdminController {
         );
     }
 
-    public function actionEdit() {
+    public function actionView() {
         $id = ObjInput::get('id', 'int', 0);
         $mol = new Link();
         $data = $mol->getOne($id);
         if (!$data) {
             echo Strings::alert('Không tồn tại', Yii::app()->createUrl('admin/link'));
-        }
-
-        if (Yii::app()->request->isPostRequest) {
-
-            $type = ObjInput::get('type', 'int', 1);
-            if ($type <> "") {
-                $params["type"] = $type;
-            }
-            $name = ObjInput::get("name", "str", "");
-            if ($name <> "") {
-                $params["name"] = $name;
-            }
-            $position = ObjInput::get('position', 'int', 1);
-            if ($type <> "") {
-                $params["position"] = $position;
-            }
-            $link = ObjInput::get("link", "str", "");
-            if ($name <> "") {
-                $params["link"] = $link;
-            }
-            $update = $mol->updateData($params, $id);
-            if ($update) {
-                echo Strings::alert('Bạn cập nhật thành công', Yii::app()->createUrl('admin/link'));
-            } else {
-                $this->_err = 'Cập nhật không thành công.';
-            }
         }
         $this->render('form', array(
             'data' => $data,
@@ -66,6 +40,75 @@ class LinkController extends AdminController {
             'link_create' => Yii::app()->createUrl('admin/link/create/'),
             'err' => $this->_err,
         ));
+    }
+
+    public function actionEdit() {
+        $id = ObjInput::get('id', 'int', 0);
+        /** Xóa Ảnh * */
+        if (isset($_GET['image']) && $_GET['image'] <> '') {
+            $this->_delImgae($id);
+        }
+        if (Yii::app()->request->isPostRequest) {
+            $this->_model->attributes = $_POST;
+            if (Yii::app()->request->isPostRequest && $this->_model->validate()) {
+                $exits = $this->_model->getDataById($id);
+                if (!$exits) {
+                    $this->setErrors('Không tồn tại hoặc đã bị xóa.');
+                    $this->redirect(Yii::app()->createUrl('admin/link/'));
+                }
+
+                $data = array(
+                    'type' => ObjInput::get('type', 'int', 0),
+                    'name' => ObjInput::get('name', 'str', ''),
+                    'position' => ObjInput::get('position', 'int', 0),
+                    'link' => ObjInput::get('link', 'str', ''),
+                );
+                if (isset($_FILES['image']) && $_FILES['image']['size'] > 0) {
+                    $file = $_FILES['file'];
+
+                    $name = Strings::cut_char(Strings::remove_space(Strings::get_ascii(ObjInput::get('title', 'str', ''))), '30') . '_' . time();
+                    $images = Upload::UploadOne($_FILES['file'], IMG_LINK, IMG_LINK2, 32, 20, 20, $name);
+                    $data['image'] = $images;
+                    @unlink('./' . IMG_LINK_2 . $exits['image']);
+                    @unlink('./' . IMG_LINK . $exits['image']);
+                } else {
+                    $data['image'] = $exits['image'];
+                }
+                if ($id == $data['parent_id']) {
+                    $this->setErrors('Danh mục bạn cập nhật không thể là danh mục con của chính nó.');
+                    $this->redirect(Yii::app()->createUrl('admin/link/view/', array('id' => $id)));
+                }
+                $update = $this->_model->updateData($data, 'id=' . $id);
+                if ($update) {
+                    $this->setErrors('Cập nhật thành công.', 'success');
+                    $this->redirect(Yii::app()->createUrl('admin/link/'));
+                } else {
+                    $this->setErrors('Có lỗi quá trình cấp nhật.');
+                    $this->redirect(Yii::app()->createUrl('admin/link/view/', array('id' => $id)));
+                }
+            } else {
+                $this->setErrors($this->_model->getErrorForm());
+                $this->redirect(Yii::app()->createUrl('admin/link/view/', array('id' => $id)));
+            }
+        }
+    }
+
+    private function _delImgae($id) {
+        $image = ObjInput::get('image', 'str', '');
+        $id = ObjInput::get('id', 'int', 0);
+        if ($image != '') {
+            $image_replace = base64_decode($image);
+            $u = $this->_model->updateData(array('image' => ''), 'id='.$id);
+            if ($u > 0) {
+                $this->setErrors('Cập nhật thành công', 'success');
+                @unlink('./' . IMG_LINK . $image_replace);
+                @unlink('./' . IMG_LINK_2 . $image_replace);
+                $this->redirect(Yii::app()->createUrl('admin/link/view', array('id' => $id)));
+            } else {
+                $this->setErrors('Có lỗi trong quá trình xử lý');
+                $this->redirect(Yii::app()->createUrl('admin/link/view', array('id' => $id)));
+            }
+        }
     }
 
     public function actionDel() {

@@ -70,7 +70,7 @@
                                 <td>{if $item.image <>""}<img src="{$link_images}{$item.image}" width="50"/>{/if}</td>
                                 <th style="width:250px;">
                                 <span class="input-group-btn">                                   
-                                    <a class="btn btn-warning" href='{Yii::app()->createUrl("admin/link/edit/",['id'=>$item.id])}' >Sửa</a>
+                                    <a class="btn btn-warning" href='{Yii::app()->createUrl("admin/link/view/",['id'=>$item.id])}' >Sửa</a>
                                     <a class="btn btn-red" onclick="return confirm('Bạn có chắc chắn xoá');" href='{Yii::app()->createUrl("admin/link/del/",['id'=>$item.id])}'>Xóa</a>
                                 </span>
                                 </th>

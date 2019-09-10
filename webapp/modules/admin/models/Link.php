@@ -35,7 +35,10 @@ class Link extends CFormModel {
     public function insertData($data) {
         return DataHelper::insert($this->tableName(), $data);
     }
-
+    public function getDataById($ID) {
+        $accountsData = DataHelper::selectOne($this->tableName(), "*", "id='" . (int) $ID . "'");
+        return $accountsData;
+    }
     public function updateData($data, $id) {
         return DataHelper::update($this->tableName(), $data, '`id` = ' . (int) $id);
     }
