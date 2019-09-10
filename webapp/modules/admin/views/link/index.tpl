@@ -44,7 +44,7 @@
                                 <th>Text hiển thị</th>
                                 <th>Vị trí</th>
                                 <th>Link</th>
-                                <th>Mạng xã hội</th>
+                                <th>Ảnh Nền</th>
                                 <th>Thao tác</th>
                             </tr>
                         </thead>
