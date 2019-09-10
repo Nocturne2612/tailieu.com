@@ -67,16 +67,11 @@
         </div>
       </div>
       <script>
-        
         $("#type").change(function(){
           var selectedType = $(this).children("option:selected").val();
-          console.log(selectedType);
-          console.log(typeof selectedType);
           if (selectedType != 4) {
             $("#image").attr('disabled', 'disabled');
-            console.log("add disable");
           } else {
-            console.log("remove disable");
             $("#image").removeAttr('disabled');
           }
         });
