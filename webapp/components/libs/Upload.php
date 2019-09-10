@@ -1001,7 +1001,7 @@ class Upload {
      */
     function getsize($size) {
         echo '<br>';
-        vardump($size);
+        var_dump($size);
         $last = strtolower($size{strlen($size) - 1});
         var_dump($last);
         die;
