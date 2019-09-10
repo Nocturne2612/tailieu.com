@@ -97,6 +97,7 @@ class LinkController extends AdminController {
         );
         $data['image'] = '';
         if (Yii::app()->request->isPostRequest) {
+            var_dump($_FILES);die;
             if ($name != '' || (isset($_FILES['file']) && $_FILES['file']['size'] > 0)) {
                 $file = $_FILES['file'];
                 $x = '200';
