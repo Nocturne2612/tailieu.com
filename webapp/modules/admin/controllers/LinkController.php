@@ -38,6 +38,7 @@ class LinkController extends AdminController {
             'data' => $data,
             'link_home' => Yii::app()->createUrl('admin/link/'),
             'link_create' => Yii::app()->createUrl('admin/link/create/'),
+            'link_images' => Yii::app()->request->baseUrl . DS . IMG_LINK,
             'err' => $this->_err,
         ));
     }
@@ -50,7 +51,7 @@ class LinkController extends AdminController {
         }
         if (Yii::app()->request->isPostRequest) {
             $this->_model->attributes = $_POST;
-            if (Yii::app()->request->isPostRequest && $this->_model->validate()) {
+            if ($this->_model->validate()) {
                 $exits = $this->_model->getDataById($id);
                 if (!$exits) {
                     $this->setErrors('Không tồn tại hoặc đã bị xóa.');
@@ -161,6 +162,7 @@ class LinkController extends AdminController {
             'data' => $data,
             'link_home' => Yii::app()->createUrl('admin/link/'),
             'link_create' => Yii::app()->createUrl('admin/link/create/'),
+            'link_images' => Yii::app()->request->baseUrl . DS . IMG_LINK,            
             'err' => $this->_err,
         ));
     }

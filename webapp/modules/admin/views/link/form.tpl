@@ -35,9 +35,9 @@
       <div class="form-group">
         <label class="col-sm-2 control-label">Ảnh nền cho Mạng Xã hội: </label>
         <div class="col-md-9">
-          <input type="file" id="image" name="image" data-bfi-disabled>
+          <input type="file" id="image" name="image" data-bfi-disabled {if $data.type == 4}disabled{/if}>
           <br>
-          {if isset($data.image) && $data.image != ""}<img src="{$data.image}" height="80"/>
+          {if isset($data.image) && $data.image != ""}<img src="{$link_images}{$data.image}" height="80"/>
           <br> <a  style="padding-left:10px; " href="{Yii::app()->createUrl("admin/link/edit/",['id'=>$data.id,'image'=>base64_encode($data.image)])}" class="fa-hover"><i class="fa fa-trash"></i></a>
           {/if} </div>
       </div>
