@@ -28,8 +28,8 @@
             <option  {if !$data.type}selected{/if}>---Chọn cột hiển thị---</option>
             <option value="1" {if $data.type == 1}selected{/if}>TRANG</option>
             <option value="2" {if $data.type == 2}selected{/if}>TRỢ GIÚP</option>
-            <option value="3" {if $data.type == 3}selected{/if}>PHÁP LÝ</option></select>
-            <option value="4" {if $data.type == 4}selected{/if}>MẠNG XÃ HỘI</option>
+            <option value="3" {if $data.type == 3}selected{/if}>PHÁP LÝ</option>
+            <option value="4" {if $data.type == 4}selected{/if}>MẠNG XÃ HỘI</option></select>
         </div>
       </div>
       <div class="form-group">
@@ -66,6 +66,16 @@
           <button type="button" class="btn btn-default pull-right" name="reset" value="   " onclick="window.history.back();">Quay lại</button>
         </div>
       </div>
+      <script>
+        $("select#type").change(function(){
+          var selectedType = $(this).children("option:selected").val();
+          if (selectedType !== 4) {
+            $("#image").attr('disabled', true);
+          } else {
+            $("#image").removeAttr('disabled');
+          }
+        });
+      </script>
       {CHtml::endForm()} </div>
   </div>
 </div>
