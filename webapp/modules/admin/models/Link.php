@@ -39,8 +39,8 @@ class Link extends CFormModel {
         $accountsData = DataHelper::selectOne($this->tableName(), "*", "id='" . (int) $ID . "'");
         return $accountsData;
     }
-    public function updateData($data, $id) {
-        return DataHelper::update($this->tableName(), $data, '`id` = ' . (int) $id);
+    public function updateData($data, $array_condition) {
+        return DataHelper::update($this->tableName(), $data, $array_condition);
     }
 
     public static function deleteData($id) {
