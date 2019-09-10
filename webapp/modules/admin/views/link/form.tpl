@@ -28,8 +28,18 @@
             <option  {if !$data.type}selected{/if}>---Chọn cột hiển thị---</option>
             <option value="1" {if $data.type == 1}selected{/if}>TRANG</option>
             <option value="2" {if $data.type == 2}selected{/if}>TRỢ GIÚP</option>
-            <option value="3" {if $data.type == 3}selected{/if}>PHÁP LÝ</option></select>
+            <option value="3" {if $data.type == 3}selected{/if}>PHÁP LÝ</option>
+            <option value="4" {if $data.type == 4}selected{/if}>MẠNG XÃ HỘI</option></select>
         </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Ảnh nền cho Mạng Xã hội: </label>
+        <div class="col-md-9">
+          <input type="file" id="image" name="image" data-bfi-disabled>
+          <br>
+          {if isset($data.image) && $data.image != ""}<img src="{$data.image}" height="80"/>
+          <br> <a  style="padding-left:10px; " href="{Yii::app()->createUrl("admin/link/edit/",['id'=>$data.id,'image'=>base64_encode($data.image)])}" class="fa-hover"><i class="fa fa-trash"></i></a>
+          {/if} </div>
       </div>
       <div class="form-group">
         <label for="desc" class="col-sm-2 control-label">Text hiển thị(*):</label>
@@ -56,6 +66,16 @@
           <button type="button" class="btn btn-default pull-right" name="reset" value="   " onclick="window.history.back();">Quay lại</button>
         </div>
       </div>
+      <script>
+        $("#type").change(function(){
+          var selectedType = $(this).children("option:selected").val();
+          if (selectedType != 4) {
+            $("#image").attr('disabled', 'disabled');
+          } else {
+            $("#image").removeAttr('disabled');
+          }
+        });
+      </script>
       {CHtml::endForm()} </div>
   </div>
 </div>

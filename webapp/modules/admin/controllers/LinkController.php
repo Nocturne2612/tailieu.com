@@ -21,6 +21,7 @@ class LinkController extends AdminController {
         $data = $this->_model->getLink();
         $this->render('index', array(
             'link_action' => Yii::app()->createUrl('admin/link/edit'),
+            'link_images' => Yii::app()->request->baseUrl . DS . IMG_LINK,
             'links' => $data['links'],
             'counts' => $data['counts'])
         );
@@ -68,8 +69,15 @@ class LinkController extends AdminController {
     }
 
     public function actionDel() {
-        $this->setErrors('Cập nhật thành công','success');
-        $this->redirect(Yii::app()->createUrl('admin/link/'));
+        $id = ObjInput::get('id', 'int', 0);
+        if ($id <> 0) {
+            $this->_model->deleteData($id);
+            $this->setErrors('Xóa thành công', 'success');
+            $this->redirect(Yii::app()->createUrl('admin/link'));
+        } else {
+            $this->setErrors('Tham số sai.');
+            $this->redirect(Yii::app()->createUrl('admin/link'));
+        }
     }
 
     public function actionCreate() {
@@ -79,20 +87,31 @@ class LinkController extends AdminController {
         $name = ObjInput::get('name', 'str', '');
         $position = ObjInput::get('position', 'int', 0);
         $link = ObjInput::get('link', 'str', '');
+        $image = '';
+
         $data = array(
             'type' => $type,
             'name' => $name,
             'position' => $position,
             'link' => $link,
         );
-
+        $data['image'] = '';
         if (Yii::app()->request->isPostRequest) {
             if ($name != '') {
+                if (isset($_FILES['image']) && $_FILES['image']['size'] > 0) {
+                    $file = $_FILES['image'];
+                    $x = '200';
+                    $y = '';
+                    $imageName = Strings::cut_char(Strings::remove_space(Strings::get_ascii($name)), '30') . '_' . time();
+                    $images = Upload::UploadOne($file, IMG_LINK, IMG_LINK_2, IMG_W, IMG_WT, IMG_HT, $imageName);
+                    $data['image'] = $images;
+                }
                 $id_u = $Model->insertData($data);
                 if ($id_u > 0) {
                     echo Strings::alert('Thêm mới thành công', Yii::app()->createUrl('admin/link/'));
                     die();
                 } else {
+                    @unlink('./' . IMG_LINK . $data['image']);
                     $this->_err = 'Có lỗi trong quá trình xử lý';
                 }
             } else {

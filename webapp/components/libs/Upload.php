@@ -1000,7 +1000,11 @@ class Upload {
      * @return integer Size in bytes
      */
     function getsize($size) {
+        echo '<br>';
+        var_dump($size);
         $last = strtolower($size{strlen($size) - 1});
+        var_dump($last);
+        die;
         switch ($last) {
             case 'g':
                 $size *= 1024;

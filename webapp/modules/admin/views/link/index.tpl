@@ -44,6 +44,7 @@
                                 <th>Text hiển thị</th>
                                 <th>Vị trí</th>
                                 <th>Link</th>
+                                <th>Ảnh Nền</th>
                                 <th>Thao tác</th>
                             </tr>
                         </thead>
@@ -64,6 +65,7 @@
                                 <th>{$item.name}</th>
                                 <th>{$item.position}</th>
                                 <th><a href="{$item.link}" target="_blank">{$item.link}</a></th>
+                                <td>{if $item.image <>""}<img src="{$link_images}{$item.image}" width="50"/>{/if}</td>
                                 <th style="width:250px;">
                                 <span class="input-group-btn">                                   
                                     <a class="btn btn-warning" href='{Yii::app()->createUrl("admin/link/edit/",['id'=>$item.id])}' >Sửa</a>
