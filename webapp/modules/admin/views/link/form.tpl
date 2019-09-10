@@ -29,11 +29,11 @@
             <option value="1" {if $data.type == 1}selected{/if}>TRANG</option>
             <option value="2" {if $data.type == 2}selected{/if}>TRỢ GIÚP</option>
             <option value="3" {if $data.type == 3}selected{/if}>PHÁP LÝ</option></select>
-            <option value="4" {if $data.type == 4}selected{/if}>MẠNG XÃ HỘI</option></select>
+            <option value="4" {if $data.type == 4}selected{/if}>MẠNG XÃ HỘI</option>
         </div>
       </div>
       <div class="form-group">
-        <label class="col-sm-3 control-label">Ảnh nền cho Mạng Xã hội: </label>
+        <label class="col-sm-2 control-label">Ảnh nền cho Mạng Xã hội: </label>
         <div class="col-md-9">
           <input type="file" id="image" name="image" data-bfi-disabled>
           <br>
