@@ -97,8 +97,6 @@ class LinkController extends AdminController {
         if ($image != '') {
             $image_replace = base64_decode($image);
             $u = $this->_model->updateData(array('image' => ''), 'id='.$id);
-            var_dump($u);
-            die();
             if ($u > 0) {
                 $this->setErrors('Cập nhật thành công', 'success');
                 @unlink('./' . IMG_LINK . $image_replace);
