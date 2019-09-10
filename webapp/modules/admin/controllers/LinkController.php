@@ -45,6 +45,7 @@ class LinkController extends AdminController {
     }
 
     public function actionEdit() {
+        die();
         $id = ObjInput::get('id', 'int', 0);
         /** Xóa Ảnh * */
         if (isset($_GET['image']) && $_GET['image'] <> '') {
