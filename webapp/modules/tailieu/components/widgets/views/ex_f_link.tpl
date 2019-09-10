@@ -49,7 +49,10 @@
                     {foreach $data as $k=>$item}
                         {if $item.type == 4}
                             <dd>
-                                <a target="_blank" href="{$item.link}" rel="nofollow" class="foot-btn" style="background: url(https://tailieukientruc.com/{$smarty.const.IMG_LINK}{$item.image}) no-repeat">
+                                <a target="_blank" href="{$item.link}" rel="nofollow" class="foot-btn"
+                                style="background-size: cover;
+                                        background-repeat: no-repeat;
+                                        background-image: url(https://tailieukientruc.com/{$smarty.const.IMG_LINK}{$item.image});">
                                 </a>
                             </dd>
                         {/if}
