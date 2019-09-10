@@ -67,12 +67,15 @@
         </div>
       </div>
       <script>
-        $("select#type").change(function(){
+        
+        $("#type").change(function(){
+          console.log("11111");
           var selectedType = $(this).children("option:selected").val();
+		      console.log(selectedType);
           if (selectedType !== 4) {
-            $("#image").attr('disabled', true);
+            $("#image").prop('disabled', true);
           } else {
-            $("#image").removeAttr('disabled');
+            $("#image").prop('disabled', false);
           }
         });
       </script>
