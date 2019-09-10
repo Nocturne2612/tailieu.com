@@ -70,7 +70,7 @@
         
         $("#type").change(function(){
           var selectedType = $(this).children("option:selected").val();
-          if (selectedType !== 4) {
+          if (selectedType != 4) {
             $("#image").attr('disabled', 'disabled');
             console.log("add disable");
           } else {
