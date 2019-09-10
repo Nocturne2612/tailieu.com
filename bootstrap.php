@@ -4,7 +4,7 @@ define('DS', "/");
 if($_SERVER['HTTP_HOST']=='localhost'){
     define('ROOT_URL', 'http://localhost/tailieukientruc');
 }else {
-     define('ROOT_URL', 'https://tailieukientruc.com');
+     define('ROOT_URL', 'https://tailieukientruc.net');
 }
 
 define('ROOT_PATH', dirname(__FILE__));
