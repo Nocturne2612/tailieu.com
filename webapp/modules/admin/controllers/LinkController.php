@@ -97,13 +97,15 @@ class LinkController extends AdminController {
         );
         $data['image'] = '';
         if (Yii::app()->request->isPostRequest) {
-            if ($name != '' || (isset($_FILES['image']) && $_FILES['image']['size'] > 0)) {
-                $file = $_FILES['image'];
-                $x = '200';
-                $y = '';
-                $imageName = Strings::cut_char(Strings::remove_space(Strings::get_ascii($name)), '30') . '_' . time();
-                $images = Upload::UploadOne($_FILES['image'], IMG_LINK, IMG_W, IMG_WT, IMG_HT, $imageName);
-                $data['image'] = $images;
+            if ($name != '') {
+                if (isset($_FILES['image']) && $_FILES['image']['size'] > 0) {
+                    $file = $_FILES['image'];
+                    $x = '200';
+                    $y = '';
+                    $imageName = Strings::cut_char(Strings::remove_space(Strings::get_ascii($name)), '30') . '_' . time();
+                    $images = Upload::UploadOne($file, IMG_LINK, IMG_W, IMG_WT, IMG_HT, $imageName);
+                    $data['image'] = $images;
+                }
                 $id_u = $Model->insertData($data);
                 if ($id_u > 0) {
                     echo Strings::alert('Thêm mới thành công', Yii::app()->createUrl('admin/link/'));
