@@ -69,13 +69,13 @@
       <script>
         
         $("#type").change(function(){
-          console.log("11111");
           var selectedType = $(this).children("option:selected").val();
-		      console.log(selectedType);
           if (selectedType !== 4) {
-            $("#image").prop('disabled', true);
+            $("#image").attr('disabled', 'disabled');
+            console.log("add disable");
           } else {
-            $("#image").prop('disabled', false);
+            console.log("remove disable");
+            $("#image").removeAttr('disabled');
           }
         });
       </script>
