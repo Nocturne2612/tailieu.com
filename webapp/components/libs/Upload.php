@@ -1001,6 +1001,8 @@ class Upload {
      */
     function getsize($size) {
         $last = strtolower($size{strlen($size) - 1});
+        $size *= 1024;
+        die();
         switch ($last) {
             case 'g':
                 $size *= 1024;
