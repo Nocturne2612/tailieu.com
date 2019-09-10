@@ -43,14 +43,10 @@ class Link extends CFormModel {
     public static function deleteData($id) {
 
         if (DataHelper::deleteById(self::tableName(), (int) $id) > 0) {
-            $fc = DataHelper::delete(self::tableName(), ' parent_id= ' . (int) $id);
-            DataHelper::update(News::tableName(), array('parent_id' => 0, 'sub_id' => 0), '`parent_id` = ' . (int) $id);
-
-            echo Strings::alert('Bạn đã xoá danh mục!', Yii::app()->createUrl('admin/categorynews/'));
+            echo Strings::alert('Bạn đã xoá Link!', Yii::app()->createUrl('admin/link/'));
             die();
         } else {
-
-            echo Strings::alert('Có lỗi trong quá trình xử lý!', Yii::app()->createUrl('admin/categorynews/'));
+            echo Strings::alert('Có lỗi trong quá trình xử lý!', Yii::app()->createUrl('admin/link/'));
             die();
         }
     }

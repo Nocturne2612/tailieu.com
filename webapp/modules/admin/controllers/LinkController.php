@@ -68,8 +68,15 @@ class LinkController extends AdminController {
     }
 
     public function actionDel() {
-        $this->setErrors('Cập nhật thành công','success');
-        $this->redirect(Yii::app()->createUrl('admin/link/'));
+        $id = ObjInput::get('id', 'int', 0);
+        if ($id <> 0) {
+            $this->_model->deleteData($id);
+            $this->setErrors('Xóa thành công', 'success');
+            $this->redirect(Yii::app()->createUrl('admin/link'));
+        } else {
+            $this->setErrors('Tham số sai.');
+            $this->redirect(Yii::app()->createUrl('admin/link'));
+        }
     }
 
     public function actionCreate() {
