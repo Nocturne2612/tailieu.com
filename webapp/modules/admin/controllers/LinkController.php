@@ -147,15 +147,18 @@ class LinkController extends AdminController {
                     $images = Upload::UploadOne($file, IMG_LINK, IMG_LINK_2, IMG_W, IMG_WT, IMG_HT, $imageName);
                     $data['image'] = $images;
                 }
-                $id_u = $Model->insertData($data);
-                if ($id_u > 0) {
-                    echo Strings::alert('Thêm mới thành công', Yii::app()->createUrl('admin/link/'));
-                    die();
+                if($data['image']){
+                    $id_u = $Model->insertData($data);
+                    if ($id_u > 0) {
+                        echo Strings::alert('Thêm mới thành công', Yii::app()->createUrl('admin/link/'));
+                        die();
+                    } else {
+                        @unlink('./' . IMG_LINK . $data['image']);
+                        $this->_err = 'Có lỗi trong quá trình xử lý';
+                    }
                 } else {
-                    @unlink('./' . IMG_LINK . $data['image']);
                     echo Strings::alert('Lỗi!!! File tải lên quá lớn', Yii::app()->createUrl('admin/link/create'));
                     die();
-                    $this->_err = 'Có lỗi trong quá trình xử lý';
                 }
             } else {
                 $this->_err = 'Text hiển thị không được để trống';
