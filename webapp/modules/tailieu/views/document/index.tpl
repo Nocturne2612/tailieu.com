@@ -129,9 +129,6 @@
                                     <a target="_blank" href="{SystemBase::buildUrl('tailieu/search',['keyword'=> $t])}" title="{$t}" class="">{$t}</a>
                                 {/foreach}
                                 <div class="detail-more">
-                                    <span less="">less</span>
-                                </div>
-                                <div class="detail-more">
                                     {$output.full}
                                 </div>
                             </div>
