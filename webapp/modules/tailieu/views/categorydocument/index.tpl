@@ -119,12 +119,12 @@
                 <div class="main-body">
 
                     {if $outputs}
-                        <ul class="mb-box clearfix">
+                        <ul class="mb-box masonry-element clearfix tpl-ul">
                             {$this->widget('TWidgets',['methodName'=>'productView','product'=> $outputs['data'],'check'=> true],true)} 
                         </ul>
                         {$outputs['pageHtml']}
                     {else}
-                        <ul class="mb-box clearfix">
+                        <ul class="mb-box masonry-element clearfix tpl-ul">
                             {$this->widget('TWidgets',['methodName'=>'productView','product'=> $output['data'],'check'=> true],true)} 
                         </ul>
                         {$output['pageHtml']}
