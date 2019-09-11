@@ -37,7 +37,7 @@
     <div class="user-main-inner">
         <div class="user-empty">
             <div class="user-empty-img"></div>
-            <p class="user-empty-tips">You don't have any downloads yet.</p>
+            <p class="user-empty-tips">Bạn chưa upload Tài liệu nào.</p>
         </div>
     </div>
     {/if}
