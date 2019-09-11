@@ -127,11 +127,11 @@
                                 {assign var="arr_tag" value=","|explode:$output.tag}
                                 {foreach $arr_tag as $t}
                                     <a target="_blank" href="{SystemBase::buildUrl('tailieu/search',['keyword'=> $t])}" title="{$t}" class="">{$t}</a>
-                                {/foreach}
+                                {/foreach}<br/>
+                                <br/>
                                 <div class="detail-more">
                                     <span less="">less</span>
-                                    <br/>
-                                    <br/>
+
                                 </div>
                                 <div class="detail-more">
                                     {$output.full}
