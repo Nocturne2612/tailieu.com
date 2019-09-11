@@ -1,9 +1,9 @@
 ﻿<div id="v2-subpageBan" class="subpageBan new-subpageBan">
     <div class="w1520 pr">
         <h1 class="title-main">{$data.title}</h1>
-        <p class="detail-breadcrumbs" style="font-size: 12px;">
+        {* <p class="detail-breadcrumbs" style="font-size: 12px;">
             {$this->widget('TWidgets',['methodName'=>'breadcrums','data'=>$data],true)}
-        </p>
+        </p> *}
         <!-- search -->
         <div class="serach-box">
             <form class="sb-form clearfix">

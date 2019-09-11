@@ -50,7 +50,7 @@
                         {if $item.type == 4}
                             <dd>
                                 <a target="_blank" href="{$item.link}" rel="nofollow" class="foot-btn"
-                                style="background-size: 100% 100%;
+                                style="background-size: contain;
                                         background-repeat: no-repeat;
                                         background-image: url(https://tailieukientruc.com/{$smarty.const.IMG_LINK}{$item.image});">
                                 </a>

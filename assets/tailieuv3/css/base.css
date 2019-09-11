@@ -4902,7 +4902,7 @@ textarea:-ms-input-placeholder {
   -webkit-box-shadow: 0 2px 5px rgba(21, 21, 21, .1);
   -moz-box-shadow: 0 2px 5px rgba(21, 21, 21, .1);
   box-shadow: 0 2px 5px rgba(21, 21, 21, .1);
-  width: 140px;
+  width: 240px;
   padding-top: 8px;
   position: relative;
   border-radius: 10px 0 0 10px
@@ -4928,16 +4928,16 @@ textarea:-ms-input-placeholder {
 .vfp-cont {
   position: absolute;
   top: 0;
-  left: 140px;
+  left: 240px;
   background: #fff;
   box-shadow: 0 2px 5px rgba(21, 21, 21, .1);
   padding-left: 20px;
-  width: 430px;
+  width: 500px;
   overflow: hidden;
   display: none;
   z-index: -1;
   height: 100%;
-  border-radius: 0 10px 10px 0
+  border-radius: 0 10px 10px 0;
 }
 
 .vfp-cont-right {
@@ -4965,13 +4965,14 @@ textarea:-ms-input-placeholder {
   font-size: 14px;
   color: #666;
   margin-bottom: 12px;
-  width: 130px;
+  margin-left: 5px;
+  width: 200px;
   display: inline-block;
   float: left;
   overflow: hidden;
   word-break: keep-all;
   white-space: nowrap;
-  text-overflow: ellipsis
+  text-overflow: ellipsis;
 }
 
 .vfp-cont>a:hover {
@@ -4985,7 +4986,7 @@ textarea:-ms-input-placeholder {
 
 .Topnav li.pulldown-box .mainCont li>a {
   overflow: hidden;
-  width: 140px;
+  width: 240px;
   height: 40px;
   font-size: 14px;
   color: #666;
