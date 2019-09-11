@@ -27,7 +27,6 @@
                     </div>
                 </div>
             </li>
-            <div class="gutter-sizer"></div>
             {/foreach}
         </ul>
         <div class="user-list-wrap">
