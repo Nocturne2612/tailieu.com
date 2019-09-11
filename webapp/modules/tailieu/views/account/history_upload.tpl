@@ -1,6 +1,6 @@
 <div class="user-main">
     <div class="user-main-inner">
-        <h1 class="user-main-title">Lịch sử download</h1>
+        <h1 class="user-main-title">Lịch sử Upload</h1>
     </div>
     {if $product}
     <div class="user-list-wrap">
@@ -31,7 +31,7 @@
             {/foreach}
         </ul>
         <div class="user-list-wrap">
-            {$transactions['pageHtml']}
+            {$product['pageHtml']}
         </div>
     </div>
     {else}
