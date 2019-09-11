@@ -129,15 +129,15 @@
                                     <a target="_blank" href="{SystemBase::buildUrl('tailieu/search',['keyword'=> $t])}" title="{$t}" class="">{$t}</a>
                                 {/foreach}
                                 <div class="detail-more">
-                                    <span less="">less</span>
+                                    <span less="">less</span><br/>
+
+                                    {$output.full}
                                 </div>
                             </div>
                             <div class="detail-more">
                                 <span more>
                                     show more
                                     <i class="iconfont icon-xiangxiazhanhang"></i>
-
-                                {$output.full}
                                 </span>
                                 <div id="fb-root"></div>
                                 <script src="https://connect.facebook.net/vi_VN/all.js#appId=882475878492163&xfbml=1"></script>
