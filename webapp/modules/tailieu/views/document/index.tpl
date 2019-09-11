@@ -80,7 +80,7 @@
                                     <span>Share this: </span>
                                     <div class="normal share-group circle ">
 {*                                        <a class="btn btn-large btn-secondary" href="{SystemBase::buildUrl('tailieu/account/favorite',['like'=>$output.id])}"  rel="not_faved" title="Collect This File">Thêm vào yêu thích</a>*}
-{*                                        <br/>*}
+                                        <br/>
                                         <div style="width: 100%;text-align: center;position: relative;"> 
                                             <div class="fb-like" data-href="{SystemBase::buildUrl('tailieu/document',['id'=>$output.id,'title'=>$output.title])}" data-width="450" data-layout="button_count" data-show-faces="false" data-share="true" data-send="false"></div>
                                             <script src="https://apis.google.com/js/platform.js" async defer></script>
