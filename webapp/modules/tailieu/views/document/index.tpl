@@ -77,14 +77,14 @@
                                     <span>{$output.count}</span>
                                 </li>
                                 <li>
-                                    <span>Share this:</span>
+                                    <span>Share this: </span>
                                     <div class="normal share-group circle ">
-                                        <a class="btn btn-large btn-secondary" href="{SystemBase::buildUrl('tailieu/account/favorite',['like'=>$output.id])}"  rel="not_faved" title="Collect This File">Thêm vào yêu thích</a>
-                                        <br/>
+{*                                        <a class="btn btn-large btn-secondary" href="{SystemBase::buildUrl('tailieu/account/favorite',['like'=>$output.id])}"  rel="not_faved" title="Collect This File">Thêm vào yêu thích</a>*}
+{*                                        <br/>*}
                                         <div style="width: 100%;text-align: center;position: relative;"> 
                                             <div class="fb-like" data-href="{SystemBase::buildUrl('tailieu/document',['id'=>$output.id,'title'=>$output.title])}" data-width="450" data-layout="button_count" data-show-faces="false" data-share="true" data-send="false"></div>
                                             <script src="https://apis.google.com/js/platform.js" async defer></script>
-                                            <br/>
+{*                                            <br/>*}
                                             <g:plusone size='medium'></g:plusone>
                                             <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
                                             {literal}<script>!function (d, s, id) {
@@ -125,16 +125,20 @@
                         <div class="keyWords-wrap needmore">
                             <div class="dl-keyWords clearfix ele_keyword ">
                                 {assign var="arr_tag" value=","|explode:$output.tag}
-                                {foreach $arr_tag as $t} 
+                                {foreach $arr_tag as $t}
                                     <a target="_blank" href="{SystemBase::buildUrl('tailieu/search',['keyword'=> $t])}" title="{$t}" class="">{$t}</a>
-                                {/foreach} 
+                                {/foreach}
+                                <div class="detail-more">
+                                    <span less="">less</span>
+                                </div>
                             </div>
                             <div class="detail-more">
                                 <span more>
                                     show more
                                     <i class="iconfont icon-xiangxiazhanhang"></i>
-                                </span>
+
                                 {$output.full}
+                                </span>
                                 <div id="fb-root"></div>
                                 <script src="https://connect.facebook.net/vi_VN/all.js#appId=882475878492163&xfbml=1"></script>
                                 <fb:comments href="{SystemBase::buildUrl('tailieu/document',['id'=>$output.id,'title'=>$output.title])}" num_posts="5" width="auto"></fb:comments>
