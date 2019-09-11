@@ -16,16 +16,15 @@
                 </p>
                 <span class="user-panel-id">
                     {if $data.type == 2}
-                        <li class="list-group-item"><b style="color: red;font-weight: bold">VIP</b> đến <b style="color: #468847">{$data.time_vip_end|date_format:"%d-%m-%Y"}</b></li>
+                        <b style="color: red;font-weight: bold">VIP</b> đến <b style="color: #468847">{$data.time_vip_end|date_format:"%d-%m-%Y"}</b>
                         {else}
-                        <li class="list-group-item"> <b style="font-weight: bold">Bình thường</b></li>
+                        <b style="font-weight: bold">Bình thường</b>
                         {/if}
-
                 </span>
-                <li class="list-group-item">Gia nhập từ: <b class="alert-warning">{$data.create_time|date_format:"%d-%m-%Y"}</b></li>
-                <li class="list-group-item">Số Point: <b class="alert-danger">{$data.point|number_format:2:",":"."|replace:',00':''}</b> Point</li>
-                <li class="list-group-item">Upload: <b class="alert-danger">{$data.count_upload}</b> tài liệu</li>
-                <li class="list-group-item">Download: <b class="alert-danger">{$data.count_down}</b> tài liệu</li>
+                <span class="user-panel-id">Gia nhập từ: <b class="alert-warning">{$data.create_time|date_format:"%d-%m-%Y"}</b></span>
+                <span class="user-panel-id">Số Point: <b class="alert-danger">{$data.point|number_format:2:",":"."|replace:',00':''}</b> Point</span>
+                <span class="user-panel-id">Upload: <b class="alert-danger">{$data.count_upload}</b> tài liệu</span>
+                <span class="user-panel-id">Download: <b class="alert-danger">{$data.count_down}</b> tài liệu</span>
             </div>
         </div>
         <ul class="user-router">
