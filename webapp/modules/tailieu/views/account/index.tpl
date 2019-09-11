@@ -4,9 +4,8 @@
     </div>
     {if $transactions}
     <div class="user-list-wrap">
-        <ul class="user-gdlist">
-            <li class="user-gdsizer"></li>
-        {foreach $transactions['data'] as $k=>$t}
+        <ul class="user-gdlist" style="display: flex;flex-wrap: wrap;">
+            {foreach $transactions['data'] as $k=>$t}
             <li class="user-gditem">
                 <div class="user-gditem-inner">
                     <div class="item-img">
@@ -14,21 +13,23 @@
                             href="{SystemBase::buildUrl('tailieu/document',['title'=>$t.title,'id'=>$t.id_product])}"
                             class="item-link"></a>
                         {if isset($t.picture) && $t.picture <>""}
-                        {assign var="arr_pic" value="|"|explode:$t.picture}
-                        <img src="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_PRODUCT_THUMB}{$arr_pic[0]}"
-                            alt="{$t.title}">
-                        {/if}
+                            {assign var="arr_pic" value="|"|explode:$t.picture}
+                            <img src="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_PRODUCT_THUMB}{$arr_pic[0]}"
+                                alt="{$t.title}">
+                            {/if}
                     </div>
                     <h4 class="item-title">{$t.title}</h4>
-                   <div class="item-info">
-                    <span class="item-size">{$t.price|number_format:2:",":"."|replace:',00':''} POINT </span>
-                    <span class="item-size">{$arr_status[$t.status]}&nbsp;&nbsp; </span>
-                </div>
+                    <div class="item-info">
+                        <span class="item-size">{$t.price|number_format:2:",":"."|replace:',00':''} POINT </span>  |  
+                        <span class="item-size">{$arr_status[$t.status]}&nbsp;&nbsp; </span>
+                    </div>
                 </div>
             </li>
             {/foreach}
         </ul>
-        {$transactions['pageHtml']}
+        <div class="user-list-wrap">
+            {$transactions['pageHtml']}
+        </div>
     </div>
     {else}
     <div class="user-main-inner">
