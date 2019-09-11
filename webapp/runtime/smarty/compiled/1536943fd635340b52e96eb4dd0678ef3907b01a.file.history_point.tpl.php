@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2019-09-03 08:42:48
+<?php /* Smarty version Smarty-3.1.19, created on 2019-09-10 09:48:58
          compiled from "/home/tailieuk/public_html/webapp/modules/tailieu/views/account/history_point.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16037640045abccbc71917d0-37881288%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1536943fd635340b52e96eb4dd0678ef3907b01a' => 
     array (
       0 => '/home/tailieuk/public_html/webapp/modules/tailieu/views/account/history_point.tpl',
-      1 => 1566790391,
+      1 => 1568001966,
       2 => 'file',
     ),
   ),

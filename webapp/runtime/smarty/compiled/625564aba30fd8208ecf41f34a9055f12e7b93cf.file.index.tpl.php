@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2019-09-09 04:30:14
+<?php /* Smarty version Smarty-3.1.19, created on 2019-09-11 08:43:28
          compiled from "/home/tailieuk/public_html/webapp/modules/tailieu/views/categorydocument/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7652901785abc88d214e9f3-26844288%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '625564aba30fd8208ecf41f34a9055f12e7b93cf' => 
     array (
       0 => '/home/tailieuk/public_html/webapp/modules/tailieu/views/categorydocument/index.tpl',
-      1 => 1568001968,
+      1 => 1568191379,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'data' => 0,
-    'this' => 0,
     'category' => 0,
     'v' => 0,
     'arr_tag' => 0,
     't' => 0,
     'outputs' => 0,
+    'this' => 0,
     'output' => 0,
   ),
   'has_nocache_code' => false,
@@ -34,16 +34,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <div class="w1520 pr">
         <h1 class="title-main"><?php echo $_smarty_tpl->tpl_vars['data']->value['title'];?>
 </h1>
-        <p class="detail-breadcrumbs" style="font-size: 12px;">
-            <?php echo $_smarty_tpl->tpl_vars['this']->value->widget('TWidgets',array('methodName'=>'breadcrums','data'=>$_smarty_tpl->tpl_vars['data']->value),true);?>
-
-        </p>
+        
         <!-- search -->
         <div class="serach-box">
             <form class="sb-form clearfix">
-                <input type="text" placeholder="Search <?php echo $_smarty_tpl->tpl_vars['data']->value['title'];?>
-"
-                       class="sb-input fl-l comment-search-keyword-box-input">
+                <input type="text" placeholder="Tìm kiếm <?php echo $_smarty_tpl->tpl_vars['data']->value['title'];?>
+" class="sb-input fl-l comment-search-keyword-box-input">
                 <a href="javascript:;" class="sb-btn fl-l search-box-input-index" data-ga="1">
                     <i class="iconfont icon-sousuo"></i>
                 </a>
@@ -140,7 +136,7 @@ $_smarty_tpl->tpl_vars['t']->_loop = true;
                 </div>
 
                 <div class="subpage-menu-toggleBox">
-                    <span class="lg-subpage-filter-sort-title xs-hide">:</span>
+                    <span class="lg-subpage-filter-sort-title xs-hide" style="width: 120px;">Danh mục con:</span>
                     <div class="subpage-menu-box new-subpage-menu-box">
 
                         <?php if ($_smarty_tpl->tpl_vars['data']->value['parent_id']>0&&isset($_smarty_tpl->tpl_vars['category']->value['sub_category'][$_smarty_tpl->tpl_vars['data']->value['parent_id']])) {?>
@@ -155,7 +151,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                                     <div class="subpage-menu-inneBox">
                                         <a href="<?php echo @constant('ROOT_URL');?>
 /<?php echo $_smarty_tpl->tpl_vars['v']->value['acsii'];?>
-.html" class="sort-btn on"><?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+.html" class="sort-btn"><?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
 </a>
                                     </div>
                                 <?php }?>
@@ -172,7 +168,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                                     <div class="subpage-menu-inneBox">
                                         <a href="<?php echo @constant('ROOT_URL');?>
 /<?php echo $_smarty_tpl->tpl_vars['v']->value['acsii'];?>
-.html" class="sort-btn on"><?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+.html" class="sort-btn"><?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
 </a>
                                     </div>
                                 <?php } ?>
@@ -197,17 +193,19 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                 <div class="main-body">
 
                     <?php if ($_smarty_tpl->tpl_vars['outputs']->value) {?>
-                        <ul class="mb-box clearfix">
+                        <ul class="mb-box masonry-element clearfix tpl-ul">
                             <?php echo $_smarty_tpl->tpl_vars['this']->value->widget('TWidgets',array('methodName'=>'productView','product'=>$_smarty_tpl->tpl_vars['outputs']->value['data'],'check'=>true),true);?>
  
                         </ul>
                         <?php echo $_smarty_tpl->tpl_vars['outputs']->value['pageHtml'];?>
 
                     <?php } else { ?>
-                        <ul class="mb-box clearfix">
+                        <ul class="mb-box masonry-element clearfix tpl-ul">
                             <?php echo $_smarty_tpl->tpl_vars['this']->value->widget('TWidgets',array('methodName'=>'productView','product'=>$_smarty_tpl->tpl_vars['output']->value['data'],'check'=>true),true);?>
  
                         </ul>
+                        <?php echo $_smarty_tpl->tpl_vars['output']->value['pageHtml'];?>
+
                     <?php }?>
                 </div>
             </div>

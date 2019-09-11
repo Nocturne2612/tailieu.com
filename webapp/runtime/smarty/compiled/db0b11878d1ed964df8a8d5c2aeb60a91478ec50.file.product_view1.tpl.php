@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2019-09-09 04:19:08
+<?php /* Smarty version Smarty-3.1.19, created on 2019-09-11 06:51:32
          compiled from "/home/tailieuk/public_html/webapp/modules/tailieu/components/widgets/views/product_view1.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:13215186045abc88d1e859b3-98106653%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'db0b11878d1ed964df8a8d5c2aeb60a91478ec50' => 
     array (
       0 => '/home/tailieuk/public_html/webapp/modules/tailieu/components/widgets/views/product_view1.tpl',
-      1 => 1568001976,
+      1 => 1568184688,
       2 => 'file',
     ),
   ),
@@ -32,7 +32,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['d']->key => $_smarty_tpl->tpl_vars['d
 $_smarty_tpl->tpl_vars['d']->_loop = true;
 ?>
         <div class="recommend-img-box">
-                <a target="_blank" href="<?php echo SystemBase::buildUrl('tailieu/document',array('id'=>$_smarty_tpl->tpl_vars['d']->value['id'],'title'=>$_smarty_tpl->tpl_vars['d']->value['title']));?>
+                <a href="<?php echo SystemBase::buildUrl('tailieu/document',array('id'=>$_smarty_tpl->tpl_vars['d']->value['id'],'title'=>$_smarty_tpl->tpl_vars['d']->value['title']));?>
 " title="<?php echo $_smarty_tpl->tpl_vars['d']->value['title'];?>
 "  alt="<?php echo $_smarty_tpl->tpl_vars['d']->value['title'];?>
 "  width="100%">

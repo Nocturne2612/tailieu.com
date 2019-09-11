@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2019-09-03 08:42:03
+<?php /* Smarty version Smarty-3.1.19, created on 2019-09-11 09:58:59
          compiled from "/home/tailieuk/public_html/webapp/modules/tailieu/views/account/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19800302265abc8b8243a9e9-18042410%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '36061b6be42b29d552b04e323e420e5a0d0deecd' => 
     array (
       0 => '/home/tailieuk/public_html/webapp/modules/tailieu/views/account/index.tpl',
-      1 => 1566790391,
+      1 => 1568195936,
       2 => 'file',
     ),
   ),
@@ -29,8 +29,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_5abc8b824abc42_31445753')) {function content_5abc8b824abc42_31445753($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include '/home/tailieuk/public_html/webapp/vendors/smarty/libs/plugins/modifier.replace.php';
 ?><div class="user-main user-main-inner">
     <h1>Lịch sử download</h1>
+    <?php if ($_smarty_tpl->tpl_vars['transactions']->value) {?>
     <ul class="mb-box masonry-element  clearfix tpl-ul">
-            <?php if ($_smarty_tpl->tpl_vars['transactions']->value) {?>
                 <?php  $_smarty_tpl->tpl_vars['t'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['t']->_loop = false;
  $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['transactions']->value['data']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -66,6 +66,7 @@ $_smarty_tpl->tpl_vars['t']->_loop = true;
                 </li>
                 <div class="gutter-sizer"></div>
             <?php } ?>
+        </ul>
             <?php echo $_smarty_tpl->tpl_vars['transactions']->value['pageHtml'];?>
 
         <?php } else { ?>
@@ -73,8 +74,6 @@ $_smarty_tpl->tpl_vars['t']->_loop = true;
                 <td colspan="6" align="center">Không tồn tại tài liệu</td>
             </tr>
         <?php }?>
-
-    </ul>
 </div>
 
 

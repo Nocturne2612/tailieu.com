@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2019-07-26 10:30:02
+<?php /* Smarty version Smarty-3.1.19, created on 2019-09-10 09:49:14
          compiled from "/home/tailieuk/public_html/webapp/modules/tailieu/views/account/favorite.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:20468688605abca98f3bba36-27827704%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '70542301e7e0fc4151465831db18c01a534d3206' => 
     array (
       0 => '/home/tailieuk/public_html/webapp/modules/tailieu/views/account/favorite.tpl',
-      1 => 1564036781,
+      1 => 1568001966,
       2 => 'file',
     ),
   ),

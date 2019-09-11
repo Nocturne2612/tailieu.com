@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2018-03-30 01:26:06
+<?php /* Smarty version Smarty-3.1.19, created on 2019-09-10 09:49:32
          compiled from "/home/tailieuk/public_html/webapp/modules/tailieu/views/account/changepass.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12933418345abd922e71ff16-58551717%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '92f15a27769c2a0fb3dcdae4e7098c396522508a' => 
     array (
       0 => '/home/tailieuk/public_html/webapp/modules/tailieu/views/account/changepass.tpl',
-      1 => 1522308731,
+      1 => 1568001966,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.19',
+  'unifunc' => 'content_5abd922e764399_17304919',
   'variables' => 
   array (
     'errors' => 0,
@@ -22,84 +24,62 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'this' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5abd922e764399_17304919',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5abd922e764399_17304919')) {function content_5abd922e764399_17304919($_smarty_tpl) {?>
-<div class="common-mains">
-    <div class="about-content">
-        <h1>Đổi mật khẩu</h1>
-        <?php echo CHtml::beginForm('','post',array('name'=>'changepass','id'=>'changepass'));?>
+<div class="user-main">
+    <div class="user-main-inner">
+        <div class="user-profile">
 
-        <div class="panel-body fn-clear"> 
-            <div class="ui-box panel sign-panel" id="signin-panel">
-                <?php if ($_smarty_tpl->tpl_vars['errors']->value!='') {?>
-                    <div class="alert alert-danger"><?php echo $_smarty_tpl->tpl_vars['errors']->value;?>
+            <h1>Đổi Mật khẩu</h1>
+             <?php echo CHtml::beginForm('','post',array('name'=>'changepass','id'=>'changepass'));?>
+
+            <div class="user-profile-inner user-connect"> 
+                <div class="window-jobCollect-contain">
+                    <?php if ($_smarty_tpl->tpl_vars['errors']->value!='') {?>
+                        <div class="alert alert-danger"><?php echo $_smarty_tpl->tpl_vars['errors']->value;?>
 </div>
-                <?php }?>
-                <?php if ($_smarty_tpl->tpl_vars['success']->value!='') {?>
-                    <div class="alert alert-success"><?php echo $_smarty_tpl->tpl_vars['success']->value;?>
+                    <?php }?>
+                    <?php if ($_smarty_tpl->tpl_vars['success']->value!='') {?>
+                        <div class="alert alert-success"><?php echo $_smarty_tpl->tpl_vars['success']->value;?>
 </div>
-                <?php }?>
-                <div class="ui-form-item fn-clear">
-                    <label for="password_old" class="ui-label">Mật khẩu hiện tại</label>
-                    <input class="ui-input" id="password_old" name="password_old" placeholder="" type="password" autocomplete="off">
-                </div>
-                <div class="ui-form-item fn-clear">
-                    <label for="password" class="ui-label">Mật khẩu mới</label>
+                    <?php }?>
+                    <p class="window-jobCollect-question">Mật khẩu cũ</p>
+                    <div class="window-jobCollect-group _job">
+                        <input class="ui-input" id="password_old" name="password_old" placeholder="Mật khẩu hiện tại" type="password" autocomplete="off">
+                    </div>
+                    <p class="window-jobCollect-question">Mật khẩu mới</p>
+                    <div class="window-jobCollect-group _job">
+                         <input class="ui-input" id="password" name="password" placeholder="Mật khẩu mới" type="password">
+                    </div>
+                    <p class="window-jobCollect-question">Xác nhận lại mật khẩu</p>
+                    <div class="window-jobCollect-group _job">
+                         <input class="ui-input" id="repassword" placeholder="Xác nhận mật khẩu mới" name="repassword" type="password">
+                    </div>
+                    <p class="window-jobCollect-question">Mã bảo mật</p>
+                    <div class="window-jobCollect-group _job ccaptcha">
+                        <input class="ui-input" id="verifyCode" name="verifyCode" type="text">
+                        <?php echo $_smarty_tpl->tpl_vars['this']->value->widget('CCaptcha',array('id'=>'ccaptcha'),true);?>
 
-                    <input class="ui-input" id="password" name="password" placeholder="" type="password">
-                </div>
-                <div class="ui-form-item fn-clear">
-                    <label for="repassword" class="ui-label">Xác nhận mật khẩu mới</label>
+                    </div>
+                    <button type="submit" href="javascript:;" class="submit">Thực hiện</button>
 
-                    <input class="ui-input" id="repassword" placeholder="" name="repassword" type="password">
-
-                </div>
-                <div class="ui-form-item fn-clear">
-                    <label for="" class="ui-label">Mã bảo mật:</label>
-                    <input class="ui-label" id="verifyCode" name="verifyCode" type="text">
-                    <div class="col-sm-4 pdl5"> <?php echo $_smarty_tpl->tpl_vars['this']->value->widget('CCaptcha',array('id'=>'ccaptcha'),true);?>
- </div>
-                </div>
-                <hr>
-                <div class="ui-form-item fn-clear">
-
-                    <input type="submit" class="btn btn-warning" href="" value="Cập nhật">
                 </div>
             </div>
 
+            <?php echo CHtml::endForm();?>
+
         </div>
-
-        <?php echo CHtml::endForm();?>
-
+        
+            <style>
+                #ccaptcha{width:80px;}
+            </style>
+            <style>
+                #ccaptcha_button {
+                    display: none}
+            </style>
+        
     </div>
 </div>
-
-    <style>
-        #ccaptcha{width:80px;}
-    </style>
-    <style>
-        #ccaptcha_button {
-            display: none}
-        </style>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <?php }} ?>

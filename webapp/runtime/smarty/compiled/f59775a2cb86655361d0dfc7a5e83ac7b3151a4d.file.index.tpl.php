@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2018-04-15 01:16:54
+<?php /* Smarty version Smarty-3.1.19, created on 2019-09-09 17:54:37
          compiled from "/home/tailieuk/public_html/webapp/modules/admin/views/useradmin/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:13140670475ad2a8064951c1-48674708%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f59775a2cb86655361d0dfc7a5e83ac7b3151a4d' => 
     array (
       0 => '/home/tailieuk/public_html/webapp/modules/admin/views/useradmin/index.tpl',
-      1 => 1522308731,
+      1 => 1563752346,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.19',
+  'unifunc' => 'content_5ad2a8064f7202_49758304',
   'variables' => 
   array (
     'link_action' => 0,
@@ -25,8 +27,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'pageHtml' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5ad2a8064f7202_49758304',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ad2a8064f7202_49758304')) {function content_5ad2a8064f7202_49758304($_smarty_tpl) {?><div class="page-title">
   <div class="title-env">
@@ -95,6 +95,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <thead>
               <tr>
                 <th>ID</th>
+                <th>Họ và tên</th>
                 <th>Tài khoản</th>
                 <th>Email</th>
                 <th>Trạng thái</th>
@@ -114,6 +115,8 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 ?>
             <tr>
               <td><?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+</td>
+              <td><?php echo $_smarty_tpl->tpl_vars['item']->value['fullname'];?>
 </td>
               <td><?php echo $_smarty_tpl->tpl_vars['item']->value['username'];?>
 </td>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2019-09-09 04:07:41
+<?php /* Smarty version Smarty-3.1.19, created on 2019-09-11 04:26:12
          compiled from "/home/tailieuk/public_html/webapp/modules/tailieu/components/widgets/views/product_view.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:10323218165abc88d0a43599-26354836%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '252fa7d34b8746c35d04379f452b4c69a5e31dbe' => 
     array (
       0 => '/home/tailieuk/public_html/webapp/modules/tailieu/components/widgets/views/product_view.tpl',
-      1 => 1568001976,
+      1 => 1568175962,
       2 => 'file',
     ),
   ),
@@ -48,7 +48,7 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
 " data-type="1" title="Add to favorites" class="hs-star  star-btn-click element-list-click" data-like="4773403_like">
                         <i class="iconfont icon-xin"></i>
                     </a>
-                    <a target="_blank" data-down="<?php echo $_smarty_tpl->tpl_vars['rs']->value['id'];?>
+                    <a data-down="<?php echo $_smarty_tpl->tpl_vars['rs']->value['id'];?>
 _DOWNLOAD" rel="nofollow" href="/element/down?id=NDc3MzQwMw==&type=1" class="hs-downPng down-jpg-click element-list-click">
                         <i class="iconfont icon-xiazai"></i>&nbsp;<?php echo smarty_modifier_replace(number_format($_smarty_tpl->tpl_vars['rs']->value['count_down'],2,",","."),',00','');?>
 
@@ -63,7 +63,7 @@ _DOWNLOAD" rel="nofollow" href="/element/down?id=NDc3MzQwMw==&type=1" class="hs-
 " title="<?php echo $_smarty_tpl->tpl_vars['rs']->value['title'];?>
 " alt="<?php echo $_smarty_tpl->tpl_vars['rs']->value['title'];?>
 " class="lazy"><?php }?>
-                    <a target="_blank" data-ga="<?php echo $_smarty_tpl->tpl_vars['rs']->value['id'];?>
+                    <a data-ga="<?php echo $_smarty_tpl->tpl_vars['rs']->value['id'];?>
 _ImgUrl" title="<?php echo $_smarty_tpl->tpl_vars['rs']->value['title'];?>
 " href="<?php echo SystemBase::buildUrl('tailieu/document',array('id'=>$_smarty_tpl->tpl_vars['rs']->value['id'],'title'=>$_smarty_tpl->tpl_vars['rs']->value['title']));?>
 " class="tran element-list-click"></a>
@@ -94,7 +94,7 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
 _like">
                         <i class="iconfont icon-xin"></i>
                     </a>
-                    <a target="_blank" data-down="<?php echo $_smarty_tpl->tpl_vars['rs']->value['id'];?>
+                    <a data-down="<?php echo $_smarty_tpl->tpl_vars['rs']->value['id'];?>
 _DOWNLOAD" rel="nofollow" href="<?php echo SystemBase::buildUrl('tailieu/download',array('id'=>$_smarty_tpl->tpl_vars['rs']->value['id'],'title'=>$_smarty_tpl->tpl_vars['rs']->value['title']));?>
 " class="hs-downPng down-jpg-click element-list-click">
                         <i class="iconfont icon-xiazai"></i>&nbsp;<?php echo smarty_modifier_replace(number_format($_smarty_tpl->tpl_vars['rs']->value['count_down'],2,",","."),',00','');?>
@@ -110,7 +110,7 @@ _DOWNLOAD" rel="nofollow" href="<?php echo SystemBase::buildUrl('tailieu/downloa
 " title="<?php echo $_smarty_tpl->tpl_vars['rs']->value['title'];?>
 " alt="<?php echo $_smarty_tpl->tpl_vars['rs']->value['title'];?>
 " class="lazy"><?php }?>
-                    <a target="_blank" data-ga="<?php echo $_smarty_tpl->tpl_vars['rs']->value['id'];?>
+                    <a data-ga="<?php echo $_smarty_tpl->tpl_vars['rs']->value['id'];?>
 _ImgUrl" title="<?php echo $_smarty_tpl->tpl_vars['rs']->value['title'];?>
 " href="<?php echo SystemBase::buildUrl('tailieu/document',array('id'=>$_smarty_tpl->tpl_vars['rs']->value['id'],'title'=>$_smarty_tpl->tpl_vars['rs']->value['title']));?>
 " class="tran element-list-click"></a>

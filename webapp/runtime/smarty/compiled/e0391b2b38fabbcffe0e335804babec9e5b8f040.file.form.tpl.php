@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2018-04-19 18:41:00
+<?php /* Smarty version Smarty-3.1.19, created on 2019-09-10 09:38:04
          compiled from "/home/tailieuk/public_html/webapp/modules/admin/views/products/form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9974723815abdbb11314a93-54097421%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e0391b2b38fabbcffe0e335804babec9e5b8f040' => 
     array (
       0 => '/home/tailieuk/public_html/webapp/modules/admin/views/products/form.tpl',
-      1 => 1524163259,
+      1 => 1563752345,
       2 => 'file',
     ),
   ),
@@ -23,6 +23,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'title_page' => 0,
     'link_action' => 0,
     'error' => 0,
+    'success' => 0,
     'data' => 0,
     'combo_category' => 0,
     'combo_category2' => 0,
@@ -68,12 +69,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </div>
     <div class="row">
         <div class="panel panel-default">
-            <div class="panel-body"> <?php if ($_smarty_tpl->tpl_vars['error']->value!=false) {?>
-                <div class="alert alert-danger">
-                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                    <?php echo $_smarty_tpl->tpl_vars['error']->value;?>
+            <div class="panel-body"><?php if ($_smarty_tpl->tpl_vars['error']->value!=false) {?>
+                <div class="alert alert-danger"><?php echo $_smarty_tpl->tpl_vars['error']->value;?>
 </div>
-                    <?php }?>
+            <?php }?>
+            <?php if ($_smarty_tpl->tpl_vars['success']->value!=false) {?>
+                <div class="alert alert-success"><?php echo $_smarty_tpl->tpl_vars['success']->value;?>
+</div>
+            <?php }?>
                         <?php echo CHtml::beginForm('','post',array('role'=>'form','class'=>'form-wizard','enctype'=>'multipart/form-data'));?>
 
                     <div class="col-md-8">

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2018-06-09 02:12:08
+<?php /* Smarty version Smarty-3.1.19, created on 2019-09-09 17:59:59
          compiled from "/home/tailieuk/public_html/webapp/modules/admin/views/permission/form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:54706185b1b37782d7711-74018595%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd2ffd26e457f28c5a532b96e11046d8e2bb03a37' => 
     array (
       0 => '/home/tailieuk/public_html/webapp/modules/admin/views/permission/form.tpl',
-      1 => 1522308730,
+      1 => 1563752345,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.19',
+  'unifunc' => 'content_5b1b377836a873_29981027',
   'variables' => 
   array (
     'link_account' => 0,
@@ -23,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'combo_type' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5b1b377836a873_29981027',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5b1b377836a873_29981027')) {function content_5b1b377836a873_29981027($_smarty_tpl) {?><div class="page-title">
     <div class="title-env">

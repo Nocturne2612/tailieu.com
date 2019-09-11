@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2019-09-09 04:19:08
+<?php /* Smarty version Smarty-3.1.19, created on 2019-09-11 09:05:26
          compiled from "/home/tailieuk/public_html/webapp/modules/tailieu/views/document/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5943428035abc88d08df860-12257637%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0d085ad1af1de76112fb356496e34a3d89f9181f' => 
     array (
       0 => '/home/tailieuk/public_html/webapp/modules/tailieu/views/document/index.tpl',
-      1 => 1568001968,
+      1 => 1568192724,
       2 => 'file',
     ),
   ),
@@ -68,7 +68,7 @@ if (!is_callable('smarty_modifier_replace')) include '/home/tailieuk/public_html
 
         <div class="fl-l db-leftPic">
             <div class="detail-inner">
-                <a href="javascript:;" target="_blank">
+                <a href="javascript:;">
                     <div class="dbl-picbox commercial">
                         <?php if ($_smarty_tpl->tpl_vars['output']->value['picture']!='') {?>
                             <li data-thumb="<?php echo @constant('ROOT_URL');?>
@@ -111,27 +111,27 @@ if (!is_callable('smarty_modifier_replace')) include '/home/tailieuk/public_html
  <?php echo $_smarty_tpl->tpl_vars['account']->value['last_name'];?>
 </a>
                                 <?php } else { ?>
+                                    <label>Upload: </label>
                                     <a style="color:#2e9fe2" href="<?php echo @constant('ROOT_URL');?>
 " title="Views all models upload by tailieukientruc.net"><?php echo $_smarty_tpl->tpl_vars['admin']->value['fullname'];?>
 </a>
                                     <?php }?>
                                     </span>
-                                    <label>Upload</label>
                                 </li>
                                 <li >
+                                    <label>Ngày đăng: </label>
                                     <span><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['output']->value['create_time'],"%d-%m-%Y");?>
 </span>
-                                    <label>Ngày đăng</label>
                                 </li>
                                 <li >
+                                    <label>Lượt tải: </label>
                                     <span><?php echo smarty_modifier_replace(number_format($_smarty_tpl->tpl_vars['output']->value['count_down'],2,",","."),',00','');?>
 </span>
-                                    <label>Lượt tải</label>
                                 </li>
                                 <li >
+                                    <label>Lượt xem: </label>
                                     <span><?php echo $_smarty_tpl->tpl_vars['output']->value['count'];?>
 </span>
-                                    <label>Lượt xem</label>
                                 </li>
                                 <li>
                                     <span>Share this:</span>

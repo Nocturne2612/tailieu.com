@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2018-05-15 08:21:19
+<?php /* Smarty version Smarty-3.1.19, created on 2019-09-09 17:54:55
          compiled from "/home/tailieuk/public_html/webapp/modules/admin/views/useradmin/view.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18985805565afa987f3ac849-36872717%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c60da563be9505eed3b128fcb9f0aa62174d539d' => 
     array (
       0 => '/home/tailieuk/public_html/webapp/modules/admin/views/useradmin/view.tpl',
-      1 => 1522308731,
+      1 => 1563752346,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.19',
+  'unifunc' => 'content_5afa987f75e340_41330382',
   'variables' => 
   array (
     'link_account' => 0,
@@ -29,8 +31,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'arrAction' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5afa987f75e340_41330382',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5afa987f75e340_41330382')) {function content_5afa987f75e340_41330382($_smarty_tpl) {?><div class="page-title">
     <div class="title-env">
@@ -74,6 +74,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
             <?php echo CHtml::beginForm('','post',array('role'=>'form','class'=>'form-horizontal'));?>
 
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Họ và tên:</label>
+                <div class="col-sm-9">                   
+                    <input type="text" name="fullname" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['fullname'];?>
+" id="fullname" class="form-control" />
+                </div>
+            </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Tài khoản:</label>
                 <div class="col-sm-9">                   
