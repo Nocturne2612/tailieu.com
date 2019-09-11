@@ -31,7 +31,7 @@
 
         <div class="fl-l db-leftPic">
             <div class="detail-inner">
-                <a href="javascript:;" target="_blank">
+                <a href="javascript:;">
                     <div class="dbl-picbox commercial">
                         {if $output.picture <> ""}
                             <li data-thumb="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_PRODUCT_THUMB}{$arr_pic[0]}">
@@ -59,22 +59,22 @@
                             <span>{if $account}
                                 <a style="color:#2e9fe2" href="{Yii::app()->createUrl('tailieu/account/member',['id'=> $account.id])}" title="Views all models upload by tailieukientruc.net">{$account.first_name} {$account.last_name}</a>
                                 {else}
+                                    <label>Upload: </label>
                                     <a style="color:#2e9fe2" href="{$smarty.const.ROOT_URL}" title="Views all models upload by tailieukientruc.net">{$admin.fullname}</a>
                                     {/if}
                                     </span>
-                                    <label>Upload</label>
                                 </li>
                                 <li >
+                                    <label>Ngày đăng: </label>
                                     <span>{$output.create_time|date_format:"%d-%m-%Y"}</span>
-                                    <label>Ngày đăng</label>
                                 </li>
                                 <li >
+                                    <label>Lượt tải: </label>
                                     <span>{$output.count_down|number_format:2:",":"."|replace:',00':''}</span>
-                                    <label>Lượt tải</label>
                                 </li>
                                 <li >
+                                    <label>Lượt xem: </label>
                                     <span>{$output.count}</span>
-                                    <label>Lượt xem</label>
                                 </li>
                                 <li>
                                     <span>Share this:</span>
