@@ -95,7 +95,7 @@
                             {if $data['parent_id'] eq 0 && isset($category['sub_category'][$data['id']])}
                                 {foreach item=v from=$category['sub_category'][$data['id']] key =e}
                                     <div class="subpage-menu-inneBox">
-                                        <a href="{$smarty.const.ROOT_URL}/{$v.acsii}.html" class="sort-btn on">{$v.title}</a>
+                                        <a href="{$smarty.const.ROOT_URL}/{$v.acsii}.html" class="sort-btn">{$v.title}</a>
                                     </div>
                                 {/foreach}
                             {/if}
