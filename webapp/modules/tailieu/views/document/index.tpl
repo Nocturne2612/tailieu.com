@@ -130,7 +130,8 @@
                                 {/foreach}
                                 <div class="detail-more">
                                     <span less="">less</span>
-                                    <br/><br/>
+                                </div>
+                                <div class="detail-more">
                                     {$output.full}
                                 </div>
                             </div>
