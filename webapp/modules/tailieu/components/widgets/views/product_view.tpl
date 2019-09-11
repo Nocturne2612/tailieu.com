@@ -17,7 +17,7 @@
                 <div class="mb-picbox">
                     {if isset($rs.picture) && $rs.picture <>""}
                             {assign var="arr_pic" value="|"|explode:$rs.picture} <img src="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_PRODUCT_THUMB}{$arr_pic[0]}" title="{$rs.title}" alt="{$rs.title}" class="lazy">{/if}
-                    <a target="_blank" data-ga="{$rs.id}_ImgUrl" title="{$rs.title}" href="{SystemBase::buildUrl('tailieu/document',['id'=>$rs.id,'title'=>$rs.title])}" class="tran element-list-click"></a>
+                    <a data-ga="{$rs.id}_ImgUrl" title="{$rs.title}" href="{SystemBase::buildUrl('tailieu/document',['id'=>$rs.id,'title'=>$rs.title])}" class="tran element-list-click"></a>
                 </div>
                 <p class="pic-detail text-overflow">{$rs.title}</p>
                 <!-- infor -->
