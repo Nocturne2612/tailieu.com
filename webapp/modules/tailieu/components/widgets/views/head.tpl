@@ -9,7 +9,8 @@
                         <p class="big-tit">Login pngtree</p>
                         <p class="small-tit">with your social network.</p>
                         <div class="share-website clearfix ">
-                            <a href="{SystemBase::buildUrl('tailieu/login/google',[])}" rel="nofollow" data-type="gg" class="btn-google  fl-l">
+                            <a href="{SystemBase::buildUrl('tailieu/login/google',[])}" rel="nofollow" data-type="gg"
+                               class="btn-google  fl-l">
                                 <i class="iconfont icon-google"></i>Google</a>
                             <a href="{$fb_login}" rel="nofollow" data-type="fb"
                                class="btn-facebook  fl-l">
@@ -17,7 +18,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="fg-line"> or </div>
+                    <div class="fg-line"> or</div>
                     <!-- 快速登录部分 -->
                     <div class="quick-login-box" style="display: none;">
                         <div class="quick-login-inner">
@@ -29,21 +30,24 @@
                             </a>
                         </div>
                         <p class="wx-prompt">
-                            <a href="javascript:;" rel="nofollow" class="another-login-btn">Login with another account</a>
+                            <a href="javascript:;" rel="nofollow" class="another-login-btn">Login with another
+                                account</a>
                             <span class="fl-r">Not a member?                                
-                                <a href="javascript:;" rel="nofollow" id="base-reg-trigger" class="reg-trigger">Register</a>
+                                <a href="javascript:;" rel="nofollow" id="base-reg-trigger"
+                                   class="reg-trigger">Register</a>
                             </span>
                         </p>
                     </div>
                     <!-- 其他账号登录部分 -->
                     {CHtml::beginForm('/site/login','post',['enctype' => '','class'=> 'other-account','id' => 'login_form_header'])}
-                    <input type="email" maxlength="100" id="base-public-login-email-text" placeholder="Email" name="email_login_header" />
+                    <input type="email" maxlength="100" id="base-public-login-email-text" placeholder="Email"
+                           name="email_login_header"/>
                     <div class="password-box">
                         <input type="password" maxlength="20" id="base-public-login-password-text"
                                placeholder="Password" class="pwdPut" name="password_login_header"/>
                         <i class="iconfont icon-w_yanjingkai password_toggle"></i>
                     </div>
-                    <a class="ipt-btn" id="base-sub-Login-Btn" />Login</a>
+                    <a class="ipt-btn" id="base-sub-Login-Btn"/>Login</a>
                     <p class="wx-prompt">
                         <a href="/password/find" style="" class="reg-trigger">Reset my password</a>
                         <span class="fl-r">Not a member?                                
@@ -61,13 +65,14 @@
 <div class="tkw-window " id="base-register-window" style="display: none;">
     <div class="tkw-mask"></div>
     <div class="tkw-main">
-        <div class="tkw-registerCont rlg-main" >
+        <div class="tkw-registerCont rlg-main">
             <span class="cls-btn"></span>
             <div class="register-wrap">
                 <!-- 侧边隐藏 -->
                 <div class="register-asideImage">
                     <p class="register-asideImage-title">pngtree</p>
-                    <p class="register-asideImage-text"><span style="color:#78c972;">5,563,653+</span> designers have joined Pngtree</p>
+                    <p class="register-asideImage-text"><span style="color:#78c972;">5,563,653+</span> designers have
+                        joined Pngtree</p>
                 </div>
                 <!-- 侧边隐藏 -->
                 <!-- 主体 -->
@@ -79,7 +84,8 @@
                         </p>
                         <div class="share-website clearfix ">
                             <!--                    <a href="javascript:;" rel="nofollow" data-type="fb" style="display: none;"  class="btn-facebook base-go-login fl-l"><i class="icon-facebook"></i>Facebook</a>-->
-                            <a href="{SystemBase::buildUrl('tailieu/login/google',[])}" rel="nofollow" data-type="gg" class="btn-google base-go-login fl-l">
+                            <a href="{SystemBase::buildUrl('tailieu/login/google',[])}" rel="nofollow" data-type="gg"
+                               class="btn-google base-go-login fl-l">
                                 <i class="iconfont icon-google"></i>Google</a>
                             <a href="{$fb_login}" rel="nofollow" data-type="fb"
                                class="btn-facebook base-go-login fl-l">
@@ -87,29 +93,36 @@
                         </div>
                     </div>
                     <div class="fg-line">
-                        or </div>
-                        {CHtml::beginForm('/site/register','post',['enctype' => '','class'=> 'other-account','id' => 'register_form_header'])}
-                            <input class="ui-input" id="email" name="email" placeholder="Email" type="email" data-toggle="popover" autocomplete="off" data-placement="bottom" value="">
-                            <input class="ui-input" id="mobile_phone" name="mobile_phone" placeholder="Số điện thoại" type="mobile_phone" data-toggle="popover" autocomplete="off" data-placement="bottom" value="">
-                            <input class="ui-input" id="password" name="password" placeholder="Mật khẩu" type="password" data-toggle="popover" autocomplete="off" data-placement="bottom">
-                            <input class="ui-input" id="repassword" name="repassword" placeholder="Nhập lại mật khẩu" type="password" data-toggle="popover" autocomplete="off" data-placement="bottom">
-                            <select class="ui-input" name="gender" id="gender">
-                                <option  value="" selected="selected">-- Chọn giới tính --</option>
-                                <option value="M" >NAM</option>
-                                <option value="F">NỮ</option>
-                            </select>
-                            <a class="ipt-btn" id="base-sub-regist-Btn">Register</a>
+                        or
+                    </div>
+                    {CHtml::beginForm('/site/register','post',['enctype' => '','class'=> 'other-account','id' => 'register_form_header'])}
+                    <input class="ui-input" id="email" name="email" placeholder="Email" type="email"
+                           data-toggle="popover" autocomplete="off" data-placement="bottom" value="">
+                    <input class="ui-input" id="mobile_phone" name="mobile_phone" placeholder="Số điện thoại"
+                           type="mobile_phone" data-toggle="popover" autocomplete="off" data-placement="bottom"
+                           value="">
+                    <input class="ui-input" id="password" name="password" placeholder="Mật khẩu" type="password"
+                           data-toggle="popover" autocomplete="off" data-placement="bottom">
+                    <input class="ui-input" id="repassword" name="repassword" placeholder="Nhập lại mật khẩu"
+                           type="password" data-toggle="popover" autocomplete="off" data-placement="bottom">
+                    <select class="ui-input" name="gender" id="gender">
+                        <option value="" selected="selected">-- Chọn giới tính --</option>
+                        <option value="M">NAM</option>
+                        <option value="F">NỮ</option>
+                    </select>
+                    <a class="ipt-btn" id="base-sub-regist-Btn">Register</a>
                     {CHtml::endForm()}
 
                     <p class="window-register-tips">By creating an account, I agree to Pngtree's <a
-                            href="/terms-of-service">Terms of Service</a>, <a href="/privacy-policy">Privacy Policy</a>
+                                href="/terms-of-service">Terms of Service</a>, <a href="/privacy-policy">Privacy
+                            Policy</a>
                         and <a href="/protocol">Intellectual Property Rights</a></p>
 
                     <p class="wx-prompt">Already have an account? <a href="javascript:;" rel="nofollow"
-                                                                     id="base-login-trigger" class="login-trigger">Log in</a>
+                                                                     id="base-login-trigger" class="login-trigger">Log
+                            in</a>
                     </p>
                 </div>
-
 
 
             </div>
@@ -119,18 +132,12 @@
             <span class="cls-btn"></span>
 
             <p class="big-tit">Thank you!</p>
-            <p class="small-tit" >
+            <p class="small-tit">
                 Đăng ký thành công
             </p>
         </div>
     </div>
-</div>                    
-
-
-
-
-
-
+</div>
 
 
 {$this->widget('TWidgets',['methodName'=>'ads','position'=>'HOME_TOP'],true)}
@@ -151,19 +158,26 @@
                     </ul>
                 </div>
             </li>
-            <li class="nav-item "><a ref="nofollow" class="nav-link" href="{SystemBase::buildUrl('tailieu/home',['sort'=>'hot'])}">Models mới</a></li>
-            <li class="nav-item "><a ref="nofollow" class="nav-link" href="{SystemBase::buildUrl('tailieu/home',['sort'=>'free'])}">MIỄN PHÍ</a></li> 
-            <li class="nav-item "><a ref="nofollow" class="nav-link" href="{SystemBase::buildUrl('tailieu/categorynews',[])}">TIN TỨC</a></li> 
+            <li class="nav-item "><a ref="nofollow" class="nav-link"
+                                     href="{SystemBase::buildUrl('tailieu/home',['sort'=>'hot'])}">Models mới</a></li>
+            <li class="nav-item "><a ref="nofollow" class="nav-link"
+                                     href="{SystemBase::buildUrl('tailieu/home',['sort'=>'free'])}">MIỄN PHÍ</a></li>
+            <li class="nav-item "><a ref="nofollow" class="nav-link"
+                                     href="{SystemBase::buildUrl('tailieu/categorynews',[])}">TIN TỨC</a></li>
         </ul>
         <!-- right infor -->
         <div class="Top-infor fl-r clearfix">
             <!--设计师上传入口-->
             <div class="ti-credit fl-l desinger-head-btn" style="display: block">
-                <a rel="nofollow" href="{SystemBase::buildUrl('tailieu/account/upload',[])}" data-join='head' target="_blank" data-invite-click="button" class="btn-Referral designer-project ga-c" data-ga="UPLOAD A MODEL"><i class="iconfont icon-upload"></i>UPLOAD A MODEL </a>
-                <a rel="nofollow" href="{SystemBase::buildUrl('tailieu/account/upload',[])}" target="_blank" data-invite-click="button" class="btn-Referral designer-upload ga-c" data-ga="Go_Upload" style="display:none;"><i class="iconfont icon-upload"></i>Go Upload</a>
+                <a rel="nofollow" href="{SystemBase::buildUrl('tailieu/account/upload',[])}" data-join='head'
+                   target="_blank" data-invite-click="button" class="btn-Referral designer-project ga-c"
+                   data-ga="UPLOAD A MODEL"><i class="iconfont icon-upload"></i>UPLOAD A MODEL </a>
+                <a rel="nofollow" href="{SystemBase::buildUrl('tailieu/account/upload',[])}" target="_blank"
+                   data-invite-click="button" class="btn-Referral designer-upload ga-c" data-ga="Go_Upload"
+                   style="display:none;"><i class="iconfont icon-upload"></i>Go Upload</a>
             </div>
             <!--设计师上传入口END-->
-            <div class="fl-l top-collect-box pr"  style="display: block">
+            <div class="fl-l top-collect-box pr" style="display: block">
                 <a class="iconfont icon-star"></a>
                 <div class="top-collect-down">
                     <img src="//js.pngtree.com/v2/images/v2/collect-xx.jpg" alt="">
@@ -172,42 +186,47 @@
                 </div>
             </div>
             {if !$check_login}
-                <div class="Beforelogin-boxs fl-l">
-                    <a href="javascript:;" rel="nofollow" class="btn-logo base-public-login-button index-login-click" data-lg="">Login</a>
-                    <a href="javascript:;" rel="nofollow" class="btn-register base-public-register-button  index-login-reg" data-lg="">Register</a>
-                </div>
+            <div class="Beforelogin-boxs fl-l">
+                <a href="javascript:;" rel="nofollow" class="btn-logo base-public-login-button index-login-click"
+                   data-lg="">Login</a>
+                <a href="javascript:;" rel="nofollow" class="btn-register base-public-register-button  index-login-reg"
+                   data-lg="">Register</a>
+            </div>
             {else}
-                <div class="user-infor fl-l">
-                    <a href="{SystemBase::buildUrl('tailieu/account',[])}" class="user-entry ga-c" data-ga="User_Center">
-                        <div class="user-img">
-                            <img  src="/assets/images/007-nature-29.png">
-                        </div>
-                        <span class="user-name">0343373988 MrT</span>
-                    </a>
+            <div class="user-infor fl-l">
+                <a href="{SystemBase::buildUrl('tailieu/account',[])}" class="user-entry ga-c" data-ga="User_Center">
+                    <div class="user-img">
+                        <img src="/assets/images/007-nature-29.png">
+                    </div>
+                    <span class="user-name">0343373988 MrT</span>
+                </a>
 
 
+                <!-- 用户下拉界面 -->
+                <!--普通用户下拉界面-->
+                <div class="user-dropbox">
+                    <div class="db-top">
+                        <i class="vip-icon free-vip"></i>
+                        <span class="user-name">{$check_login.first_name}</span>
+                        <span>UID: {$check_login.id}</span>
+                    </div>
+                    <div class="db-subbox">
+                        <a href="{SystemBase::buildUrl('tailieu/account',[])}" class="sub-li ga-c" data-ga="User_Center"
+                           target="_blank">
+                            <i class="iconfont icon-yonghu"></i>Tài khoản </a>
+                        <a href="{SystemBase::buildUrl('tailieu/addfund',[])}" class="sub-li ga-c"
+                           data-ga="Referral_Program">
+                            <i class="iconfont icon-liwu"></i>Nạp tiền </a>
+                        <a target="_blank" href="{SystemBase::buildUrl('tailieu/account/upload',[])}"
+                           class="sub-li ga-c" data-ga="Go_Upload">
+                            <i class="iconfont icon-upload"></i> Go Upload </a>
 
-                    <!-- 用户下拉界面 -->
-                    <!--普通用户下拉界面-->
-                    <div class="user-dropbox">
-                        <div class="db-top">
-                            <i class="vip-icon free-vip"></i>
-                            <span class="user-name">{$check_login.first_name}</span>
-                            <span>UID: {$check_login.id}</span>
-                        </div>
-                        <div class="db-subbox">
-                            <a href="{SystemBase::buildUrl('tailieu/account',[])}" class="sub-li ga-c" data-ga="User_Center" target="_blank">
-                                <i class="iconfont icon-yonghu"></i>Tài khoản                                </a>
-                            <a href="{SystemBase::buildUrl('tailieu/addfund',[])}" class="sub-li ga-c" data-ga="Referral_Program">
-                                <i class="iconfont icon-liwu"></i>Nạp tiền                                </a>
-                            <a target="_blank" href="{SystemBase::buildUrl('tailieu/account/upload',[])}" class="sub-li ga-c" data-ga="Go_Upload">
-                                <i class="iconfont icon-upload"></i> Go Upload                                </a>
-
-                            <a  href="{SystemBase::buildUrl('tailieu/account/logout',[])}" class="sub-li ga-c" data-ga="Logout"><i class="iconfont icon-tuichu"></i> Thoát</a>
-                        </div>
+                        <a href="{SystemBase::buildUrl('tailieu/account/logout',[])}" class="sub-li ga-c"
+                           data-ga="Logout"><i class="iconfont icon-tuichu"></i> Thoát</a>
                     </div>
                 </div>
             </div>
+        </div>
         {/if}
     </div>
     <div class="continuous-login-tips keep-login-alert" style="display: none;">
@@ -226,7 +245,7 @@
         <a href="//pngtree.com" class="Newlogo fl-l"></a>
 
         <!--scroll search -->
-        <form  class="sb-form clearfix fl-l search-box-outer" style="">
+        <form class="sb-form clearfix fl-l search-box-outer" style="">
             <div class="pulldown-title fl-l">
                 {$platforms = ObjInput::get('platforms', 'int')}
                 <span class="sb-val">
@@ -236,14 +255,16 @@
                     <ul id="fixed-search-tag" class="sTt-bg search-box-item-li" data-search="top">
                         <p>SEARCH ITEMS </p>
                         {foreach item=v from=$data.parent_category}
-                            <li id="{$v.id}" for="category__{$v.id}" {if $platforms == $v.id}class="current"{/if}>{$v.title}</li>
-                            {/foreach}
+                            <li id="{$v.id}" for="category__{$v.id}"
+                                {if $platforms == $v.id}class="current"{/if}>{$v.title}</li>
+                        {/foreach}
                     </ul>
                 </div>
             </div>
             <input type="text" placeholder="" class="sb-input fl-l search-box-input">
-            <div class=" search-dropdown-wrap comment-search-dropdown-wrap" id="search-dropdown-wrap" style="display: none;">
-                <div class="search-dropdown head-dop" data-type="headen" >
+            <div class=" search-dropdown-wrap comment-search-dropdown-wrap" id="search-dropdown-wrap"
+                 style="display: none;">
+                <div class="search-dropdown head-dop" data-type="headen">
                     <!--<p class="recent-search">
                         <b><i></i>RECENTLY SEARCHED:</b><span>flower</span><span>flower</span><span>flower</span><span>flower</span>
                     </p>-->
@@ -261,8 +282,10 @@
 
                 <div class="Beforelogin-boxs fl-l">
 
-                    <a href="javascript:;" {SystemBase::buildUrl('tailieu/login',[])} rel="nofollow" class="btn-logo base-public-login-button index-login-click" data-lg="">Login</a>
-                    <a href="javascript:;" rel="nofollow" {SystemBase::buildUrl('tailieu/register',[])} class="btn-register base-public-register-button  index-login-reg" data-lg="">Register</a>
+                    <a href="javascript:;" {SystemBase::buildUrl('tailieu/login',[])} rel="nofollow"
+                       class="btn-logo base-public-login-button index-login-click" data-lg="">Login</a>
+                    <a href="javascript:;" rel="nofollow" {SystemBase::buildUrl('tailieu/register',[])}
+                       class="btn-register base-public-register-button  index-login-reg" data-lg="">Register</a>
 
                 </div>
 
@@ -272,11 +295,10 @@
             <div class="user-infor fl-l">
                 <a href="{SystemBase::buildUrl('tailieu/account',[])}" class="user-entry ga-c" data-ga="User_Center">
                     <div class="user-img">
-                        <img  src="/assets/images/007-nature-29.png">
+                        <img src="/assets/images/007-nature-29.png">
                     </div>
                     <span class="user-name">0343373988 MrT</span>
                 </a>
-
 
 
                 <!-- 用户下拉界面 -->
@@ -288,54 +310,56 @@
                         <span>UID: {$check_login.id}</span>
                     </div>
                     <div class="db-subbox">
-                        <a href="{SystemBase::buildUrl('tailieu/account',[])}" class="sub-li ga-c" data-ga="User_Center" target="_blank">
-                            <i class="iconfont icon-yonghu"></i>Tài khoản                                </a>
-                        <a href="{SystemBase::buildUrl('tailieu/addfund',[])}" class="sub-li ga-c" data-ga="Referral_Program">
-                            <i class="iconfont icon-liwu"></i>Nạp tiền                                </a>
-                        <a target="_blank" href="{SystemBase::buildUrl('tailieu/account/upload',[])}" class="sub-li ga-c" data-ga="Go_Upload">
-                            <i class="iconfont icon-upload"></i> Go Upload                                </a>
+                        <a href="{SystemBase::buildUrl('tailieu/account',[])}" class="sub-li ga-c" data-ga="User_Center"
+                           target="_blank">
+                            <i class="iconfont icon-yonghu"></i>Tài khoản </a>
+                        <a href="{SystemBase::buildUrl('tailieu/addfund',[])}" class="sub-li ga-c"
+                           data-ga="Referral_Program">
+                            <i class="iconfont icon-liwu"></i>Nạp tiền </a>
+                        <a target="_blank" href="{SystemBase::buildUrl('tailieu/account/upload',[])}"
+                           class="sub-li ga-c" data-ga="Go_Upload">
+                            <i class="iconfont icon-upload"></i> Go Upload </a>
 
-                        <a  href="{SystemBase::buildUrl('tailieu/account/logout',[])}" class="sub-li ga-c" data-ga="Logout"><i class="iconfont icon-tuichu"></i> Thoát</a>
+                        <a href="{SystemBase::buildUrl('tailieu/account/logout',[])}" class="sub-li ga-c"
+                           data-ga="Logout"><i class="iconfont icon-tuichu"></i> Thoát</a>
                     </div>
                 </div>
             </div>
-        </div>
-    {/if}
-</div>
+        {/if}
+    </div>
 
 </div>
 
-
-
-
-
-{literal} 
+{literal}
     <script type="text/javascript">
         function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'auto', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            new google.translate.TranslateElement({
+                pageLanguage: 'auto',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
         }
     </script>
 
-    <!--<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>-->
+<!--<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>-->
 
 
-    <script type="text/javascript">        function searching() {
-            var cate = document.getElementById('tid').value;
-            var keyword = document.getElementById('q').value;
-            if (keyword == '' || typeof keyword == 'undefined') {
-                return false;
-            }
-            keyword = keyword.replace(/&quot;/g, '"');
-            keyword = keyword.replace(/([?*#<>!$%^&()/]+)/g, "");
-            keyword = keyword.replace(/([ ]+)/g, " ");
-            keyword = keyword.replace(/"/g, '');
-            if (parseInt(cate) > 0) {
-                location.href = '{/literal}{$smarty.const.ROOT_URL}/{literal}tim-kiem/' + cate + '-' + encodeURIComponent(keyword).replace(/%20/g, '+') + '.html';
-            } else {
-                location.href = '{/literal}{$smarty.const.ROOT_URL}/{literal}tim-kiem/' + encodeURIComponent(keyword).replace(/%20/g, '+') + '.html';
-            }
+<script type="text/javascript">        function searching() {
+        var cate = document.getElementById('tid').value;
+        var keyword = document.getElementById('q').value;
+        if (keyword == '' || typeof keyword == 'undefined') {
             return false;
-        }</script>
+        }
+        keyword = keyword.replace(/&quot;/g, '"');
+        keyword = keyword.replace(/([?*#<>!$%^&()/]+)/g, "");
+        keyword = keyword.replace(/([ ]+)/g, " ");
+        keyword = keyword.replace(/"/g, '');
+        if (parseInt(cate) > 0) {
+            location.href = '{/literal}{$smarty.const.ROOT_URL}/{literal}tim-kiem/' + cate + '-' + encodeURIComponent(keyword).replace(/%20/g, '+') + '.html';
+        } else {
+            location.href = '{/literal}{$smarty.const.ROOT_URL}/{literal}tim-kiem/' + encodeURIComponent(keyword).replace(/%20/g, '+') + '.html';
+        }
+        return false;
+    }</script>
     <script>
         window.fbAsyncInit = function () {
             FB.init({
@@ -404,16 +428,17 @@
                         <a href="javascript:;" class="xs-nav-header-avatar">
                             <img src="/assets/images/007-nature-29.png" alt="">
                         </a>
-                        <a target="_blank" href="{SystemBase::buildUrl('tailieu/account',[])}" class="xs-nav-header-btn">Thông tin</a>
-                        <a href="{SystemBase::buildUrl('tailieu/account/logout',[])}" class="xs-nav-header-btn">Logout</a>
+                        <a target="_blank" href="{SystemBase::buildUrl('tailieu/account',[])}"
+                           class="xs-nav-header-btn">Thông tin</a>
+                        <a href="{SystemBase::buildUrl('tailieu/account/logout',[])}"
+                           class="xs-nav-header-btn">Logout</a>
                     </div>
                 </div>
-
             {/if}
             <ul class="xs-nav">
                 {foreach item=v from=$data.parent_category}
-                    <li > <a href="/">{$v.title}</a></li>
-                    {/foreach}
+                    <li><a href="/">{$v.title}</a></li>
+                {/foreach}
                 <li class="on">
                     <a href="/">Trang chủ</a>
                 </li>
