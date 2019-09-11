@@ -77,7 +77,7 @@
                                     <span>{$output.count}</span>
                                 </li>
                                 <li>
-                                    <span>Share this:</span>
+                                    <span>Share this: </span>
                                     <div class="normal share-group circle ">
 {*                                        <a class="btn btn-large btn-secondary" href="{SystemBase::buildUrl('tailieu/account/favorite',['like'=>$output.id])}"  rel="not_faved" title="Collect This File">Thêm vào yêu thích</a>*}
 {*                                        <br/>*}
