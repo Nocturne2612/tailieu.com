@@ -131,9 +131,6 @@
                                 <br/>
                                 <div class="detail-more">
                                     <span less="">less</span>
-
-                                </div>
-                                <div class="detail-more">
                                     {$output.full}
                                 </div>
                             </div>
