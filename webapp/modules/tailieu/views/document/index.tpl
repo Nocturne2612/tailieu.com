@@ -151,8 +151,8 @@
                                 <a target="_blank" rel="nofollow" href="javascript:;" data-type="1" class="fl-l btn-free down-no-login">
                                     <i class="iconfont icon-xiazai"></i>
                                     {if $output.proprice > 0} 
-                                        <span class="oldprice" style="text-decoration: line-through;">{$output.price|number_format:2:",":"."|replace:',00':''} POINT</span>
-                                        <span class="proprice" style="color: #F44359;"> {$output.proprice|number_format:2:",":"."|replace:',00':''} POINT  &nbsp;&nbsp;&nbsp;</span> 
+                                        <span class="oldprice" style="text-decoration: line-through; font-size: small;">{$output.price|number_format:2:",":"."|replace:',00':''} POINT</span>
+                                        <span class="proprice" style="color: #F44359; font-size: medium;"> {$output.proprice|number_format:2:",":"."|replace:',00':''} POINT  &nbsp;&nbsp;&nbsp;</span>
                                     {else if $output.proprice == '0' && $output.price > 0} 
                                         {$output.price|number_format:2:",":"."|replace:',00':''} POINT
                                     {else} 
