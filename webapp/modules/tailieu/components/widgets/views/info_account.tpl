@@ -21,10 +21,10 @@
                         <b style="font-weight: bold">Bình thường</b>
                         {/if}
                 </span>
-                <span class="user-panel-id">Gia nhập từ: <b class="alert-warning">{$data.create_time|date_format:"%d-%m-%Y"}</b></span>
-                <span class="user-panel-id">Số Point: <b class="alert-danger">{$data.point|number_format:2:",":"."|replace:',00':''}</b> Point</span>
-                <span class="user-panel-id">Upload: <b class="alert-danger">{$data.count_upload}</b> tài liệu</span>
-                <span class="user-panel-id">Download: <b class="alert-danger">{$data.count_down}</b> tài liệu</span>
+                <span class="user-panel-id">Gia nhập từ: <b style="color: #468847">{$data.create_time|date_format:"%d-%m-%Y"}</b></span><br/>
+                <span class="user-panel-id">Số Point: <b style="color: #468847">{$data.point|number_format:2:",":"."|replace:',00':''}</b> Point</span><br/>
+                <span class="user-panel-id">Upload: <b style="color: #468847">{$data.count_upload}</b> tài liệu</span><br/>
+                <span class="user-panel-id">Download: <b style="color: #468847">{$data.count_down}</b> tài liệu</span>
             </div>
         </div>
         <ul class="user-router">
