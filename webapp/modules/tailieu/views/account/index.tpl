@@ -1,7 +1,7 @@
 <div class="user-main user-main-inner">
     <h1>Lịch sử download</h1>
+    {if $transactions}
     <ul class="mb-box masonry-element  clearfix tpl-ul">
-            {if $transactions}
                 {foreach $transactions['data'] as $k=>$t}
                 <li class="user-gditem">
                     <div class="user-gditem-inner">
@@ -23,14 +23,13 @@
                 </li>
                 <div class="gutter-sizer"></div>
             {/foreach}
+        </ul>
             {$transactions['pageHtml']}
         {else}
             <tr class="danger">
                 <td colspan="6" align="center">Không tồn tại tài liệu</td>
             </tr>
         {/if}
-
-    </ul>
 </div>
 
 
