@@ -35,7 +35,7 @@
                     <div class="dbl-picbox commercial">
                         {if $output.picture <> ""}
                             <li data-thumb="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_PRODUCT_THUMB}{$arr_pic[0]}">
-                                {assign var="arr_pic" value="|"|explode:$output.picture} 
+                                {assign var="arr_pic" value="|"|explode:$output.picture}
                                 <img  data-original="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_PRODUCT}{$arr_pic[0]}" itemprop="image" title="{$output.title}" alt="{$output.title}" class="lazy" style="width: 100%">
 
                             </li>
@@ -81,7 +81,7 @@
                                     <div class="normal share-group circle ">
 {*                                        <a class="btn btn-large btn-secondary" href="{SystemBase::buildUrl('tailieu/account/favorite',['like'=>$output.id])}"  rel="not_faved" title="Collect This File">Thêm vào yêu thích</a>*}
                                         <br/>
-                                        <div style="width: 100%;text-align: center;position: relative;"> 
+                                        <div style="width: 100%;text-align: center;position: relative;">
                                             <div class="fb-like" data-href="{SystemBase::buildUrl('tailieu/document',['id'=>$output.id,'title'=>$output.title])}" data-width="450" data-layout="button_count" data-show-faces="false" data-share="true" data-send="false"></div>
                                             <script src="https://apis.google.com/js/platform.js" async defer></script>
 {*                                            <br/>*}
@@ -130,8 +130,10 @@
                                 {/foreach}<br/>
                                 <br/>
                                 <div class="detail-more">
-                                    <span less="">less</span><br/>
-                                    {$output.full}
+                                    <span less="">less</span>
+                                </div>
+                                <div class="detail-more">
+                                    <span less="">{$output.full}</span>
                                 </div>
                             </div>
                             <div class="detail-more">
@@ -153,12 +155,12 @@
                             <div class="dbr-btnbox clearfix detail-down-click">
                                 <a target="_blank" rel="nofollow" href="javascript:;" data-type="1" class="fl-l btn-free down-no-login">
                                     <i class="iconfont icon-xiazai"></i>
-                                    {if $output.proprice > 0} 
+                                    {if $output.proprice > 0}
                                         <span class="oldprice" style="text-decoration: line-through; font-size: small;">{$output.price|number_format:2:",":"."|replace:',00':''} POINT</span>
                                         <span class="proprice" style="color: #F44359; font-size: medium;"> {$output.proprice|number_format:2:",":"."|replace:',00':''} POINT  &nbsp;&nbsp;&nbsp;</span>
-                                    {else if $output.proprice == '0' && $output.price > 0} 
+                                    {else if $output.proprice == '0' && $output.price > 0}
                                         {$output.price|number_format:2:",":"."|replace:',00':''} POINT
-                                    {else} 
+                                    {else}
                                         Free download{/if}
 
                                     </a>
@@ -182,7 +184,7 @@
                                     <div class="recommend-list-box">
                                         <div class="recommend-list js_slick">
                                             <div class="recommend-list-item slide-item">
-                                                {$this->widget('TWidgets',['methodName'=>'productView','product'=> $relation,'check'=> false],true)} 
+                                                {$this->widget('TWidgets',['methodName'=>'productView','product'=> $relation,'check'=> false],true)}
                                             </div>
                                         </div>
                                     </div>
