@@ -9,12 +9,12 @@ class AccountController extends TailieuController {
 
     public $_models;
 
-    public function filters() {
-        return array('accessControl', // perform access control for CRUD operations
-        );
-    }
+    // public function filters() {
+    //     return array('accessControl', // perform access control for CRUD operations
+    //     );
+    // }
 
-    public function accessRules() {
+    // public function accessRules() {
 //        return array(
 //            array('allow', // allow all users to perform 'index' and 'view' actions
 //                'actions' => array('member'),
@@ -25,8 +25,8 @@ class AccountController extends TailieuController {
 //            'index',
 //            'info',
 //        );
-        return TRoles::getAccessRules($this->id);
-    }
+        // return TRoles::getAccessRules($this->id);
+    // }
 
     public function init() {
 		
