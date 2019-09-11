@@ -154,7 +154,7 @@
                                         <span class="oldprice" style="text-decoration: line-through;">{$output.price|number_format:2:",":"."|replace:',00':''} POINT</span>
                                         <span class="proprice" style="color: #F44359;"> {$output.proprice|number_format:2:",":"."|replace:',00':''} POINT  &nbsp;&nbsp;&nbsp;</span> 
                                     {else if $output.proprice == '0' && $output.price > 0} 
-                                        {$output.price|number_format:2:",":"."|replace:',00':''}
+                                        {$output.price|number_format:2:",":"."|replace:',00':''} POINT
                                     {else} 
                                         Free download{/if}
 
