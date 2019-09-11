@@ -18,13 +18,7 @@
                 </li>
                 <li class="user-methods-item">
                     <div class="user-methods-inner">
-
-                    </div>
-                    <span class="user-methods-type">Level</span>
-                </li>
-                <li class="user-methods-item">
-                    <div class="user-methods-inner">
-                        {$data.count_down}
+                        <strong class="user-methods-num">{$data.count_down}</strong>
                     </div>
                     <span class="user-methods-type">Download</span>
                 </li>
@@ -41,15 +35,15 @@
                     <div class="user-profile-account">
                         <h4 class="user-profile-title">Thông tin khác</h4>
                         <div class="form-item">
-                            <input class="ui-input" id="email_other" placeholder="" name="email_other" type="text" data-toggle="popover" autocomplete="off" value="{$params.email_other}">
+                            <input class="ui-input fill" id="email_other" placeholder="" name="email_other" type="text" data-toggle="popover" autocomplete="off" value="{$params.email_other}">
                             <label for="email_other"><span>Email</span></label>
                         </div>
                         <div class="form-item">
-                            <input class="ui-input" id="mobile_phone" placeholder="" name="mobile_phone" type="text" data-toggle="popover" autocomplete="off" value="{$params.mobile_phone}">
+                            <input class="ui-input fill" id="mobile_phone" placeholder="" name="mobile_phone" type="text" data-toggle="popover" autocomplete="off" value="{$params.mobile_phone}">
                             <label for="mobile_phone"><span>Số điện thoại</span></label>
                         </div>
                         <div class="form-item ccaptcha">
-                            <input class="ui-input" id="verifyCode" name="verifyCode" type="text">
+                            <input class="ui-input fill" id="verifyCode" name="verifyCode" type="text">
                             <label for="verifyCode"><span>Mã bảo mật</span></label>
                             {$this->widget('CCaptcha',['id'=>'ccaptcha'],true)}
                         </div>
@@ -59,15 +53,15 @@
                     <div class="user-profile-personal">
                         <h4 class="user-profile-title">Thông tin tài khoản</h4>
                         <div class="form-item">
-                            <input type="text" id="lastName" name="lastName" value="{$params.last_name}" class="real-name-input ">
+                            <input type="text" id="lastName" name="lastName" value="{$params.last_name}" class="real-name-input fill">
                             <label for="lastName"><span>Họ</span></label>
                         </div>
                         <div class="form-item">
-                            <input type="text" id="firstName" name="firstName" value="{$params.first_name}" class="job-title-input ">
+                            <input type="text" id="firstName" name="firstName" value="{$params.first_name}" class="job-title-input fill">
                             <label for="firstName"><span>Tên</span></label>
                         </div>
                         <div class="form-item">
-                            <input class="ui-input" id="dob" name="dob" placeholder="Ngày sinh định dạng ngày/tháng/năm" type="text" data-toggle="popover" autocomplete="off" data-placement="bottom" value="{$params.dob|date_format:"%d/%m/%Y"}">
+                            <input class="ui-input fill" id="dob" name="dob" placeholder="Ngày sinh định dạng ngày/tháng/năm" type="text" data-toggle="popover" autocomplete="off" data-placement="bottom" value="{$params.dob|date_format:"%d/%m/%Y"}">
                             <label for="Telephone Number"><span>Ngày sinh</span></label>
                         </div>
                         <div class="form-item">
