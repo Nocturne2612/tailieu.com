@@ -127,6 +127,7 @@
                         <ul class="mb-box clearfix">
                             {$this->widget('TWidgets',['methodName'=>'productView','product'=> $output['data'],'check'=> true],true)} 
                         </ul>
+                        {$output['pageHtml']}
                     {/if}
                 </div>
             </div>
