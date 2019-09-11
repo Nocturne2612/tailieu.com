@@ -125,7 +125,9 @@
                         {$outputs['pageHtml']}
                     {else}
                         <ul class="mb-box clearfix">
-                            {$this->widget('TWidgets',['methodName'=>'productView','product'=> $output['data'],'check'=> true],true)} 
+                            {$this->widget('TWidgets',['methodName'=>'productView','product'=> $output['data'],'check'=> true],true)}
+                        {$outputs['pageHtml']}
+
                         </ul>
                     {/if}
                 </div>
