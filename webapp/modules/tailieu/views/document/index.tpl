@@ -125,16 +125,20 @@
                         <div class="keyWords-wrap needmore">
                             <div class="dl-keyWords clearfix ele_keyword ">
                                 {assign var="arr_tag" value=","|explode:$output.tag}
-                                {foreach $arr_tag as $t} 
+                                {foreach $arr_tag as $t}
                                     <a target="_blank" href="{SystemBase::buildUrl('tailieu/search',['keyword'=> $t])}" title="{$t}" class="">{$t}</a>
-                                {/foreach} 
+                                {/foreach}
+                                <div class="detail-more">
+                                    <span less="">less</span>
+                                </div>
                             </div>
                             <div class="detail-more">
                                 <span more>
                                     show more
                                     <i class="iconfont icon-xiangxiazhanhang"></i>
-                                </span>
+
                                 {$output.full}
+                                </span>
                                 <div id="fb-root"></div>
                                 <script src="https://connect.facebook.net/vi_VN/all.js#appId=882475878492163&xfbml=1"></script>
                                 <fb:comments href="{SystemBase::buildUrl('tailieu/document',['id'=>$output.id,'title'=>$output.title])}" num_posts="5" width="auto"></fb:comments>
