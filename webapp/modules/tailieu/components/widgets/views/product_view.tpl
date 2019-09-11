@@ -3,7 +3,7 @@
     {$count = count($data)}
     {if $count <= 2}
         {foreach $data as $rs}
-            <li class="">
+            <li class="li-box grid-sizer search_keyword_statis_js">
                 <div class="hover-show">
                     <span class="commercial-use" title="{$rs.title}"></span>
                     <a href="javascript:;" data-id="{$rs.id}" data-type="1" title="Add to favorites" class="hs-star  star-btn-click element-list-click" data-like="4773403_like">
@@ -22,7 +22,7 @@
                 <p class="pic-detail text-overflow">{$rs.title}</p>
                 <!-- infor -->
             </li>
-
+            <div class="gutter-sizer"></div>
         {/foreach}
     {else}
         {$count3 = ROUND($count / 2)}
