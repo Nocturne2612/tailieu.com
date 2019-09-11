@@ -87,7 +87,7 @@
                             {foreach item=v from=$category['sub_category'][$data['parent_id']] key =e}
                                 {if $v.id neq $data['id']}
                                     <div class="subpage-menu-inneBox">
-                                        <a href="{$smarty.const.ROOT_URL}/{$v.acsii}.html" class="sort-btn on">{$v.title}</a>
+                                        <a href="{$smarty.const.ROOT_URL}/{$v.acsii}.html" class="sort-btn">{$v.title}</a>
                                     </div>
                                 {/if}
                             {/foreach}
