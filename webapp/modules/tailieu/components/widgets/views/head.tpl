@@ -227,7 +227,7 @@
     <div id="scroll-Nav" class="v2-header scroll-Nav">
         <div class="w1520 clearfix">
             <!-- logo -->
-            <a href="//pngtree.com" class="Newlogo fl-l"></a>
+            <a href="/" class="Newlogo fl-l"></a>
 
             <!--scroll search -->
             <form class="sb-form clearfix fl-l search-box-outer" style="">
@@ -242,12 +242,16 @@
                             {foreach item=v from=$data.parent_category}
                             <li id="{$v.id}" for="category__{$v.id}" {if $platforms==$v.id} class="current">
                                 {/if}>{$v.title}
-                            </li> 
-                            {/foreach} 
-                        </ul> 
+                            </li>
+                            {/foreach}
+                        </ul>
                     </div>
-                    <input type="text" placeholder="" class="sb-input fl-l search-box-input" />
-                    <div class=" search-dropdown-wrap comment-search-dropdown-wrap" id="search-dropdown-wrap" style="display: none;">
+                    <div class="index-search-input">
+                        <input type="text" placeholder="Search Png Resource" class="js_search-input " data-type="1"
+                            value="">
+                    </div>
+                    <div class=" search-dropdown-wrap comment-search-dropdown-wrap" id="search-dropdown-wrap"
+                        style="display: none;">
                         <div class="search-dropdown head-dop" data-type="headen">
                         </div>
                     </div>
@@ -370,59 +374,57 @@
     </script>
 
     {/literal}
-
-    <div class="xs-contain">
-        <!--    <div class="xs-nav-mask" onclick="$('.xs-header-box-btn').click()"></div>-->
-        <!--head_search_type-->
-        <div class="xs-header">
-            <a href="/" class="xs-header-logo"></a>
-            <a href="javascript:;" class="xs-header-box-btn"><i class="iconfont icon-menu"></i></a>
-            <a href="javascript:;" class="xs-header-search">
-                <i class="iconfont icon-sousuo"></i>
+</div>
+<div class="xs-contain">
+    <!--    <div class="xs-nav-mask" onclick="$('.xs-header-box-btn').click()"></div>-->
+    <!--head_search_type-->
+    <div class="xs-header">
+        <a href="/" class="xs-header-logo"></a>
+        <a href="javascript:;" class="xs-header-box-btn"><i class="iconfont icon-menu"></i></a>
+        <a href="javascript:;" class="xs-header-search">
+            <i class="iconfont icon-sousuo"></i>
+        </a>
+        <div class="xs-header-search-box bg-greenLinear fcc">
+            <a class="xs-header-search-close">
+                <i class="iconfont icon-guanbi"></i>
             </a>
-            <div class="xs-header-search-box bg-greenLinear fcc">
-                <a class="xs-header-search-close">
-                    <i class="iconfont icon-guanbi"></i>
+            <div class="xs-header-search-wrap">
+                <input type="text" class="xs-header-search-input" placeholder="Seach...">
+                <a href="javascript:;" class="xs-header-search-btn" data-type="-1">
+                    <i class="iconfont icon-sousuo"></i>
                 </a>
-                <div class="xs-header-search-wrap">
-                    <input type="text" class="xs-header-search-input" placeholder="Seach...">
-                    <a href="javascript:;" class="xs-header-search-btn" data-type="-1">
-                        <i class="iconfont icon-sousuo"></i>
+            </div>
+        </div>
+        <div class="xs-nav-box">
+            <a href="javascript:;" class="xs-nav-box-close">
+                <i class="iconfont icon-guanbi"></i>
+            </a>
+            {if !$check_login}
+            <div class="xs-nav-header">
+                <div class="xs-nav-header-unlogin">
+                    <a href="javascript:;" class="xs-nav-header-toLogin base-public-login-button">Login</a>
+                </div>
+            </div>
+            {else}
+            <div class="xs-nav-header">
+                <div class="xs-nav-header-user">
+                    <a href="javascript:;" class="xs-nav-header-avatar">
+                        <img src="/assets/images/007-nature-29.png" alt="">
                     </a>
+                    <a target="_blank" href="{SystemBase::buildUrl('tailieu/account',[])}"
+                        class="xs-nav-header-btn">Thông tin</a>
+                    <a href="{SystemBase::buildUrl('tailieu/account/logout',[])}" class="xs-nav-header-btn">Logout</a>
                 </div>
             </div>
-            <div class="xs-nav-box">
-                <a href="javascript:;" class="xs-nav-box-close">
-                    <i class="iconfont icon-guanbi"></i>
-                </a>
-                {if !$check_login}
-                <div class="xs-nav-header">
-                    <div class="xs-nav-header-unlogin">
-                        <a href="javascript:;" class="xs-nav-header-toLogin base-public-login-button">Login</a>
-                    </div>
-                </div>
-                {else}
-                <div class="xs-nav-header">
-                    <div class="xs-nav-header-user">
-                        <a href="javascript:;" class="xs-nav-header-avatar">
-                            <img src="/assets/images/007-nature-29.png" alt="">
-                        </a>
-                        <a target="_blank" href="{SystemBase::buildUrl('tailieu/account',[])}"
-                            class="xs-nav-header-btn">Thông tin</a>
-                        <a href="{SystemBase::buildUrl('tailieu/account/logout',[])}"
-                            class="xs-nav-header-btn">Logout</a>
-                    </div>
-                </div>
-                {/if}
-                <ul class="xs-nav">
-                    {foreach item=v from=$data.parent_category}
-                    <li><a href="/">{$v.title}</a></li>
-                    {/foreach}
-                    <li class="on">
-                        <a href="/">Trang chủ</a>
-                    </li>
-                </ul>
-            </div>
+            {/if}
+            <ul class="xs-nav">
+                {foreach item=v from=$data.parent_category}
+                <li><a href="/">{$v.title}</a></li>
+                {/foreach}
+                <li class="on">
+                    <a href="/">Trang chủ</a>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
