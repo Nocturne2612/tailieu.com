@@ -16,15 +16,15 @@ class CategorynewsController extends TailieuController {
 
     public function init() {
         $this->_model = new Categorynews;
-        $this->layout = 'news';
+        $this->layout = 'home';
         parent::init();
     }
 
     public function actionIndex() {
-        Yii::app()->getClientScript()->registerCssFile(Yii::app()->baseUrl . '/assets/tailieu/css/stylev2.css');
-        Yii::app()->getClientScript()->registerCssFile(Yii::app()->baseUrl . '/assets/tailieu/css/owl.carousel.css');
-        Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieu/js/owl.carousel.js', CClientScript::POS_END);
-        Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieu/js/custom.js', CClientScript::POS_END);
+        // Yii::app()->getClientScript()->registerCssFile(Yii::app()->baseUrl . '/assets/tailieu/css/stylev2.css');
+        // Yii::app()->getClientScript()->registerCssFile(Yii::app()->baseUrl . '/assets/tailieu/css/owl.carousel.css');
+        // Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieu/js/owl.carousel.js', CClientScript::POS_END);
+        // Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieu/js/custom.js', CClientScript::POS_END);
         $model = new News;
         $id = ObjInput::get('id', 'int', 0);
         
