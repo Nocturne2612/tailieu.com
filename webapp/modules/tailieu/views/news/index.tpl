@@ -34,10 +34,7 @@
 <div class="help">
     <div class="help-query">
         <div class="w1000">
-            <form class="help-query-form">
-                <input class="help-query-search" type="text" placeholder="Search help articles">
-                <button class="help-query-btn"><i class="icon-search"></i></button>
-            </form>
+            
         </div>
     </div>
     <div class="help-main custom">
