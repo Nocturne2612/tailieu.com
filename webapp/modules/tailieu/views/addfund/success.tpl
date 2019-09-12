@@ -12,6 +12,5 @@
 </div>
 {literal}
 <style> 
-#ccaptcha{width:80px;} 
 </style>
 {/literal}

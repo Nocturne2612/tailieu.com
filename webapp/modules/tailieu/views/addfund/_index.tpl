@@ -72,5 +72,4 @@
         <script language="javascript">
             var mc_flow = new NGANLUONG.apps.MCFlow({trigger: 'btn_deposit', url: '{/literal}{$link_checkout}{literal}'});
         </script>
-        <style> #ccaptcha{width:80px;} </style>
 {/literal}
