@@ -1,3 +1,12 @@
+<style>
+    .new-image {
+        box-shadow: 0px 2px 16px #888888;
+        border: 2px solid #ddd;
+    }
+    .new-text {
+        padding-left: 10px;
+    }
+</style>
 <div class="help">
     <div class="help-query">
         <div class="w1000">
