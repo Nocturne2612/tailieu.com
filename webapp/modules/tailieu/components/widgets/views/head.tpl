@@ -303,7 +303,7 @@
                     </div>
                 </div>
             </div>
-            <div class="fl-r top-collect-box pr" style="display: block adding-left: 13px;
+            <div class="fl-r top-collect-box pr" style="display: block;padding-left: 13px;
     margin-top: 4px;">
                 <a class="iconfont icon-star"></a>
                 <div class="top-collect-down">
@@ -312,7 +312,7 @@
                     <p>Mark us if you like us</p>
                 </div>
             </div>
-            <div class="ti-credit fl-r desinger-head-btn" style="display: block;adding-left: 13px;
+            <div class="ti-credit fl-r desinger-head-btn" style="display: block;padding-left: 13px;
     margin-top: 4px;">
                 <a rel="nofollow" href="{SystemBase::buildUrl('tailieu/account/upload',[])}" data-join='head'
                     target="_blank" data-invite-click="button" class="btn-Referral designer-project ga-c"
