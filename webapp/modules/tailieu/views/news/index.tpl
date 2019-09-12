@@ -37,7 +37,38 @@
         </div>
     </div>
 </div> *}
+<style>
+    .custom ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
 
+    .custom li {
+        font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .custom li:last-child {
+        border: none;
+    }
+
+    .custom li a {
+        text-decoration: none;
+        color: #000;
+        display: block;
+        -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+        -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+        -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+        -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+        transition: font-size 0.3s ease, background-color 0.3s ease;
+    }
+
+    .custom li a:hover {
+        font-size: 30px;
+        background: #f6f6f6;
+    }
+</style>
 <div class="help">
     <div class="help-query">
         <div class="w1000">
@@ -47,17 +78,19 @@
             </form>
         </div>
     </div>
-    <div class="help-main">
+    <div class="help-main custom">
         <div class="w1000">
             <div class="help-nav">
                 <div class="help-back-btn"><a href="https://pngtree.com/help-center"><i class="icon-back"></i>
                         Quay lại trang chủ</a></div>
-                {foreach $arrC as $k => $d1}
-                <dt class="router-mainenter">
-                    <a href="{{SystemBase::buildUrl('tailieu/categorynews',['id'=>$d1.id,'title'=>$d1.title])}}"
-                        class="help-cate-hot one-hot-cate " data-type="{$d1.title}">{$d1.title} </a>
-                </dt>
-                {/foreach}
+                <ul>
+                    {foreach $arrC as $k => $d1}
+                    <li class="router-mainenter">
+                        <a href="{{SystemBase::buildUrl('tailieu/categorynews',['id'=>$d1.id,'title'=>$d1.title])}}"
+                            class="" data-type="{$d1.title}">{$d1.title} </a>
+                    </li>
+                    {/foreach}
+                </ul>
                 {$this->widget('TWidgets',['methodName'=>'ads','position'=>'HOME_LEFT'],true)}
             </div>
             <div class="help-contain">
@@ -68,41 +101,8 @@
             </div>
         </div>
     </div>
-    <style>
-        .help-foot ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
 
-        .help-foot li {
-            font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
-            border-bottom: 1px solid #ccc;
-        }
-
-        .help-foot li:last-child {
-            border: none;
-        }
-
-        .help-foot li a {
-            text-decoration: none;
-            color: #000;
-            display: block;
-            width: 200px;
-
-            -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
-            -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
-            -o-transition: font-size 0.3s ease, background-color 0.3s ease;
-            -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
-            transition: font-size 0.3s ease, background-color 0.3s ease;
-        }
-
-        .help-foot li a:hover {
-            font-size: 30px;
-            background: #f6f6f6;
-        }
-    </style>
-    <div class="help-foot">
+    <div class="help-foot custom">
         <div class="w1000">
             {if $arr_lq.data}
             <h2 class="help-contain-title">Bài xem thêm</h2>
