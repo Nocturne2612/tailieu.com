@@ -59,7 +59,7 @@
     <div class="help-main">
         <div class="w1000">
             <div class="help-nav custom">
-                <div class="help-back-btn"><a href="https://pngtree.com/help-center"><i class="icon-back"></i>
+                <div class="help-back-btn"><a href="/"><i class="icon-back"></i>
                         Quay lại trang chủ</a></div>
                 <ul>
                 {foreach $arrC as $k => $d}
