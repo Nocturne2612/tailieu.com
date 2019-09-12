@@ -67,7 +67,7 @@
         </div>
     </div>
     <div class="help-foot">
-        <div class="w1000">
+        <div class="w1000" >
                 {if $arr_lq.data}
                     <h2>Bài xem thêm</h2>
                     <ul>
