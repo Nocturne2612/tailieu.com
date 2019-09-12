@@ -13,8 +13,8 @@
                     </a>
                     <p class="index-banner-title">5,254,600 Graphic Resources For Free Download</p>
                     <h1 class="index-banner-text">Royalty Free PNG Images, Vectors, Backgrounds, Templates, Art Fonts</h1>
-                    <div class="index-page index-search js_search pullDown ">
-                        <div class="index-search-input">
+                    <form class="index-page index-search js_search pullDown ">
+                        <div class="index-search-input" style="padding-left: 10px;margin: 7px;">
                             <input type="text" placeholder="Search Graphic Design" class="js_search-input " data-type="1" value="">
                         </div>
                         <a href="javascript:;" class="index-search-btn" data-text="Please enter keywords">
@@ -25,7 +25,7 @@
                             <div class="search-dropdown"></div>
                         </div>
 
-                    </div>                    <div class="index-banner-recommend xs-hide">
+                    </form>                    <div class="index-banner-recommend xs-hide">
                         <a href="/so/frame" data-type="frame" class="index-banner-recommend-word rem-click">frame</a>
                         <a href="/so/watercolor-flowers" data-type="watercolor flowers" class="index-banner-recommend-word rem-click">watercolor flowers</a>
                         <a href="/so/black-gold" data-type="black gold" class="index-banner-recommend-word rem-click">black gold</a>

@@ -254,7 +254,7 @@
                 </div>
                 <div class="index-search-input">
                         <input type="text" placeholder="Search Png Resource" class="js_search-input " data-type="1"
-                            value="">
+                            value="" style="padding: 0;">
                 </div>
                 <a href="javascript:;" class="sb-btn fl-l search-click-btn">
                         <i class="iconfont icon-sousuo"></i>

@@ -319,6 +319,18 @@
     border: 0;
     box-shadow: 0 0 2px 0 rgba(3,0,0,.1);
 }
+.scroll-Nav .index-search-input input {
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    padding-left: 18px;
+    font-size: 16px;
+    color: #000;
+    background: #fff;
+    outline: 0;
+    border: 0;
+    box-shadow: 0 0 2px 0 rgba(3,0,0,.1);
+}
 
 @media screen and (max-width:1000px) {
     .index-search-input input {
