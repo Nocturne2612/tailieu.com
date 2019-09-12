@@ -1,10 +1,5 @@
 <?php
 
-/**
- * Description of AccountController
- *
- * @author DUCLM
- */
 class AccountController extends TailieuController {
 
     public $_models;

@@ -6,11 +6,7 @@
  * and open the template in the editor.
  */
 
-/**
- * Description of AccountController
- *
- * @author DUCLM
- */
+
 class AccountController extends AdminController {
 
     public $typeArr = array(

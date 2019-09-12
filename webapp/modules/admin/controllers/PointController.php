@@ -6,11 +6,7 @@
  * and open the template in the editor.
  */
 
-/**
- * Description of AccountController
- *
- * @author DUCLM
- */
+
 class PointController extends AdminController {
 
     private $_modes;

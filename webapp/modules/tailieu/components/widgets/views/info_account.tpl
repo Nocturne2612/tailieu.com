@@ -20,7 +20,7 @@
                         {else}
                         <b style="font-weight: bold">Bình thường</b>
                         {/if}
-                </span>
+                </span><br/>
                 <span class="user-panel-id">Gia nhập từ: <b style="color: #468847">{$data.create_time|date_format:"%d-%m-%Y"}</b></span><br/>
                 <span class="user-panel-id">Số Point: <b style="color: #468847">{$data.point|number_format:2:",":"."|replace:',00':''}</b> Point</span><br/>
                 <span class="user-panel-id">Upload: <b style="color: #468847">{$data.count_upload}</b> tài liệu</span><br/>
