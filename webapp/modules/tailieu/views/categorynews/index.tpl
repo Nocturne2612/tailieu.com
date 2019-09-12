@@ -74,7 +74,9 @@
                         {$e.subcontent}
                     </li> *}
                     <li>
-                        <img src="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_NEWS_THUMB}{$e.image}" alt="{$e.title}" width="220">
+                        <div class="li-box grid-sizer search_keyword_statis_js mb-picbox">
+                            <img src="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_NEWS_THUMB}{$e.image}" alt="{$e.title}" width="220">
+                        </div>
                         <a href="{SystemBase::buildUrl('tailieu/news',['id'=>$e.id,'title'=>$e.title])}" class="help-cate-sug"
                             data-type="{$e.title}">{$e.title}</a>
                         {$e.subcontent}
