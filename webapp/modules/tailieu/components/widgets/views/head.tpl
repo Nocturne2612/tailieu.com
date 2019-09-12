@@ -141,10 +141,10 @@
         <!-- Topnav -->
         <ul class="fl-l Topnav" style="display: block">
             <li>
-                <a href="{$smarty.const.ROOT_URL}">Trang chủ</a>
+                <a href="{$smarty.const.ROOT_URL}">TRANG CHỦ</a>
             </li>
             <li class="pulldown-box ga-c" data-ga="Danh mục">
-                <a href="#">Danh mục</a>
+                <a href="#">DANH MỤC</a>
                 <div class="drop-down tran right">
                     <ul class="mainCont">
                         {$this->widget('TWidgets',['methodName'=>'CategoryMenu','check'=>false],true)}
@@ -153,7 +153,7 @@
                 </div>
             </li>
             <li class="nav-item "><a ref="nofollow" class="nav-link"
-                    href="{SystemBase::buildUrl('tailieu/home',['sort'=>'hot'])}">Models mới</a></li>
+                    href="{SystemBase::buildUrl('tailieu/home',['sort'=>'hot'])}">MODEL MỚI</a></li>
             <li class="nav-item "><a ref="nofollow" class="nav-link"
                     href="{SystemBase::buildUrl('tailieu/home',['sort'=>'free'])}">MIỄN PHÍ</a></li>
             <li class="nav-item "><a ref="nofollow" class="nav-link"
