@@ -36,7 +36,6 @@ class NewsController extends TailieuController {
         $arr_tk = $newsMod->getDataTK($array['tag'], $id);
         
         $arr_C = $this->_model->getData();
-        var_dump($array);die();
         $this->render('index', array(
             'd' => $array,
             'arr_lq' => $arr_lq,
