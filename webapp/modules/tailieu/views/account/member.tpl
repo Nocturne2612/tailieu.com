@@ -39,3 +39,8 @@
         }
     </style>
 {/if}
+<div class="user-main">
+    <div class="user-main-inner">
+        <h1 class="user-main-title">Tài liệu đã upload</h1>
+    </div>
+</div>
