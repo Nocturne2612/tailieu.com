@@ -15,6 +15,37 @@
         color: #3e3e3e;
         text-decoration: underline;
     }
+
+    .custom ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .custom li {
+        font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .custom li:last-child {
+        border: none;
+    }
+
+    .custom li a {
+        text-decoration: none;
+        color: #000;
+        display: block;
+        -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+        -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+        -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+        -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+        transition: font-size 0.3s ease, background-color 0.3s ease;
+    }
+
+    .custom li a:hover {
+        font-size: 30px;
+        background: #f6f6f6;
+    }
 </style>
 <div class="help">
     <div class="help-query">
@@ -30,12 +61,14 @@
             <div class="help-nav">
                 <div class="help-back-btn"><a href="https://pngtree.com/help-center"><i class="icon-back"></i>
                         Quay lại trang chủ</a></div>
+                <ul>
                 {foreach $arrC as $k => $d}
-                <dt class="router-mainenter">
+                <li class="router-mainenter">
                     <a href="{{SystemBase::buildUrl('tailieu/categorynews',['id'=>$d.id,'title'=>$d.title])}}"
-                        class="help-cate-hot one-hot-cate " data-type="{$d.title}">{$d.title} </a>
-                </dt>
+                        class="" data-type="{$d.title}">{$d.title} </a>
+                </li>
                 {/foreach}
+                </ul>
                 {$this->widget('TWidgets',['methodName'=>'ads','position'=>'HOME_LEFT'],true)}
             </div>
             <div class="help-contain">
