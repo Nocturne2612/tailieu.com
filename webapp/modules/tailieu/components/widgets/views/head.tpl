@@ -252,7 +252,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="index-search-input">
+                <div class="index-search-input" style="padding: 0;">
                         <input type="text" placeholder="Search Png Resource" class="js_search-input " data-type="1"
                             value="" style="padding: 0;">
                 </div>
