@@ -246,19 +246,19 @@
                             {/foreach}
                         </ul>
                     </div>
-                    <div class="index-search-input">
-                        <input type="text" placeholder="Search Png Resource" class="js_search-input " data-type="1"
-                            value="">
-                    </div>
                     <div class=" search-dropdown-wrap comment-search-dropdown-wrap" id="search-dropdown-wrap"
                         style="display: none;">
                         <div class="search-dropdown head-dop" data-type="headen">
                         </div>
                     </div>
-                    <a href="javascript:;" class="sb-btn fl-l search-click-btn">
-                        <i class="iconfont icon-sousuo"></i>
-                    </a>
                 </div>
+                <div class="index-search-input">
+                        <input type="text" placeholder="Search Png Resource" class="js_search-input " data-type="1"
+                            value="">
+                </div>
+                <a href="javascript:;" class="sb-btn fl-l search-click-btn">
+                        <i class="iconfont icon-sousuo"></i>
+                </a>
             </form>
 
             <!-- search search end -->
