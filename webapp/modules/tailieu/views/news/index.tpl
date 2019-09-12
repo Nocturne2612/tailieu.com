@@ -1,10 +1,11 @@
-{* 
+{*
 <div class="ui-box layout fn-clear" id="common-panel">
     <div class="common-aside">
-        <div class="about-menu"> 
+        <div class="about-menu">
             {foreach $arrC as $k => $d1}
-                <h5><a href="{SystemBase::buildUrl('tailieu/categorynews',['id'=>$d1.id,'title'=>$d1.title])}" title="{$d1.title}"> {$d1.title} <i class="icon-angle-right menuright"></i></a></h5>				
-                    {/foreach}
+            <h5><a href="{SystemBase::buildUrl('tailieu/categorynews',['id'=>$d1.id,'title'=>$d1.title])}"
+                    title="{$d1.title}"> {$d1.title} <i class="icon-angle-right menuright"></i></a></h5>
+            {/foreach}
 
 
         </div>
@@ -16,19 +17,20 @@
             <div class="about-block">
                 {$this->widget('TWidgets',['methodName'=>'ads','position'=>'DETAIL_CENTER'],true)}
                 {$d.content}
-                {$this->widget('TWidgets',['methodName'=>'ads','position'=>'DETAIL_CENTER2'],true)} 
+                {$this->widget('TWidgets',['methodName'=>'ads','position'=>'DETAIL_CENTER2'],true)}
 
                 {if $arr_lq.data}
-                    <h2>Bài xem thêm</h2>
-                    <ul>
-                        {foreach item=v from= $arr_lq.data}
-                            <li>
-                                <a class="more-link" href="{SystemBase::buildUrl('tailieu/news',['id'=>$v.id,'title'=>$v.title])}">{$v.title}</a>
-                            </li>
+                <h2>Bài xem thêm</h2>
+                <ul>
+                    {foreach item=v from= $arr_lq.data}
+                    <li>
+                        <a class="more-link"
+                            href="{SystemBase::buildUrl('tailieu/news',['id'=>$v.id,'title'=>$v.title])}">{$v.title}</a>
+                    </li>
 
-                        {/foreach}
-                    </ul>
-                    {$arr_lq.pageHtml}
+                    {/foreach}
+                </ul>
+                {$arr_lq.pageHtml}
                 {/if}
                 <!-- // about-block end -->
             </div>
@@ -66,19 +68,54 @@
             </div>
         </div>
     </div>
-    <div class="help-foot">
-        <div class="w1000" >
-                {if $arr_lq.data}
-                    <h2>Bài xem thêm</h2>
-                    <ul>
-                        {foreach item=v from= $arr_lq.data}
-                            <li>
-                                <a class="more-link" href="{SystemBase::buildUrl('tailieu/news',['id'=>$v.id,'title'=>$v.title])}">{$v.title}</a>
-                            </li>
+    <style>
+        .help-foot ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
 
-                        {/foreach}
-                    </ul>
-                {/if}
+        .help-foot li {
+            font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .help-foot li:last-child {
+            border: none;
+        }
+
+        .help-foot li a {
+            text-decoration: none;
+            color: #000;
+            display: block;
+            width: 200px;
+
+            -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+            -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+            -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+            -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+            transition: font-size 0.3s ease, background-color 0.3s ease;
+        }
+
+        .help-foot li a:hover {
+            font-size: 30px;
+            background: #f6f6f6;
+        }
+    </style>
+    <div class="help-foot">
+        <div class="w1000">
+            {if $arr_lq.data}
+            <h2 class="help-contain-title">Bài xem thêm</h2>
+            <ul>
+                {foreach item=v from= $arr_lq.data}
+                <li>
+                    <a class="more-link"
+                        href="{SystemBase::buildUrl('tailieu/news',['id'=>$v.id,'title'=>$v.title])}">{$v.title}</a>
+                </li>
+
+                {/foreach}
+            </ul>
+            {/if}
         </div>
     </div>
 </div>
