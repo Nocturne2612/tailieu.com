@@ -27,11 +27,14 @@
                     {foreach $arr_news.data as $e}
                     <li>
                         <div class="new-image">
-                            <img src="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_NEWS_THUMB}{$e.image}" alt="{$e.title}" width="220">
+                            <img src="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_NEWS_THUMB}{$e.image}"
+                                alt="{$e.title}" width="220">
                         </div>
-                        <a href="{SystemBase::buildUrl('tailieu/news',['id'=>$e.id,'title'=>$e.title])}" class="help-cate-sug"
-                            data-type="{$e.title}">{$e.title}</a>
-                        {$e.subcontent}
+                        <div class="new-text">
+                            <a href="{SystemBase::buildUrl('tailieu/news',['id'=>$e.id,'title'=>$e.title])}"
+                                class="help-cate-sug" data-type="{$e.title}">{$e.title}</a>
+                            {$e.subcontent}
+                        </div>
                     </li>
                     {/foreach}
                     {/if}
@@ -43,8 +46,8 @@
     <div class="help-foot">
         <div class="w1000">
             <div class="contact-group">
-            {$this->widget('TWidgets',['methodName'=>'ads','position'=>'DETAIL_CENTER2'],true)}
-                
+                {$this->widget('TWidgets',['methodName'=>'ads','position'=>'DETAIL_CENTER2'],true)}
+
             </div>
         </div>
     </div>
