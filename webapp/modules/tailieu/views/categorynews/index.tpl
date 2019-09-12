@@ -34,7 +34,7 @@
                     {if $category}<h3 class="help-contain-title">{$category.title}</h3>{/if}
                     {if $arr_news.data}
                     {foreach $arr_news.data as $e}
-                    <li>
+                    <li style="display: flex">
                         <div class="new-image">
                             <img src="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_NEWS_THUMB}{$e.image}"
                                 alt="{$e.title}" width="220">
