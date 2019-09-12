@@ -74,6 +74,7 @@
                         {$e.subcontent}
                     </li> *}
                     <li>
+                        <img src="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_NEWS_THUMB}{$e.image}" alt="{$e.title}" width="220">
                         <a href="{SystemBase::buildUrl('tailieu/news',['id'=>$e.id,'title'=>$e.title])}" class="help-cate-sug"
                             data-type="{$e.title}">{$e.title}</a>
                         {$e.subcontent}
@@ -88,8 +89,8 @@
     <div class="help-foot">
         <div class="w1000">
             <div class="contact-group">
-                <p class="contact-us-text">Can’t find what you’re looking for?</p>
-                <a href="https://pngtree.com/help-center/contact" class="contact-us-link">Contact us</a>
+            {$this->widget('TWidgets',['methodName'=>'ads','position'=>'DETAIL_CENTER2'],true)}
+                
             </div>
         </div>
     </div>
