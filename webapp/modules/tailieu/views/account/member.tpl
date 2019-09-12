@@ -19,9 +19,9 @@
                 <span class="user-panel-id">Upload: <b
                             style="color: #468847">{$data.count_upload}</b> tài liệu</span><br/>
                 <span class="user-panel-id">Up miễn phí: <b
-                            style="color: #468847">{$data.total_free}</b> tài liệu</span><br/>
+                            style="color: #468847">{$total_free}</b> tài liệu</span><br/>
                 <span class="user-panel-id">Up có phí: <b
-                            style="color: #468847">{$data.total_fee}</b> tài liệu</span><br/>
+                            style="color: #468847">{$total_fee}</b> tài liệu</span><br/>
                 <span class="user-panel-id">Download: <b
                             style="color: #468847">{$data.count_down}</b> tài liệu</span><br/><br/>
                 <a class="btn btn-small btn-primary" href="{SystemBase::buildUrl('tailieu/addfund/',[])}">Nạp tiền</a>
