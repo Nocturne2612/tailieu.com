@@ -62,7 +62,6 @@
                             <h4 class="item-title">{$t.title}</h4>
                             <div class="item-info">
                                 <span class="item-size">{$t.price|number_format:2:",":"."|replace:',00':''} POINT &nbsp;&nbsp;</span>
-                                <span class="item-size">{$arr_status[$t.status]}&nbsp;&nbsp; </span>
                             </div>
                         </div>
                     </li>
