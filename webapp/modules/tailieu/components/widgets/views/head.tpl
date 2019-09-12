@@ -303,14 +303,6 @@
                     </div>
                 </div>
             </div>
-            <div class="ti-credit fl-r desinger-head-btn" style="display: block">
-                <a rel="nofollow" href="{SystemBase::buildUrl('tailieu/account/upload',[])}" data-join='head'
-                    target="_blank" data-invite-click="button" class="btn-Referral designer-project ga-c"
-                    data-ga="UPLOAD A MODEL"><i class="iconfont icon-upload"></i>UPLOAD A MODEL </a>
-                <a rel="nofollow" href="{SystemBase::buildUrl('tailieu/account/upload',[])}" target="_blank"
-                    data-invite-click="button" class="btn-Referral designer-upload ga-c" data-ga="Go_Upload"
-                    style="display:none;"><i class="iconfont icon-upload"></i>Go Upload</a>
-            </div>
             <div class="fl-r top-collect-box pr" style="display: block">
                 <a class="iconfont icon-star"></a>
                 <div class="top-collect-down">
@@ -318,6 +310,14 @@
                     <p><i class="iconfont icon-star"></i>Ctrl+D</p>
                     <p>Mark us if you like us</p>
                 </div>
+            </div>
+            <div class="ti-credit fl-r desinger-head-btn" style="display: block">
+                <a rel="nofollow" href="{SystemBase::buildUrl('tailieu/account/upload',[])}" data-join='head'
+                    target="_blank" data-invite-click="button" class="btn-Referral designer-project ga-c"
+                    data-ga="UPLOAD A MODEL"><i class="iconfont icon-upload"></i>UPLOAD A MODEL </a>
+                <a rel="nofollow" href="{SystemBase::buildUrl('tailieu/account/upload',[])}" target="_blank"
+                    data-invite-click="button" class="btn-Referral designer-upload ga-c" data-ga="Go_Upload"
+                    style="display:none;"><i class="iconfont icon-upload"></i>Go Upload</a>
             </div>
             {/if}
         </div>
