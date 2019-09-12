@@ -4585,12 +4585,13 @@ textarea:-ms-input-placeholder {
   border-bottom: 7px solid #FFF;
   position: absolute;
   top: -7px;
-  right: 25%
+  right: 5%;
 }
 
 .v2-header .user-infor .user-dropbox .db-top {
   height: 50px;
-  padding: 0 30px
+  padding: 0 30px;
+  border-bottom: 1px solid #d3d3d3;
 }
 
 .v2-header .db-top span {
