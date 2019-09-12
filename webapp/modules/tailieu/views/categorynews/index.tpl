@@ -6,6 +6,11 @@
     .new-text {
         padding-left: 10px;
     }
+    .new-text a {
+        font-size: 2em;
+        color: #3e3e3e;
+        text-decoration: underline;
+    }
 </style>
 <div class="help">
     <div class="help-query">
