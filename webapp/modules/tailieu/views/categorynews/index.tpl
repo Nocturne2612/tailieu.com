@@ -43,7 +43,7 @@
     }
 
     .custom li a:hover {
-        font-size: 30px;
+        font-size: 1.1em;
         background: #f6f6f6;
     }
 </style>
