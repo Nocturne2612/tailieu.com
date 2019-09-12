@@ -72,17 +72,6 @@
         {/literal}
         <div id="wrapper" class="home  UNLOGIN VND">
 
-            <div class="window-register-top">
-
-            </div>
-            <div class="window-extra-top xs-contain mobile-question" style="display: none">
-                <p class="window-extra-top-text">
-                    <i class="iconfont icon-tiaocha"></i>Chance to win free 5 days Premium Plan
-                    <a href="javascript:;" class="window-extra-top-close">
-                        <i class="iconfont icon-guanbi"></i></a>
-                    <a href="https://wj.qq.com/s2/3792165/c41c/" class="window-extra-top-link">Go</a>
-                </p>
-            </div>
 
             {$this->widget('TWidgets',['methodName'=>'head'],true)}
 
