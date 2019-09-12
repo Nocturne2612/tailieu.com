@@ -651,9 +651,7 @@ class AccountController extends TailieuController {
             $output = Paging::getDataForFunction('products', 'price,proprice,title,id,create_time,picture,sub_category_id,category_id,short,count,count_down,tag,picture', $conditions, 'id desc', '28');
             $total_free = DataHelper::count('products', $conditions . ' and price = 0');
             $total_fee = DataHelper::count('products', $conditions . ' and price <> 0');
-echo "<pre>";
-print_r($output);
-die();
+
             return $this->render('member', array(
                         'outputs' => $output,
                         'data' => $data,
