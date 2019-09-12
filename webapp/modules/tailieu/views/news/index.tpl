@@ -68,7 +68,6 @@
     </div>
     <div class="help-foot">
         <div class="w1000">
-            <div class="contact-group">
                 {if $arr_lq.data}
                     <h2>Bài xem thêm</h2>
                     <ul>
@@ -79,10 +78,7 @@
 
                         {/foreach}
                     </ul>
-                    {$arr_lq.pageHtml}
                 {/if}
-
-            </div>
         </div>
     </div>
 </div>
