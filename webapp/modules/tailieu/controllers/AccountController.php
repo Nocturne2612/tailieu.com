@@ -642,7 +642,7 @@ class AccountController extends TailieuController {
     }
 
     public function actionMember($id) {
-//        $this->layout = 'account2';
+        $this->layout = 'home';
         $id = (int) $id;
         $data = DataHelper::selectOne('accounts', "*", "id='" . $id . "' and active_status = 1");
 

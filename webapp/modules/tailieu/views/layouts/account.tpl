@@ -65,5 +65,6 @@
         </div>
     </div>
     {$this->widget('TWidgets',['methodName'=>'footer'],true)}
+</div>
 </body>
 </html>
