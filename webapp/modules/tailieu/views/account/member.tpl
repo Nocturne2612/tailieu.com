@@ -51,7 +51,7 @@
                         <div class="user-gditem-inner">
                             <div class="item-img">
                                 <a target="_blank"
-                                   href="{SystemBase::buildUrl('tailieu/document',['title'=>$t.title,'id'=>$t.id_product])}"
+                                   href="{SystemBase::buildUrl('tailieu/document',['title'=>$t.title,'id'=>$t.id])}"
                                    class="item-link"></a>
                                 {if isset($t.picture) && $t.picture <>""}
                                     {assign var="arr_pic" value="|"|explode:$t.picture}
