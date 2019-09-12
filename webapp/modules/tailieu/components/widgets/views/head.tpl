@@ -193,7 +193,7 @@
                    data-lg="">Register</a>
             </div>
             {else}
-            <div class="user-infor fl-l">
+            <div class="user-infor fl-r">
                 <a href="{SystemBase::buildUrl('tailieu/account',[])}" class="user-entry ga-c" data-ga="User_Center">
                     <div class="user-img">
                         <img src="/assets/images/007-nature-29.png">
@@ -292,7 +292,7 @@
             </div>
         {else}
             <!-- user -->
-            <div class="user-infor fl-l">
+            <div class="user-infor fl-r">
                 <a href="{SystemBase::buildUrl('tailieu/account',[])}" class="user-entry ga-c" data-ga="User_Center">
                     <div class="user-img">
                         <img src="/assets/images/007-nature-29.png">
