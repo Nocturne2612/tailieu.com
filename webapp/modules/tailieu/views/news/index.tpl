@@ -50,10 +50,10 @@
             <div class="help-nav">
                 <div class="help-back-btn"><a href="https://pngtree.com/help-center"><i class="icon-back"></i>
                         Quay lại trang chủ</a></div>
-                {foreach $arrC as $k => $d}
+                {foreach $arrC as $k => $d1}
                 <dt class="router-mainenter">
-                    <a href="{{SystemBase::buildUrl('tailieu/categorynews',['id'=>$d.id,'title'=>$d.title])}}"
-                        class="help-cate-hot one-hot-cate " data-type="{$d.title}">{$d.title} </a>
+                    <a href="{{SystemBase::buildUrl('tailieu/categorynews',['id'=>$d1.id,'title'=>$d1.title])}}"
+                        class="help-cate-hot one-hot-cate " data-type="{$d1.title}">{$d1.title} </a>
                 </dt>
                 {/foreach}
                 {$this->widget('TWidgets',['methodName'=>'ads','position'=>'HOME_LEFT'],true)}
@@ -61,7 +61,7 @@
             <div class="help-contain">
                 <ul class="help-contain-list">
                     <h1 class="help-contain-title">{$d.title}</h1>
-                    {$d}
+                    {$d.content}
                 </ul>
             </div>
         </div>
