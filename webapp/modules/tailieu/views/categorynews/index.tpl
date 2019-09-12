@@ -1,5 +1,5 @@
 <div class="help">
-    {* <div class="help-query">
+     <div class="help-query">
         <div class="w1000">
             <form class="help-query-form">
                 <input class="help-query-search" type="text" placeholder="Search help articles">
@@ -7,7 +7,7 @@
             </form>
         </div>
     </div>
-    <div class="help-main">
+    {*<div class="help-main">
         <div class="w1000">
             <div class="help-nav">
                 <div class="help-back-btn"><a href="https://pngtree.com/help-center"><i class="icon-back"></i>
