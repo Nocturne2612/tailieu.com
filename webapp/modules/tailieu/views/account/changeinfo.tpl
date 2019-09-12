@@ -45,8 +45,8 @@
                         <div class="form-item ccaptcha">
                             <input class="ui-input fill" id="verifyCode" name="verifyCode" type="text">
                             <label for="verifyCode"><span>Mã bảo mật</span></label>
-                            {$this->widget('CCaptcha',['id'=>'ccaptcha'],true)}
                         </div>
+                            {$this->widget('CCaptcha',['id'=>'ccaptcha'],true)}
 
                         
                     </div>
