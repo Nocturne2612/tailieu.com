@@ -22,9 +22,6 @@ class CategorynewsController extends TailieuController {
 
     public function actionIndex() {
         Yii::app()->getClientScript()->registerCssFile(Yii::app()->baseUrl . '/assets/tailieuv3/css/help_index.css');
-        // Yii::app()->getClientScript()->registerCssFile(Yii::app()->baseUrl . '/assets/tailieu/css/owl.carousel.css');
-        // Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieu/js/owl.carousel.js', CClientScript::POS_END);
-        // Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieu/js/custom.js', CClientScript::POS_END);
         $model = new News;
         $id = ObjInput::get('id', 'int', 0);
         
