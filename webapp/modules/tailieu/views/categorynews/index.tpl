@@ -1,12 +1,16 @@
 <style>
     .new-image {
-        box-shadow: 0px 2px 16px #888888;
+        box-shadow: 5px 5px 10px #ddd;
         border: 2px solid #ddd;
     }
     .new-text {
         padding-left: 10px;
     }
     .new-text a {
+        font-size: 2em;
+        color: #3e3e3e;
+    }
+    .new-text a:hover {
         font-size: 2em;
         color: #3e3e3e;
         text-decoration: underline;
