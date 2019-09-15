@@ -92,15 +92,13 @@
                             <div class="
 normal share-group circle
 ">
-    <a href="javascript:;" onclick="Pngtree.BaseFun.Base_OpenWin('https://www.facebook.com/share.php?u=https%3A%2F%2Fpngtree.com%2Ffreepng%2Fcat-animal-lovely-cute-pet_4111427.html?share=2','facebook-share')" data-type="8" class="share-two bg-facebook share-user-btn">
+    <a href="javascript:;" onclick="Pngtree.BaseFun.Base_OpenWin('https://www.facebook.com/share.php?u={SystemBase::buildUrl('tailieu/document',['id'=>$output.id,'title'=>$output.title])}','facebook-share')" data-type="8" class="share-two bg-facebook share-user-btn">
         <i class="iconfont icon-facebook"></i>
     </a>
-    <a href="javascript:;" onclick="Pngtree.BaseFun.Base_OpenWin('https://twitter.com/intent/tweet?url=https%3A%2F%2Fpngtree.com%2Ffreepng%2Fcat-animal-lovely-cute-pet_4111427.html?share=1&amp;text=Cat+Animal+Lovely+Cute+Pet','twitter-share')" data-type="8" class="bg-twitter share-one share-user-btn">
+    <a href="javascript:;" onclick="Pngtree.BaseFun.Base_OpenWin('https://twitter.com/intent/tweet?url={SystemBase::buildUrl('tailieu/document',['id'=>$output.id,'title'=>$output.title])}','twitter-share')" data-type="8" class="bg-twitter share-one share-user-btn">
         <i class="iconfont icon-twitter"></i>
     </a>
-    <a href="javascript:;" onclick="Pngtree.BaseFun.Base_OpenWin('https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpngtree.com%2Ffreepng%2Fcat-animal-lovely-cute-pet_4111427.html?share=3&amp;media=https://png.pngtree.com/illustration/20190226/ourlarge/pngtree-cat-animal-lovely-cute-pet-image_7286.jpg&amp;description=hand+painted%2Cblue%2Ccat%2Canimal%2Clovely%2Ccute+pet','pinterest-share')" data-type="8" class="bg-pinterest share-user-btn share-three">
-        <i class="iconfont icon-pinterest"></i>
-    </a>
+    
 </div>
                         </li>
                     </ul>
