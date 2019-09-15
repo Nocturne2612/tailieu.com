@@ -42,7 +42,8 @@
                             <li data-thumb="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_PRODUCT_THUMB}{$arr_pic[0]}">
                                 {assign var="arr_pic" value="|"|explode:$output.picture}
                                 <img data-original="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_PRODUCT}{$arr_pic[0]}"
-                                    itemprop="image" title="{$output.title}" alt="{$output.title}" class="lazy"
+                                    itemprop="image" title="{$output.title}" alt="{$output.title}" class="lazy" 
+                                    href="#detail-more-d"
                                     style="width: 100%">
 
                             </li>
@@ -116,14 +117,15 @@ normal share-group circle
                     {/foreach}<br />
                     <br />
                     <div class="detail-more">
-                        <span less="">{$output.full}</span>
+                        <span more>
+                            show more
+                            <i class="iconfont icon-xiangxiazhanhang"></i>
+                        </span>
                     </div>
                 </div>
-                <div class="detail-more">
-                    <span more>
-                        show more
-                        <i class="iconfont icon-xiangxiazhanhang"></i>
-                    </span>
+                    <div id="detail-more-d" class="detail-more">
+                        <span less="">{$output.full}</span>
+                    </div>
                 </div>
                 <div id="fb-root"></div>
                 <script src="https://connect.facebook.net/vi_VN/all.js#appId=882475878492163&xfbml=1"></script>
