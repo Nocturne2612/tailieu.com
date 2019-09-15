@@ -408,14 +408,14 @@ $(function () {
     }, setTimeout(function () {
         o()
     }, 0));
-    try {
-        $("img.lazy").lazyload({
-            threshold: 200,
-            effect: "fadeIn",
-            load: o
-        })
-    } catch (e) {
-    }
+    // try {
+    //     $("img.lazy").lazyload({
+    //         threshold: 200,
+    //         effect: "fadeIn",
+    //         load: o
+    //     })
+    // } catch (e) {
+    // }
     $("#base-download-confirm").on("click", function () {
         $(this).fadeOut(200)
     }), $(".download-confirm").on("click", function (e) {
