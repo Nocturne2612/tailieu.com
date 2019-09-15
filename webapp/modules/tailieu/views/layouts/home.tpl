@@ -33,12 +33,6 @@
 
     <link rel="stylesheet" href="https://tailieukientruc.net/assets/tailieu/popup/qc.css" />
     <script type="text/javascript" src="https://tailieukientruc.net/assets/tailieu/popup/jquery.popup.js"></script>
-
-    <script type="text/javascript">
-        $(window).load(function () {
-            $('#myModal').linhnguyen($('#myModal').data());
-        });
-    </script>
 </head>
 
 <body>
