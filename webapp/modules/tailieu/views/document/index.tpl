@@ -43,7 +43,8 @@
                                 {assign var="arr_pic" value="|"|explode:$output.picture}
                                 <img data-original="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_PRODUCT}{$arr_pic[0]}"
                                     itemprop="image" title="{$output.title}" alt="{$output.title}" class="lazy"
-                                    style="width: 100%">
+                                    style="width: 100%"
+                                    href="#detail-more-more">
 
                             </li>
                             {/if}
@@ -115,14 +116,14 @@ normal share-group circle
                         class="">{$t}</a>
                     {/foreach}<br />
                     <br />
-                    <div class="detail-more">
+                    <div class="detail-more" style="width: 100%;">
                     <span less>
                         show more
                         <i class="iconfont icon-xiangxiazhanhang"></i>
                     </span>
                     </div>
                 </div>
-                <div class="detail-more">
+                <div class="detail-more" id="detail-more-more">
                         <span more>{$output.full}</span>
                     </div>
                 <div id="fb-root"></div>
