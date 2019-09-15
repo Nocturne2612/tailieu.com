@@ -32,6 +32,7 @@ class News extends TModel {
     }
 
     public function getData($param = '') {
+        var_dump($param);die;
         $conditions = self::searchCondition($param);
         $conditions .= ' and status = 1';
 
