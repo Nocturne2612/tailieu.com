@@ -25,7 +25,7 @@ class AddfundController extends TailieuController {
     }
 
     public function actionIndex() {
-        Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieu/js/nganluong.apps.mcflow.js');
+        // Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieu/js/nganluong.apps.mcflow.js');
         $info = Accounts::infoAccount();
         $this->_model->attributes = $_POST;
         if (Yii::app()->request->isPostRequest && $this->_model->validate()) {
