@@ -52,7 +52,7 @@ class News extends TModel {
 
     public static function searchCondition($param) {
         $conditions = ' 1 = 1 ';
-        if (isset($param['id']) && $param['id'] <> 0) {
+        if (isset($param['parent_id']) && $param['parent_id'] <> 0) {
             $conditions .= " and parent_id = " . intval($param['id']);
         }
 
