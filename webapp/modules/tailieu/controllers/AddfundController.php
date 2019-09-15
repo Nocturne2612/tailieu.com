@@ -14,9 +14,9 @@ class AddfundController extends TailieuController {
         );
     }
 
-    public function accessRules() {
-        // return TRoles::getAccessRules($this->id);
-    }
+    // public function accessRules() {
+    //     return TRoles::getAccessRules($this->id);
+    // }
 
     public function init() {
         $this->_model = new Addfund;
