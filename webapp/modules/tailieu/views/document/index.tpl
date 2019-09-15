@@ -189,7 +189,7 @@ normal share-group circle
             </div>
         </div>
     </div>
-    <div class="detail-banner">
+    {* <div class="detail-banner">
         <div class="w1520">
             <div class="detail-banner-inner">
                 <ul class="mb-box clearfix">
@@ -197,5 +197,5 @@ normal share-group circle
                 </ul>
             </div>
         </div>
-    </div>
+    </div> *}
 </div>

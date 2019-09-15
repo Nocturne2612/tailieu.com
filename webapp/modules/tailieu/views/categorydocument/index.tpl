@@ -83,7 +83,7 @@
                     <span class="lg-subpage-filter-sort-title xs-hide" style="width: 120px;">Danh mục con:</span>
                     <div class="subpage-menu-box new-subpage-menu-box">
                         <div class="subpage-menu-inneBox">
-                            <a href="{$smarty.const.ROOT_URL}/{$data.acsii}.html" class="sort-btn on">{$v.title}</a>
+                            <a href="{$smarty.const.ROOT_URL}/{$data}.html" class="sort-btn on">{$v.title}</a>
                         </div>
                         {if $data['parent_id'] > 0 && isset($category['sub_category'][$data['parent_id']])}
                             
