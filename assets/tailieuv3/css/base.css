@@ -4975,6 +4975,9 @@ textarea:-ms-input-placeholder {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.vfp-cont>a:nth-child(odd) {
+  margin-left: 30px;
+}
 
 .vfp-cont>a:hover {
   color: #90c992
