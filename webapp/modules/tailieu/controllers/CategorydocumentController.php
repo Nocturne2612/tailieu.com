@@ -23,6 +23,7 @@ class CategorydocumentController extends TailieuController {
         Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieu/js/custom.js', CClientScript::POS_END);
         $acii = ObjInput::get('title', 'str', '');
         $array = $output = $outputs = array();
+        var_dump($acii);die;
         $array['acii'] = $acii;
         $array = $this->_model->getDetailCategory($acii);
         if (!$array) {
