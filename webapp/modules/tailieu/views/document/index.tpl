@@ -98,7 +98,9 @@ normal share-group circle
     <a href="javascript:;" onclick="Pngtree.BaseFun.Base_OpenWin('https://twitter.com/intent/tweet?url={SystemBase::buildUrl('tailieu/document',['id'=>$output.id,'title'=>$output.title])}','twitter-share')" data-type="8" class="bg-twitter share-one share-user-btn">
         <i class="iconfont icon-twitter"></i>
     </a>
-    
+    <a href="javascript:;" onclick="Pngtree.BaseFun.Base_OpenWin('https://www.pinterest.com/pin/create/button/?url={SystemBase::buildUrl('tailieu/document',['id'=>$output.id,'title'=>$output.title])}?share=3&amp;media=','pinterest-share')" data-type="8" class="bg-pinterest share-user-btn share-three">
+        <i class="iconfont icon-pinterest"></i>
+    </a>
 </div>
                         </li>
                     </ul>
