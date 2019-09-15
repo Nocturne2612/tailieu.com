@@ -74,20 +74,10 @@
                     </div>
                     <div class="line_orn"></div>
                     <div class="modal-footer">
-
-
-
                         <p class="text-center green bold line-h">
                             <img src="https://tailieukientruc.net/images/bank/secure.png" height="40" alt="secure">
                             <br>Chứng nhận giao dịch an toàn!
                         </p>
-
-
-
-
-
-
-
                     </div>
                 </div>
             </div>
