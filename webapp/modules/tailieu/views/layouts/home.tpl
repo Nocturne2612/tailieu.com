@@ -92,7 +92,6 @@
 
         </div>
     </div>
-    <script type="text/javascript" src="/assets/tailieu/js/nganluong.apps.mcflow.js"></script>
 </body>
 
 </html>
