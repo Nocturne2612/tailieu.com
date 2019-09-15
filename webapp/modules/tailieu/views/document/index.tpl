@@ -160,7 +160,7 @@ normal share-group circle
 
             <div class="recommend-swiper">
                 <p class="recommend-swiper-title">
-                    <span>You may also like</span>
+                    <span>Tài liệu liên quan</span>
                 </p>
                 <div class="recommend-list-wrap">
                     <div class="recommend-list-page">
@@ -181,12 +181,12 @@ normal share-group circle
                     </div>
                 </div>
             </div>
-            <div class="add-recommend dbr-items ele_recommend needmore">
+            {* <div class="add-recommend dbr-items ele_recommend needmore">
                 <h3>Related recommendation:</h3>
                 <div class="hpnp-Related">
                     {$this->widget('TWidgets',['methodName'=>'CategoryMenu','check'=> true],true)}
                 </div>
-            </div>
+            </div> *}
         </div>
     </div>
     {* <div class="detail-banner">
