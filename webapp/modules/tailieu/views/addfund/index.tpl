@@ -110,10 +110,12 @@
     </script>
     <style>
         .sendRequestCapcha img {
+            padding: 0 !important;
             float: right;
             position: absolute;
+            width: 100px;
             top: 0px;
-            right: 135px;
+            right: 120px;
         }
 
         .popup_header {
