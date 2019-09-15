@@ -11,11 +11,11 @@
                     <a href="/" class="index-banner-logo xs-hide">
                         <img src="/assets/tailieuv3/images/clogo.png" alt="">
                     </a>
-                    <p class="index-banner-title">5,254,600 Graphic Resources For Free Download</p>
-                    <h1 class="index-banner-text">Royalty Free PNG Images, Vectors, Backgrounds, Templates, Art Fonts</h1>
+                    <p class="index-banner-title">Thư viện Tài liệu</p>
+                    <h1 class="index-banner-text">Kiến trúc, nội thất, thư viện đồ án tốt nghiệp</h1>
                     <form class="index-page index-search js_search pullDown ">
                         <div class="index-search-input">
-                            <input type="text" placeholder="Search Graphic Design" class="js_search-input " data-type="1" value="">
+                            <input type="text" placeholder="Tìm tài liệu" class="js_search-input " data-type="1" value="">
                         </div>
                         <a href="javascript:;" class="index-search-btn" data-text="Please enter keywords">
                             <i class="iconfont icon-sousuo"></i>
@@ -25,12 +25,13 @@
                             <div class="search-dropdown"></div>
                         </div>
 
-                    </form>                    <div class="index-banner-recommend xs-hide">
-                        <a href="/so/frame" data-type="frame" class="index-banner-recommend-word rem-click">frame</a>
-                        <a href="/so/watercolor-flowers" data-type="watercolor flowers" class="index-banner-recommend-word rem-click">watercolor flowers</a>
-                        <a href="/so/black-gold" data-type="black gold" class="index-banner-recommend-word rem-click">black gold</a>
-                        <a href="/so/smoke" data-type="smoke" class="index-banner-recommend-word rem-click">smoke</a>
-                        <a href="/so/sale-label" data-type="sale label" class="index-banner-recommend-word rem-click">sale label</a>
+                    </form>
+                    <div class="index-banner-recommend xs-hide">
+                        <a href="/thu-vien-autocad.html" data-type="frame" class="index-banner-recommend-word rem-click">autocad</a>
+                        <a href="/thu-vien-3ds-max.html" data-type="watercolor flowers" class="index-banner-recommend-word rem-click">3d max</a>
+                        <a href="/thu-vien-photoshop.html" data-type="black gold" class="index-banner-recommend-word rem-click">photoshop</a>
+                        <a href="/thu-vien-sketchup.html" data-type="smoke" class="index-banner-recommend-word rem-click">sketchup</a>
+                        <a href="/thu-vien-lumion.html" data-type="sale label" class="index-banner-recommend-word rem-click">luminon</a>
                     </div>
                 </div>
                 <div class="index-banner-footer xs-hide">
