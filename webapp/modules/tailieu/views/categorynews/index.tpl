@@ -7,12 +7,10 @@
         padding-left: 10px;
     }
     .new-text a {
-        font-size: 2em;
+        font-size: 1.2em;
         color: #3e3e3e;
     }
     .new-text a:hover {
-        font-size: 2em;
-        color: #3e3e3e;
         text-decoration: underline;
     }
 
