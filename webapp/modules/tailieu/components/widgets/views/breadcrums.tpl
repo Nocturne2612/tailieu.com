@@ -12,7 +12,7 @@
     <a rel="v:url" property="v:title" href="{SystemBase::buildUrl('tailieu/categorydocument',['title'=>$output.title])}" title="{$output.title}">{$output.title}</a>
     {else}
     <a rel="v:url" property="v:title" href="{SystemBase::buildUrl('tailieu/search',['keyword'=>$output.title,'platforms'=>$output.parent_id])}" title="{$output.title}">{$output.title}</a>
-{   /if}
+    {/if}
 {/if}
 
 
