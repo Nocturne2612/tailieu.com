@@ -32,10 +32,10 @@ class News extends TModel {
     }
 
     public function getData($param = '') {
-        var_dump($param);die;
         $conditions = self::searchCondition($param);
         $conditions .= ' and status = 1';
-
+        var_dump($conditions);die;
+        
         $array = Paging::getDataForFunction($this->tableName(), 'title,id,create_time,image,subcontent,parent_id', $conditions, 'create_time DESC');
 
         return $array;
