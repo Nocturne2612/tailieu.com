@@ -8,7 +8,6 @@
 
     .custom li {
         font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
-        border-bottom: 1px solid #ccc;
     }
 
     .custom li:last-child {
@@ -29,6 +28,8 @@
     .custom li a:hover {
         font-size: 1.1em;
         background: #f6f6f6;
+        text-decoration: underline;
+
     }
 </style>
 <div class="help">
