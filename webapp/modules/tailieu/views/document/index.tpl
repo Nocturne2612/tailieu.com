@@ -64,31 +64,32 @@
                     <ul class="detail-info-list">
                         <li>
                             <span>{if $account}
+                                <label>Upload:&nbsp;</label>
                                 <a style="color:#2e9fe2"
                                     href="{Yii::app()->createUrl('tailieu/account/member',['id'=> $account.id])}"
                                     title="Views all models upload by tailieukientruc.net">{$account.first_name}
                                     {$account.last_name}</a>
                                 {else}
-                                <label>Upload: </label>
+                                <label>Upload:&nbsp;</label>
                                 <a style="color:#2e9fe2" href="{$smarty.const.ROOT_URL}"
                                     title="Views all models upload by tailieukientruc.net">{$admin.fullname}</a>
                                 {/if}
                             </span>
                         </li>
                         <li>
-                            <label>Ngày đăng: </label>
+                            <label>Ngày đăng:&nbsp;</label>
                             <span>{$output.create_time|date_format:"%d-%m-%Y"}</span>
                         </li>
                         <li>
-                            <label>Lượt tải: </label>
+                            <label>Lượt tải:&nbsp;</label>
                             <span>{$output.count_down|number_format:2:",":"."|replace:',00':''}</span>
                         </li>
                         <li>
-                            <label>Lượt xem: </label>
+                            <label>Lượt xem:&nbsp;</label>
                             <span>{$output.count}</span>
                         </li>
                         <li>
-                            <span>Share this: </span>
+                            <span>Share this:&nbsp;</span>
                             <div class="
 normal share-group circle
 ">
