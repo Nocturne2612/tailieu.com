@@ -26,7 +26,7 @@ class AccountController extends TailieuController {
     public function init() {
 		
         $this->_models = new Accounts;
-	Yii::app()->getClientScript()->registerCssFile(Yii::app()->baseUrl . '/assets/tailieuv3/css/user.css');	
+        Yii::app()->getClientScript()->registerCssFile(Yii::app()->baseUrl . '/assets/tailieuv3/css/user.css');	
         $this->layout = 'account';
         parent::init();
 		

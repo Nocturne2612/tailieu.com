@@ -20,6 +20,7 @@ class AddfundController extends TailieuController {
 
     public function init() {
         $this->_model = new Addfund;
+        $this->layout = 'home';
         parent::init();
     }
 

@@ -119,6 +119,7 @@
         }
 
         .popup_header {
+            padding-left: 15px;
             background: #8dc63f;
             font-size: 18px;
             color: #fff;
@@ -280,8 +281,7 @@
         }
 
         #tabs1 {
-            margin: auto;
-            ;
+            margin: 30px auto;
             padding: 0px;
             width: 800px;
         }
