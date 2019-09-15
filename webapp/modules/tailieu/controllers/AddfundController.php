@@ -26,7 +26,6 @@ class AddfundController extends TailieuController {
     public function actionIndex() {
         Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieu/js/nganluong.apps.mcflow.js');
         $info = Accounts::infoAccount();
-        var_dump($info);die;
         $this->_model->attributes = $_POST;
         if (Yii::app()->request->isPostRequest && $this->_model->validate()) {
             $captcha = Yii::app()->getController()->createAction("captcha");
