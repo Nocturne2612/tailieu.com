@@ -36,7 +36,7 @@
 
         <div class="fl-l db-leftPic">
             <div class="detail-inner">
-                <a href="javascript:;">
+                <a href="#detail-more-more">
                     <div class="dbl-picbox commercial">
                         {if $output.picture <> ""}
                             <li data-thumb="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_PRODUCT_THUMB}{$arr_pic[0]}">
@@ -44,7 +44,7 @@
                                 <img data-original="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_PRODUCT}{$arr_pic[0]}"
                                     itemprop="image" title="{$output.title}" alt="{$output.title}" class="lazy"
                                     style="width: 100%"
-                                    href="#detail-more-more">
+                                    >
 
                             </li>
                             {/if}
