@@ -36,7 +36,7 @@
                         {if $output.picture <> ""}
                             <li data-thumb="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_PRODUCT_THUMB}{$arr_pic[0]}">
                                 {assign var="arr_pic" value="|"|explode:$output.picture}
-                                <img  data-original="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_PRODUCT}{$arr_pic[0]}" itemprop="image" title="{$output.title}" alt="{$output.title}" class="lazy" style="width: 100%">
+                                <img  data-original="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_PRODUCT}{$arr_pic[0]}" itemprop="image" title="{$output.title}" alt="{$output.title}"  style="width: 100%">
 
                             </li>
                         {/if}
