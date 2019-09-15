@@ -118,19 +118,6 @@
                 <a href="javascript:;" class="side-card-brand"></a>
             </div>
         </div>
-        <div class="side-group">
-            <div class="side-function-wrap">
-                <ul class="side-function">
-                    <li class="side-toTop">
-                        <a href="javascript:;">
-                            <i class="iconfont icon-zhiding"></i>
-                        </a>
-                        <a href="javascript:;" rel="nofollow" class="hide-top">TOP</a>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
 </body>
 
 </html>
