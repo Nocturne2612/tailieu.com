@@ -14,7 +14,7 @@
                     <p class="index-banner-title">5,254,600 Graphic Resources For Free Download</p>
                     <h1 class="index-banner-text">Royalty Free PNG Images, Vectors, Backgrounds, Templates, Art Fonts</h1>
                     <form class="index-page index-search js_search pullDown ">
-                        <div class="index-search-input" style="padding-left: 10px">
+                        <div class="index-search-input">
                             <input type="text" placeholder="Search Graphic Design" class="js_search-input " data-type="1" value="">
                         </div>
                         <a href="javascript:;" class="index-search-btn" data-text="Please enter keywords">
