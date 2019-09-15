@@ -134,8 +134,10 @@
                     {/if}
                 </div>
             </div>
-            <div class="subpage-menu new-subpage-menu">
-                <div class="subpage-menu-toggleBox">
+            <div class="subpage-menu new-subpage-menu" style="
+    margin-top: 0;
+">
+                <div>
                     {$data.short}
                 </div>
             </div>
