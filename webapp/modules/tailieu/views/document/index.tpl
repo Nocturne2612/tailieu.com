@@ -153,7 +153,7 @@ normal share-group circle
                         Free download{/if}
 
                     </a>
-                    <a href="/tailieu/account/favorite/like/{$output.id}.html" rel="nofollow" class="btn-star fl-r btn-Temstar star-btn-click "><i></i></a>
+                    <a href="/tailieu/account/favorite/like/{$output.id}.html" rel="nofollow" class="btn-star fl-r btn-Temstar"><i></i></a>
                 </div>
             </div>
 

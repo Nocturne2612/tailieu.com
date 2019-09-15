@@ -134,6 +134,19 @@
                     {/if}
                 </div>
             </div>
+            <div class="subpage-menu new-subpage-menu">
+                <div class="subpage-menu-toggleBox">
+                    {if $outputs}
+                        
+                        {$outputs.short}
+                    {else}
+                        <ul class="mb-box masonry-element clearfix tpl-ul">
+                            {$this->widget('TWidgets',['methodName'=>'productView','product'=> $output['data'],'check'=> true],true)} 
+                        </ul>
+                        {$output.short}
+                    {/if}
+                </div>
+            </div>
         </div>
     </div>
 </div>
