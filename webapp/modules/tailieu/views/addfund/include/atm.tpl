@@ -371,11 +371,11 @@
             var url = "{/literal}{Yii::app()->createUrl('tailieu/addfund/buyCard')}{literal}";
             var capchaCARD = $('#capchaATM').val();
 
-            var error_check = false;
+            //var error_check = false;
 
-            if (error_check) {
-                return false;
-            }
+            //if (error_check) {
+            //    return false;
+            //}
             $.post(url, {buyatm: 'buyatm', YII_CSRF_TOKEN: token, bank_code: bank_code, amount: amount, verify_image: capchaCARD}, function(data) {
                 console.log(data);
                 data = JSON.parse(data);
