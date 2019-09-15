@@ -18,7 +18,6 @@
                         </div>
                     </div>
                     <div class="fg-line"> or</div>
-                    <!-- 快速登录部分 -->
                     <div class="quick-login-box" style="display: none;">
                         <div class="quick-login-inner">
                             <a href="javascript:;" rel="nofollow">
@@ -37,7 +36,6 @@
                             </span>
                         </p>
                     </div>
-                    <!-- 其他账号登录部分 -->
                     {CHtml::beginForm('/site/login','post',['enctype' => '','class'=> 'other-account','id' =>
                     'login_form_header'])}
                     <input type="email" maxlength="100" id="base-public-login-email-text" placeholder="Email"
@@ -254,7 +252,7 @@
                 </div>
                 <div class="index-search-input" style="padding: 0;width: calc(100% - 220px);">
                         <input type="text" placeholder="Search Png Resource" class="js_search-input " data-type="1"
-                            value="" style="padding: 0;">
+                            value="">
                 </div>
                 <a href="javascript:;" class="sb-btn fl-l search-click-btn">
                         <i class="iconfont icon-sousuo"></i>

@@ -15,6 +15,7 @@ class AddfundController extends TailieuController {
     }
 
     public function accessRules() {
+        var_dump(TRoles::getAccessRules($this->id));die();
         return TRoles::getAccessRules($this->id);
     }
 
