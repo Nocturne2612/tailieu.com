@@ -23,6 +23,7 @@ class CategorydocumentController extends TailieuController {
         Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieu/js/custom.js', CClientScript::POS_END);
         $acii = ObjInput::get('title', 'str', '');
         $array = $output = $outputs = array();
+        $array['acii'] = $acii;
         $array = $this->_model->getDetailCategory($acii);
         if (!$array) {
             $this->redirect(Yii::app()->createUrl('tailieu/home'));
@@ -45,7 +46,7 @@ class CategorydocumentController extends TailieuController {
             $outputs = $this->_showDocument($array['id'], 0);
             $output = $this->_showCategoryLV2($array['id']);
         }
-        var_dump($array);die;
+
         $this->render('index', array(
             'data' => $array,
             'outputs' => $outputs,
