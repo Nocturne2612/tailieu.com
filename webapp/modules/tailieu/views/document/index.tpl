@@ -116,14 +116,14 @@ normal share-group circle
                     {/foreach}<br />
                     <br />
                     <div class="detail-more">
-                    <span more>
+                    <span less>
                         show more
                         <i class="iconfont icon-xiangxiazhanhang"></i>
                     </span>
                     </div>
                 </div>
                 <div class="detail-more">
-                        <span less="">{$output.full}</span>
+                        <span more>{$output.full}</span>
                     </div>
                 <div id="fb-root"></div>
                 <script src="https://connect.facebook.net/vi_VN/all.js#appId=882475878492163&xfbml=1"></script>
