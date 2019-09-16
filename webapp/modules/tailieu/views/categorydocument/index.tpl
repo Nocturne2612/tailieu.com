@@ -149,10 +149,8 @@
                     {/if}
                 </div>
             </div>
-            <div class="subpage-menu new-subpage-menu" style="
-    margin-top: 0;
-">
-                <div class="subpage-menu-toggleBox" style="display:block; padding: 10px;>
+            <div class="subpage-menu new-subpage-menu" style="margin-top: 0;">
+                <div class="subpage-menu-toggleBox" style="display:block; padding: 10px;">
                     {$data.short}
                 </div>
             </div>
