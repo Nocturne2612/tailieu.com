@@ -238,7 +238,7 @@
                         <ul id="fixed-search-tag" class="sTt-bg search-box-item-li" data-search="top">
                             <p>SEARCH ITEMS </p>
                             {foreach item=v from=$data.parent_category}
-                            <li id="{$v.id}" for="category__{$v.id}" data-type="{$v.id}" data-placeholder="{$v.title}"
+                            <li id="{$v.id}" for="category__{$v.id}" data-type="{$v.id}" data-placeholder="Tìm {$v.title}"
                                 {if $platforms==$v.id} class="on" {/if}> 
                                 {$v.title} 
                             </li>
