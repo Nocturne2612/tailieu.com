@@ -242,7 +242,8 @@ class Strings {
     }
 
     public static function encode($text) {
-        return htmlspecialchars($text, ENT_QUOTES, Yii::app()->charset);
+
+        return htmlspecialchars($text.'', ENT_QUOTES, Yii::app()->charset);
     }
 
     public static function blackTag($string, $blackTag) {

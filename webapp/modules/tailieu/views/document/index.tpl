@@ -116,16 +116,10 @@ normal share-group circle
                         class="">{$t}</a>
                     {/foreach}<br />
                     <br />
-                    <div class="detail-more" style="width: 100%;">
-                    <span less>
-                        show more
-                        <i class="iconfont icon-xiangxiazhanhang"></i>
-                    </span>
-                    </div>
                 </div>
-                <div class="detail-more" id="detail-more-more">
+                <div style="text-align: left">
                         <span more>{$output.full}</span>
-                    </div>
+                </div>
                 <div id="fb-root"></div>
                 <script src="https://connect.facebook.net/vi_VN/all.js#appId=882475878492163&xfbml=1"></script>
                 <fb:comments href="{SystemBase::buildUrl('tailieu/document',['id'=>$output.id,'title'=>$output.title])}"
