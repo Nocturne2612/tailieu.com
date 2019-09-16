@@ -1,7 +1,9 @@
 ﻿{$data|@var_dump}
-{php}
+<?php 
 die;
-{/php}
+?>
+
+
 <div id="v2-subpageBan" class="subpageBan new-subpageBan">
     <div class="res-search js_search w1520">
         <div class="res-search-select js_search-select" data-type="{$data.platforms}">
