@@ -46,7 +46,7 @@ class CategorydocumentController extends TailieuController {
             $outputs = $this->_showDocument($array['id'], 0);
             $output = $this->_showCategoryLV2($array['id']);
         }
-
+        $array['platforms'] = $array['id'];
         $this->render('index', array(
             'data' => $array,
             'outputs' => $outputs,
