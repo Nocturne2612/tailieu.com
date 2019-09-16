@@ -238,8 +238,8 @@
                         <ul id="fixed-search-tag" class="sTt-bg search-box-item-li" data-search="top">
                             <p>SEARCH ITEMS </p>
                             {foreach item=v from=$data.parent_category}
-                            <li id="{$v.id}" for="category__{$v.id}" {if $platforms==$v.id} class="current">
-                                {/if}>{$v.title}
+                            <li id="{$v.id}" for="category__{$v.id}" data-type="{$v.id}" data-placeholder="{$v.title}" {if $platforms==$v.id} class="current"{/if}>
+                                {$v.title}
                             </li>
                             {/foreach}
                         </ul>
