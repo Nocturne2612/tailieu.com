@@ -396,8 +396,6 @@ $(function () {
         t = ($(this).data("type"),
         $(this).data("placeholder"));
         $(this).parents(".pulldown-title").find(".sb-val").text(e);
-        $(this).siblings("li").find("a.on").removeClass("on").siblings(".icon-fit").remove();
-        $(this).find("a").addClass("on").after('<i class="icon-fit"></i>');
         $(this).parents(".search-box-outer").find(".sb-input").attr("placeholder", t);
     }), $(".mc-lists").hover(function () {
         $(this).addClass("on").siblings().removeClass("on")
