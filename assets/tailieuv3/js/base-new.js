@@ -314,29 +314,9 @@ $(function () {
             }, 10)
         }
     }, $(".search-click-btn").on("click", function () {
-        var e = $(this).parents(".search-box-outer").find(".search-box-item-li li a.on").data("type"),
-                t = $(this).siblings(".search-box-input").val(),
-                n = "Element";
-        switch (e) {
-            case 1:
-                n = "Element";
-                break;
-            case 2:
-                n = "Back";
-                break;
-            case 5:
-                n = "Template";
-                break;
-            case 6:
-                n = "PPT";
-                break;
-            case 7:
-                n = "Font";
-                break;
-            case 8:
-                n = "Illus"
-        }
-        Png.BaseGA.ScrolldownSearch(n), Pngtree.BaseFun.SearchClick(e, t)
+        e = $(this).siblings(".index-search-input").find("input").data("type");
+        t = $(this).siblings(".index-search-input").find("input").val();
+        Pngtree.BaseFun.SearchClick(e, t);
     }), $(".xs-header-search-btn").on("click", function () {
         var e = $(this).data("type"),
                 t = $(this).siblings(".xs-header-search-input").val(),
@@ -395,8 +375,6 @@ $(function () {
         var e = $(this).text();
         var t = $(this).data("type");
         var p = $(this).data("placeholder");
-        console.log('e: ',e);
-        console.log('t: ',t);
         $(this).parents(".pulldown-title").find(".sb-val").text(e);
         $(this).parents(".pulldown-title").siblings(".index-search-input").find("input").attr("placeholder", p);
         $(this).parents(".pulldown-title").siblings(".index-search-input").find("input").attr("data-type", t);
