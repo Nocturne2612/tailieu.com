@@ -117,8 +117,8 @@ normal share-group circle
                     {/foreach}<br />
                     <br />
                 </div>
-                <div style="text-align: left" id="detail-more-more">
-                    <p class="dbl-pictitle">{$output.full}</p>
+                <div style="text-align: left" id="detail-more-more" class="dbl-pictitle">
+                    {$output.full}
                 </div>
                 <div id="fb-root"></div>
                 <script src="https://connect.facebook.net/vi_VN/all.js#appId=882475878492163&xfbml=1"></script>
