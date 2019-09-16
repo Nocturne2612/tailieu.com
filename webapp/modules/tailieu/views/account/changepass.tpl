@@ -39,7 +39,6 @@
         </div>
         {literal}
             <style>
-                #ccaptcha{width:80px;}
             </style>
             <style>
                 #ccaptcha_button {

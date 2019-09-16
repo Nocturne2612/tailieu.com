@@ -34,7 +34,7 @@ class News extends TModel {
     public function getData($param = '') {
         $conditions = self::searchCondition($param);
         $conditions .= ' and status = 1';
-
+        
         $array = Paging::getDataForFunction($this->tableName(), 'title,id,create_time,image,subcontent,parent_id', $conditions, 'create_time DESC');
 
         return $array;
@@ -51,8 +51,8 @@ class News extends TModel {
 
     public static function searchCondition($param) {
         $conditions = ' 1 = 1 ';
-        if (isset($param['id']) && $param['id'] <> 0) {
-            $conditions .= " and parent_id = " . intval($param['id']);
+        if (isset($param['parent_id']) && $param['parent_id'] <> 0) {
+            $conditions .= " and parent_id = " . intval($param['parent_id']);
         }
 
         //return $conditions;

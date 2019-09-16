@@ -28,9 +28,7 @@
     background-color: red;
 }
 #ccaptcha {
-        position: absolute;
-    top: 0px;
-    right: 0px;
+    padding-top: 10px;
 }
 .ccaptcha {
     position: relative;

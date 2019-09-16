@@ -82,8 +82,11 @@
                 <div class="subpage-menu-toggleBox">
                     <span class="lg-subpage-filter-sort-title xs-hide" style="width: 120px;">Danh mục con:</span>
                     <div class="subpage-menu-box new-subpage-menu-box">
-
+                        <div class="subpage-menu-inneBox">
+                            <a href="{$smarty.const.ROOT_URL}/{$data.acii}.html" class="sort-btn on">{$data.title}</a>
+                        </div>
                         {if $data['parent_id'] > 0 && isset($category['sub_category'][$data['parent_id']])}
+                            
                             {foreach item=v from=$category['sub_category'][$data['parent_id']] key =e}
                                 {if $v.id neq $data['id']}
                                     <div class="subpage-menu-inneBox">
@@ -129,6 +132,13 @@
                         </ul>
                         {$output['pageHtml']}
                     {/if}
+                </div>
+            </div>
+            <div class="subpage-menu new-subpage-menu" style="
+    margin-top: 0;
+">
+                <div class="subpage-menu-toggleBox" style="display:block;">
+                    {$data.short}
                 </div>
             </div>
         </div>

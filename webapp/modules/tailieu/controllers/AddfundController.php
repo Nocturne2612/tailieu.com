@@ -14,12 +14,13 @@ class AddfundController extends TailieuController {
         );
     }
 
-    public function accessRules() {
-        return TRoles::getAccessRules($this->id);
-    }
+    // public function accessRules() {
+    //     return TRoles::getAccessRules($this->id);
+    // }
 
     public function init() {
         $this->_model = new Addfund;
+        $this->layout = 'home';
         parent::init();
     }
 
@@ -211,7 +212,6 @@ class AddfundController extends TailieuController {
             $data = $this->widget('CCaptcha', array('id' => 'ccaptcha'), true);
         }
         echo json_encode(array('error' => $error, 'data' => $data));
-        die();
     }
 
     public function getError() {

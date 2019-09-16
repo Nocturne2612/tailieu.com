@@ -390,10 +390,15 @@ $(function () {
         $(this).next(".comment-search-dropdown-wrap").show()
     }), $(".sb-form").click(function (e) {
         e.stopPropagation()
-    }), $("#fixed-search-tag").on("click", "li", function () {
-        var e = $(this).find("a").text(),
-                t = ($(this).find("a").data("type"), $(this).find("a").data("placeholder"));
-        $(this).parents(".pulldown-title").find(".sb-val").text(e), $(this).siblings("li").find("a.on").removeClass("on").siblings(".icon-fit").remove(), $(this).find("a").addClass("on").after('<i class="icon-fit"></i>'), $(this).parents(".search-box-outer").find(".sb-input").attr("placeholder", t)
+    }),
+    $("#fixed-search-tag").on("click", "li", function () {
+        var e = $(this).text(),
+        t = ($(this).data("type"),
+        $(this).data("placeholder"));
+        $(this).parents(".pulldown-title").find(".sb-val").text(e);
+        $(this).siblings("li").find("a.on").removeClass("on").siblings(".icon-fit").remove();
+        $(this).find("a").addClass("on").after('<i class="icon-fit"></i>');
+        $(this).parents(".search-box-outer").find(".sb-input").attr("placeholder", t);
     }), $(".mc-lists").hover(function () {
         $(this).addClass("on").siblings().removeClass("on")
     });

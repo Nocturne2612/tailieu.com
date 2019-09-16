@@ -4975,6 +4975,9 @@ textarea:-ms-input-placeholder {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.vfp-cont>a:nth-child(odd) {
+  margin-left: 30px;
+}
 
 .vfp-cont>a:hover {
   color: #90c992
@@ -5532,6 +5535,32 @@ li.side-toTop a {
   align-items: center
 }
 
+li.side-toTop .hide-top {
+  position: absolute;
+  width: 0;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 18px;
+  background-color: #e5e5e5;
+  text-align: left;
+  padding-left: 20px;
+  right: 16px;
+  bottom: 54px;
+  display: block;
+  z-index: -1;
+  font-size: 12px;
+  color: #666;
+  overflow: hidden;
+  transition: width .38s;
+  -webkit-transition: width .38s
+}
+
+li.side-toTop .hide-top {
+  bottom: 4px;
+  text-align: center;
+  padding-left: 0
+}
+ 
 .side-toTop .iconfont {
   font-size: 12px
 }
@@ -6948,7 +6977,7 @@ li.side-contact a {
 }
 
 .scroll-Nav .sb-form {
-  width: 800px;
+  width: 700px;
   margin: 7px
 }
 
@@ -7003,8 +7032,8 @@ li.side-contact a {
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-bottom: 5px solid #000;
-  right: -16px;
-  top: 22px;
+  right: -14px;
+  top: 20px;
   -webkit-transition: all .2s;
   -moz-transition: all .2s;
   -ms-transition: all .2s;
@@ -7028,7 +7057,7 @@ li.side-contact a {
 }
 
 .scroll-Nav .sb-form .sb-btn {
-  width: 10%
+  width: 8%
 }
 
 .searchItems-list {
@@ -7058,7 +7087,7 @@ li.side-contact a {
 
 .searchItems-list .sTt-bg>li {
   width: 100%;
-  padding-left: 52px;
+  padding-left: 25px;
   margin-bottom: 38px;
   text-align: left;
   position: relative

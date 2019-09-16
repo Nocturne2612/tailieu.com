@@ -18,7 +18,6 @@
                         </div>
                     </div>
                     <div class="fg-line"> or</div>
-                    <!-- 快速登录部分 -->
                     <div class="quick-login-box" style="display: none;">
                         <div class="quick-login-inner">
                             <a href="javascript:;" rel="nofollow">
@@ -37,7 +36,6 @@
                             </span>
                         </p>
                     </div>
-                    <!-- 其他账号登录部分 -->
                     {CHtml::beginForm('/site/login','post',['enctype' => '','class'=> 'other-account','id' =>
                     'login_form_header'])}
                     <input type="email" maxlength="100" id="base-public-login-email-text" placeholder="Email"
@@ -141,10 +139,10 @@
         <!-- Topnav -->
         <ul class="fl-l Topnav" style="display: block">
             <li>
-                <a href="{$smarty.const.ROOT_URL}">Trang chủ</a>
+                <a href="{$smarty.const.ROOT_URL}">TRANG CHỦ</a>
             </li>
             <li class="pulldown-box ga-c" data-ga="Danh mục">
-                <a href="#">Danh mục</a>
+                <a href="#">DANH MỤC</a>
                 <div class="drop-down tran right">
                     <ul class="mainCont">
                         {$this->widget('TWidgets',['methodName'=>'CategoryMenu','check'=>false],true)}
@@ -153,7 +151,7 @@
                 </div>
             </li>
             <li class="nav-item "><a ref="nofollow" class="nav-link"
-                    href="{SystemBase::buildUrl('tailieu/home',['sort'=>'hot'])}">Models mới</a></li>
+                    href="{SystemBase::buildUrl('tailieu/home',['sort'=>'hot'])}">MODEL MỚI</a></li>
             <li class="nav-item "><a ref="nofollow" class="nav-link"
                     href="{SystemBase::buildUrl('tailieu/home',['sort'=>'free'])}">MIỄN PHÍ</a></li>
             <li class="nav-item "><a ref="nofollow" class="nav-link"
@@ -246,19 +244,19 @@
                             {/foreach}
                         </ul>
                     </div>
-                    <div class="index-search-input">
-                        <input type="text" placeholder="Search Png Resource" class="js_search-input " data-type="1"
-                            value="">
-                    </div>
                     <div class=" search-dropdown-wrap comment-search-dropdown-wrap" id="search-dropdown-wrap"
                         style="display: none;">
                         <div class="search-dropdown head-dop" data-type="headen">
                         </div>
                     </div>
-                    <a href="javascript:;" class="sb-btn fl-l search-click-btn">
-                        <i class="iconfont icon-sousuo"></i>
-                    </a>
                 </div>
+                <div class="index-search-input" style="padding: 0;width: calc(100% - 220px);">
+                        <input type="text" placeholder="Search Png Resource" class="js_search-input " data-type="1"
+                            value="">
+                </div>
+                <a href="javascript:;" class="sb-btn fl-l search-click-btn">
+                        <i class="iconfont icon-sousuo"></i>
+                </a>
             </form>
 
             <!-- search search end -->
@@ -302,6 +300,24 @@
                             data-ga="Logout"><i class="iconfont icon-tuichu"></i> Thoát</a>
                     </div>
                 </div>
+            </div>
+            <div class="fl-r top-collect-box pr" style="display: block;padding-left: 13px;
+    margin-top: 4px;">
+                <a class="iconfont icon-star"></a>
+                <div class="top-collect-down">
+                    <img src="//js.pngtree.com/v2/images/v2/collect-xx.jpg" alt="">
+                    <p><i class="iconfont icon-star"></i>Ctrl+D</p>
+                    <p>Mark us if you like us</p>
+                </div>
+            </div>
+            <div class="ti-credit fl-r desinger-head-btn" style="display: block;padding-left: 13px;
+    margin-top: 4px;">
+                <a rel="nofollow" href="{SystemBase::buildUrl('tailieu/account/upload',[])}" data-join='head'
+                    target="_blank" data-invite-click="button" class="btn-Referral designer-project ga-c"
+                    data-ga="UPLOAD A MODEL"><i class="iconfont icon-upload"></i>UPLOAD A MODEL </a>
+                <a rel="nofollow" href="{SystemBase::buildUrl('tailieu/account/upload',[])}" target="_blank"
+                    data-invite-click="button" class="btn-Referral designer-upload ga-c" data-ga="Go_Upload"
+                    style="display:none;"><i class="iconfont icon-upload"></i>Go Upload</a>
             </div>
             {/if}
         </div>

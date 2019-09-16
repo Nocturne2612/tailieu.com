@@ -1,6 +1,6 @@
 <div class="user-main">
     <div class="user-main-inner">
-        <h1 class="user-main-title">Lịch sử Upload</h1>
+        <h1 class="user-main-title">List tài liệu yêu thích</h1>
     </div>
     {if $product['data']}
     <div class="user-list-wrap">

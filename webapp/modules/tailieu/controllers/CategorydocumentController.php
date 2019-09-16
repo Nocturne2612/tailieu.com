@@ -24,6 +24,7 @@ class CategorydocumentController extends TailieuController {
         $acii = ObjInput::get('title', 'str', '');
         $array = $output = $outputs = array();
         $array = $this->_model->getDetailCategory($acii);
+        $array['acii'] = $acii;
         if (!$array) {
             $this->redirect(Yii::app()->createUrl('tailieu/home'));
         } else {

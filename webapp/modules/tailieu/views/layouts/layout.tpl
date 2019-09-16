@@ -38,7 +38,6 @@
             {'GTM-PJ8J78F':true});
     </script>
             {/literal}
-<!--参数传递js脚本模块-->
 
             <!-- End Adsense tu dong-->
     </head>
