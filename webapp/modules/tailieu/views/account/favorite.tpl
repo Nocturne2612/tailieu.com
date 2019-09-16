@@ -19,7 +19,7 @@
                         <h4 class="item-title">{$t.title}</h4>
                         <div class="item-info">
                             <span class="item-size">{$t.price|number_format:2:",":"."|replace:',00':''} POINT</span> &nbsp;&nbsp; |&nbsp;&nbsp; 
-                            <a href="/tailieu/account/favorite/delete/{$t.id}.html" style="color: #999; float: left;font-size:14px;">
+                            <a href="/tailieu/account/favorite/delete/{$t.id}.html" style="color: #999; font-size:14px;">
                                 Bỏ thích
                             </a>
                         </div>
