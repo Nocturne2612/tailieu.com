@@ -9,7 +9,7 @@
                     <a href="javascript:;" data-id="{$rs.id}" data-type="1" title="Add to favorites" class="hs-star  star-btn-click element-list-click" data-like="4773403_like">
                         <i class="iconfont icon-xin"></i>
                     </a>
-                    <a data-down="{$rs.id}_DOWNLOAD" rel="nofollow" href="/element/down?id=NDc3MzQwMw==&type=1" class="hs-downPng down-jpg-click element-list-click">
+                    <a data-down="{$rs.id}_DOWNLOAD" rel="nofollow" href="/element/down?id=NDc3MzQwMw==&type=1" class="hs-downPng">
                         <i class="iconfont icon-xiazai"></i>&nbsp;{$rs.count_down|number_format:2:",":"."|replace:',00':''}
                     </a>
                 </div>
@@ -36,7 +36,7 @@
                     <a href="javascript:;" data-id="{$rs.id}" data-type="1" title="Add to favorites" class="hs-star  star-btn-click element-list-click" data-like="{$rs.id}_like">
                         <i class="iconfont icon-xin"></i>
                     </a>
-                    <a data-down="{$rs.id}_DOWNLOAD" rel="nofollow" href="{SystemBase::buildUrl('tailieu/download',['id'=>$rs.id,'title'=>$rs.title])}" class="hs-downPng down-jpg-click element-list-click">
+                    <a data-down="{$rs.id}_DOWNLOAD" rel="nofollow" href="{SystemBase::buildUrl('tailieu/download',['id'=>$rs.id,'title'=>$rs.title])}" class="hs-downPng">
                         <i class="iconfont icon-xiazai"></i>&nbsp;{$rs.count_down|number_format:2:",":"."|replace:',00':''}
                     </a>
                 </div>
