@@ -117,9 +117,7 @@ normal share-group circle
                     {/foreach}<br />
                     <br />
                 </div>
-                <div style="text-align: left" id="detail-more-more">
-                        <span more>{$output.full}</span>
-                </div>
+                        <p class="dbl-pictitle">{$output.full}</p>
                 <div id="fb-root"></div>
                 <script src="https://connect.facebook.net/vi_VN/all.js#appId=882475878492163&xfbml=1"></script>
                 <fb:comments href="{SystemBase::buildUrl('tailieu/document',['id'=>$output.id,'title'=>$output.title])}"
