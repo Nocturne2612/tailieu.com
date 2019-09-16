@@ -37,7 +37,7 @@ class CategorynewsController extends TailieuController {
                 }
             }
         }
-        $arr_news = $model->getData(array('patent_id' => $id));
+        $arr_news = $model->getData(array('parent_id' => $id));
         $arr_C = $this->_model->getData();
         $categoryOn =$this->_model->getOneNews($id);
         $this->render('index', array(
