@@ -40,13 +40,11 @@
                 <a href="javascript:;" class="sb-btn fl-l search-box-input-index" data-ga="1">
                     <i class="iconfont icon-sousuo"></i>
                 </a>
-                <!--首页搜索推荐下拉框-->
                 <div class="search-dropdown-wrap comment-search-dropdown-wrap" id="search-dropdown-wrap">
                     <div class="search-dropdown">
 
                     </div>
                 </div>
-                <!--首页搜索推荐下拉框 end-->
             </form>
             <div class="xs-contain">
                 <form class="xs-search">
