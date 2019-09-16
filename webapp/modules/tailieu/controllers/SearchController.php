@@ -26,12 +26,16 @@ class SearchController extends TailieuController {
     public function actionIndex() {
         $keyword = ObjInput::get('keyword', 'str', '');
         $platforms = ObjInput::get('platforms', 'int', 0);
-        
+        var_dump($keyword);
         $keyword = explode('/', $keyword);
         if(count($keyword) > 1) {
             $platforms = (int) $keyword[1];
             $keyword = $keyword[0];
         }
+        echo '<br>';
+        var_dump($keyword);
+        die;
+
         $this->pageTitle = $this->processKeyword($keyword);
         $this->desc = $this->processKeyword($keyword);
         
