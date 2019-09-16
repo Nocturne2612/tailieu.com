@@ -39,7 +39,7 @@ class SiteController extends CController {
         //  var_dump(Yii::app()->errorHandler->error);
         if (Yii::app()->errorHandler->error) {
             if (Yii::app()->request->isAjaxRequest) {
-                echo $error['message'];
+                echo Yii::app()->errorHandler->error;
                 die();
             } else {
                 $this->layout = 'main';
