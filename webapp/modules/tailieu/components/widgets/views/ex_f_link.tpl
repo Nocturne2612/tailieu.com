@@ -24,7 +24,7 @@
                     {/foreach}
                 </dl>
             </div>
-            <div class="foot-item foot-help xs-hide">
+            <div class="foot-item foot-pngtree xs-hide">
                 <dl>
                     <dt>TRỢ GIÚP</dt>
                     {foreach $data as $k=>$item}
@@ -36,7 +36,7 @@
                     {/foreach}
                 </dl>
             </div>
-            <div class="foot-item foot-legal xs-hide">
+            <div class="foot-item foot-pngtree xs-hide">
                 <dl>
                     <dt>PHÁP LÝ</dt>
                     {foreach $data as $k=>$item}
