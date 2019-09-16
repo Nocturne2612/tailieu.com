@@ -11,7 +11,7 @@
                         <div class="item-img">
                             <a target="_blank" href="{SystemBase::buildUrl('tailieu/document',['title'=>$t.title,'id'=>$t.id])}" class="item-link"></a>
                              <div class="hover-show">
-                                <a  href="/tailieu/account/favorite/delete/{$output.id}.html" class="hs-star" data-id="5045769" data-type="1">
+                                <a  href="/tailieu/account/favorite/delete/{$t.id}.html" class="hs-star" data-id="5045769" data-type="1">
                                     <i class="iconfont icon-xin"></i>
                                 </a>
                             </div>
