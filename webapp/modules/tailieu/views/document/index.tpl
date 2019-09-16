@@ -132,7 +132,7 @@ normal share-group circle
             <!-- infor -->
             <div class="dbr-items">
                 <div class="dbr-btnbox clearfix detail-down-click">
-                    <a data-down="{$rs.id}_DOWNLOAD" rel="nofollow" href="{SystemBase::buildUrl('tailieu/download',['id'=>$output.id,'title'=>$output.title])}"
+                    <a data-down="{$output.id}_DOWNLOAD" rel="nofollow" href="{SystemBase::buildUrl('tailieu/download',['id'=>$output.id,'title'=>$output.title])}"
                         class="fl-l btn-free down-no-login">
                         <i class="iconfont icon-xiazai"></i>
                         {if $output.proprice > 0}
