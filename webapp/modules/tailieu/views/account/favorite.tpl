@@ -10,7 +10,11 @@
                     <div class="user-gditem-inner">
                         <div class="item-img">
                             <a target="_blank" href="{SystemBase::buildUrl('tailieu/document',['title'=>$t.title,'id'=>$t.id])}" class="item-link"></a>
-
+                             <div class="hover-show">
+                                <a  href="/tailieu/account/favorite/delete/{$output.id}.html" class="hs-star" data-id="5045769" data-type="1">
+                                    <i class="iconfont icon-xin"></i>
+                                </a>
+                            </div>
                             {if isset($t.picture) && $t.picture <>""}
                                 {assign var="arr_pic" value="|"|explode:$t.picture} 
                                 <img src="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_PRODUCT_THUMB}{$arr_pic[0]}" alt="{$t.title}"  >
@@ -24,7 +28,6 @@
                         </div>
                     </div>
                 </li>
-                <div class="gutter-sizer"></div>
             {/foreach}
             {$product['pageHtml']}
     </ul>
