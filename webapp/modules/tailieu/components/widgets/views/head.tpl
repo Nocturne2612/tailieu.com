@@ -228,7 +228,7 @@
             <a href="/" class="Newlogo fl-l"></a>
 
             <!--scroll search -->
-            {* <form class="sb-form clearfix fl-l search-box-outer" style="">
+            <form class="sb-form clearfix fl-l search-box-outer" style="">
                 <div class="pulldown-title fl-l">
                     {$platforms = ObjInput::get('platforms', 'int')}
                     <span class="sb-val">
@@ -239,11 +239,11 @@
                             <p>SEARCH ITEMS </p>
                             {foreach item=v from=$data.parent_category}
                             <li id="{$v.id}" for="category__{$v.id}" data-type="{$v.id}" data-placeholder="{$v.title}"
-                                {if $platforms==$v.id} class="current" {/if}> {$v.title} </li> {/foreach} </ul> </div>
-                                <div class=" search-dropdown-wrap comment-search-dropdown-wrap"
-                                id="search-dropdown-wrap" style="display: none;">
-                                <div class="search-dropdown head-dop" data-type="headen">
-                                </div>
+                                {if $platforms==$v.id} class="on" {/if}> 
+                                {$v.title} 
+                            </li>
+                            {/foreach}
+                        </ul>
                     </div>
                 </div>
                 <div class="index-search-input" style="padding: 0;width: calc(100% - 220px);">
@@ -253,37 +253,7 @@
                 <a href="javascript:;" class="sb-btn fl-l search-click-btn">
                     <i class="iconfont icon-sousuo"></i>
                 </a>
-            </form> *}
-            <div class=" index-search js_search pullDown ">
-
-                <div class="index-search-select js_search-select" data-type="1">
-                    <span class="index-search-selected text-overflow js_search-check">All</span>
-                    <div class="searchItems-list">
-                    
-                        <ul class="index-search-optgroup">
-                        {foreach item=v from=$data.parent_category}
-                            <li class="index-search-option" data-placeholder="Search {$v.title}" data-type="{$v.id}">
-                                <span>{$v.title}</span><i></i>
-                            </li>
-                        {/foreach}
-                        </ul>
-                    </div>
-                    <i class="iconfont icon-triangle"></i>
-                </div>
-                <div class="index-search-input">
-                    <input type="text" placeholder="Search Png Resource" class="js_search-input " data-type="1"
-                        value="">
-                </div>
-                <a href="javascript:;" class="index-search-btn" data-text="Please enter keywords">
-                    <i class="iconfont icon-sousuo"></i>
-                </a>
-
-                <div class="search-dropdown-wrap comment-search-dropdown-wrap" style="display: none;">
-                    <div class="search-dropdown"></div>
-                </div>
-
-            </div>
-            <!-- search search end -->
+            </form>
             <!-- right infor -->
             {if !$check_login}
             <div class="Top-infor fl-r clearfix">
