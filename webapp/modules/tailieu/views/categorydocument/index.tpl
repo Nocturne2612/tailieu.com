@@ -2,12 +2,12 @@
     <div class="res-search js_search w1520">
         <div class="res-search-select js_search-select" data-type="{$data.platforms}">
             <span class="res-search-selected text-overflow js_search-check xs-search-selected " data-type="{$data.platforms}">
-           {if isset($cache_category['parent_category'][$data.platforms])} {$cache_category['parent_category'][$data.platforms]['title']}  {else}ALL{/if}            </span>
+           {if isset($category['parent_category'][$data.platforms])} {$category['parent_category'][$data.platforms]['title']}  {else}ALL{/if}            </span>
             <ul class="res-search-optgroup ">
-                 <li class="res-search-option" data-placeholder="Search {if isset($cache_category['parent_category'][$data.platforms])} {$cache_category['parent_category'][$data.platforms]['title']}  {else}ALL{/if}" data-type="{$data.platforms}">
+                 <li class="res-search-option" data-placeholder="Search {if isset($category['parent_category'][$data.platforms])} {$category['parent_category'][$data.platforms]['title']}  {else}ALL{/if}" data-type="{$data.platforms}">
                     <span>ALL</span><i></i>
                      </li>
-                {foreach item=v from=$cache_category['parent_category'] key =e}
+                {foreach item=v from=$category['parent_category'] key =e}
                      <li class="res-search-option" data-placeholder="Search {$v.title}" data-type="{$v.id}">
                     <span>{$v.title}</span><i></i>
                      </li>
