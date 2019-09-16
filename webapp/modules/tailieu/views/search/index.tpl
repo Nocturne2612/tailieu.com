@@ -23,13 +23,11 @@
             <i class="iconfont icon-sousuo"></i>
             </a>
 
-            <!--首页搜索推荐下拉框-->
             <div class="search-dropdown-wrap comment-search-dropdown-wrap" style="display: none;">
                 <div class="search-dropdown">
 
                 </div>
             </div>
-            <!--首页搜索推荐下拉框 end-->
     </div>
 
 </div>
@@ -78,7 +76,6 @@
 
 
 
-                <!-- 二级菜单结构 -->
                 <div class="subpage-menu-toggleBox " style="display: none ">
                     <a href="javascript:;" class="xs-subpage-menu-sort-title"> <span href="javascript:;"><i class="iconfont icon-triangle"></i></span></a>
                     <span class="lg-subpage-filter-sort-title xs-hide">Usage:</span>
