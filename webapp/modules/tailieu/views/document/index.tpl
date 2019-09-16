@@ -118,7 +118,7 @@ normal share-group circle
                     <br />
                 </div>
                 <div style="text-align: left" id="detail-more-more">
-                        <span more>{$output.full}</span>
+                    <p class="dbl-pictitle">{$output.full}</p>
                 </div>
                 <div id="fb-root"></div>
                 <script src="https://connect.facebook.net/vi_VN/all.js#appId=882475878492163&xfbml=1"></script>
