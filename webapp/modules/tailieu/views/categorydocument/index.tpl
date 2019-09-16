@@ -33,7 +33,9 @@
         {* <p class="detail-breadcrumbs" style="font-size: 12px;">
             {$this->widget('TWidgets',['methodName'=>'breadcrums','data'=>$data],true)}
         </p> *}
+        <!-- search -->
         
+        </div>
     </div>
 </div>
 <div id="v2-content">
