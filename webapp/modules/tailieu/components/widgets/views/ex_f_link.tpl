@@ -82,40 +82,7 @@
 </div>
 <div id="side-navigation" class="side-navigation" style="">
     <div class="side-group">
-        <div class="side-follow-wrap show" style="">
-            <div class="side-entrance side-share">
-                <a href="javascript:;">
-                    <i class="icon-entrance"></i>
-                </a>
-            </div>
-            <p class="side-follow-title">Follow</p>
-            <ul class="side-follow">
-                <li class="side-follow-facebook">
-                    <a target="_blank" rel="nofollow" href="https://www.facebook.com/">
-                        <i class="iconfont icon-facebook"></i>
-                    </a>
-                </li>
-                <li class="side-follow-twitter">
-                    <a target="_blank" href="https://twitter.com" rel="nofollow">
-                        <i class="iconfont icon-tuite"></i>
-                    </a>
-                </li>
-                <li class="side-follow-pinterest">
-                    <a target="_blank" href="https://www.pinterest.com/" rel="nofollow">
-                        <i class="iconfont icon-pinterest"></i>
-                    </a>
-                </li>
-                <li class="side-follow-instagram">
-                    <a target="_blank" href="https://www.instagram.com/" rel="nofollow">
-                        <i class="iconfont icon-ins"></i>
-                    </a>
-                </li>
-            </ul>
-            <a href="javascript:;" class="side-follow-close" onclick="$('.side-follow-wrap').toggleClass('show')">
-                <i class="iconfont icon-arrowLeft"></i>
-                <i class="iconfont icon-arrowRight"></i>
-            </a>
-        </div>
+
         <div class="side-function-wrap">
             <ul class="side-function">
                 <li class="side-toTop">
