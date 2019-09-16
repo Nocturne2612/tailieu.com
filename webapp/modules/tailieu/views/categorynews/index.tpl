@@ -47,12 +47,12 @@
 </style>
 <div class="help">
     <div class="help-query">
-        <div class="w1000">
+        <div class="w1360">
             
         </div>
     </div>
     <div class="help-main">
-        <div class="w1000">
+        <div class="w1360">
             <div class="help-nav custom">
                 <div class="help-back-btn"><a href="/"><i class="icon-back"></i>
                         Quay lại trang chủ</a></div>
@@ -90,7 +90,7 @@
         </div>
     </div>
     <div class="help-foot">
-        <div class="w1000">
+        <div class="w1360">
             <div class="contact-group">
                 {$this->widget('TWidgets',['methodName'=>'ads','position'=>'DETAIL_CENTER2'],true)}
 

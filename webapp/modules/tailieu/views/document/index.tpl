@@ -117,7 +117,7 @@ normal share-group circle
                     {/foreach}<br />
                     <br />
                 </div>
-                <div style="text-align: left">
+                <div style="text-align: left" id="detail-more-more">
                         <span more>{$output.full}</span>
                 </div>
                 <div id="fb-root"></div>

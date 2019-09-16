@@ -39,7 +39,7 @@
         </div>
     </div>
     <div class="help-main custom">
-        <div class="w1000">
+        <div class="w1360">
             <div class="help-nav">
                 <div class="help-back-btn"><a href="/"><i class="icon-back"></i>
                         Quay lại trang chủ</a></div>
@@ -63,7 +63,7 @@
     </div>
 
     <div class="help-foot custom">
-        <div class="w1000">
+        <div class="w1360">
             {if $arr_lq.data}
             <h2 class="help-contain-title">Bài xem thêm</h2>
             <ul>
