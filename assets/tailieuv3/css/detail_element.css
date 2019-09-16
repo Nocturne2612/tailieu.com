@@ -531,7 +531,9 @@
     display: block;
     padding-top: 100%
 }
-
+.recommend-img-box a:hover {
+    opacity: 0.5;
+}
 .recommend-img-box a {
     position: absolute;
     top: 4px;
