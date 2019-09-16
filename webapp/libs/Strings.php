@@ -242,7 +242,7 @@ class Strings {
     }
 
     public static function encode($text) {
-
+        var_dump($text);die;
         return htmlspecialchars($text.'', ENT_QUOTES, Yii::app()->charset);
     }
 
