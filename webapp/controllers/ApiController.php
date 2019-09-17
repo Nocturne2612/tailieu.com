@@ -22,7 +22,7 @@ class ApiController extends CController {
         }
         $return = array(
             'error_code'=> $error_code,
-            'data'=> $info,
+            'data'=> $data,
         );
         
         echo json_encode($return);
