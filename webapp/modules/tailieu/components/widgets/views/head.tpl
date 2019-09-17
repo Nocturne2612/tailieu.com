@@ -6,8 +6,8 @@
             <div class="login-wrap">
                 <div class="login-section">
                     <div class="rlg-with-box">
-                        <p class="big-tit">Login pngtree</p>
-                        <p class="small-tit">with your social network.</p>
+                        <p class="big-tit">Đăng nhập tài liệu kiến trúc</p>
+                        <p class="small-tit">dùng mạng xã hội.</p>
                         <div class="share-website clearfix ">
                             <a href="{SystemBase::buildUrl('tailieu/login/google',[])}" rel="nofollow" data-type="gg"
                                 class="btn-google  fl-l">
@@ -17,7 +17,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="fg-line"> or</div>
+                    <div class="fg-line"> hoặc</div>
                     <div class="quick-login-box" style="display: none;">
                         <div class="quick-login-inner">
                             <a href="javascript:;" rel="nofollow">
@@ -28,11 +28,10 @@
                             </a>
                         </div>
                         <p class="wx-prompt">
-                            <a href="javascript:;" rel="nofollow" class="another-login-btn">Login with another
-                                account</a>
-                            <span class="fl-r">Not a member?
+                            <a href="javascript:;" rel="nofollow" class="another-login-btn">Đăng nhập vói tài khoản khác</a>
+                            <span class="fl-r">chưa phài là thành viên?
                                 <a href="javascript:;" rel="nofollow" id="base-reg-trigger"
-                                    class="reg-trigger">Register</a>
+                                    class="reg-trigger">Đăng Ký</a>
                             </span>
                         </p>
                     </div>
@@ -49,7 +48,7 @@
                     <p class="wx-prompt">
                         <a href="/password/find" style="" class="reg-trigger">Reset my password</a>
                         <span class="fl-r">Not a member?
-                            <a href="javascript:;" rel="nofollow" id="base-reg-trigger" class="reg-trigger">Register</a>
+                            <a href="javascript:;" rel="nofollow" id="base-reg-trigger" class="reg-trigger">Đăng ký</a>
                         </span>
                     </p>
                     {CHtml::endForm()}
@@ -104,7 +103,7 @@
                     <a class="ipt-btn" id="base-sub-regist-Btn">Register</a>
                     {CHtml::endForm()}
 
-                    <p class="window-register-tips">By creating an account, I agree to Pngtree's <a
+                    <p class="window-register-tips">By creating an account, I agree to TLKT's <a
                             href="/terms-of-service">Terms of Service</a>, <a href="/privacy-policy">Privacy
                             Policy</a>
                         and <a href="/protocol">Intellectual Property Rights</a></p>
