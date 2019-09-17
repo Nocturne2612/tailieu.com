@@ -156,9 +156,6 @@ class LinkController extends AdminController {
                         @unlink('./' . IMG_LINK . $data['image']);
                         $this->_err = 'Có lỗi trong quá trình xử lý';
                     }
-                } else {
-                    echo Strings::alert('Lỗi!!! File tải lên quá lớn', Yii::app()->createUrl('admin/link/create'));
-                    die();
                 }
             } else {
                 $this->_err = 'Text hiển thị không được để trống';
