@@ -60,25 +60,9 @@ $(function () {
 		}
 	}), $(".index-search-btn").on("click", function () {
 		var e = $(".js_search-input").data("type"),
-			t = $.trim($(".js_search-input").val()),
-			n = 1;
-		switch (e) {
-			case 1:
-				n = "Element";
-				break;
-			case 2:
-				n = "Back";
-				break;
-			case 5:
-				n = "Template";
-				break;
-			case 6:
-				n = "PPT";
-				break;
-			case 7:
-				n = "Font"
-		}
-		Png.BaseGA.IndexSearch(n), Pngtree.BaseFun.SearchClick(e, t)
+			// t = $.trim($(".js_search-input").val()),
+			t = $.trim($(this).siblings('.index-search-input').children('input').val());
+		Pngtree.BaseFun.SearchClick(e, t);
 	}), $(".rem-click").on("click", function () {
 		var e = $(this).data("type");
 		Pngtree.BaseFun.Ga_Deploy("Home", "Recommended_Words", e)
