@@ -400,7 +400,7 @@
             </a>
             <div class="xs-header-search-wrap">
                 <input type="text" class="xs-header-search-input" placeholder="Seach...">
-                <a href="javascript:;" class="xs-header-search-btn" data-type="-1">
+                <a href="javascript:;" class="xs-header-search-btn" data-type="0">
                     <i class="iconfont icon-sousuo"></i>
                 </a>
             </div>
