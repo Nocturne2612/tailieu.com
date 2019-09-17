@@ -60,11 +60,11 @@ class DownloadController extends TailieuController {
                     Yii::app()->session['total_pay'] = $price;
                     $url = SystemBase::buildUrl('tailieu/download/confirm', array('id' => $id, 'token' => $token));
                     echo "<script type=\"text/javascript\">
-       //window.open('Location:".$url."', '_blank');
-          // header('Location:".$url."');
-               window.location= '".$url."';
-          // setTimeout(function(){ window.history.back(); }, 3000);
-    </script>";
+                    //window.open('Location:".$url."', '_blank');
+                        // header('Location:".$url."');
+                            window.location= '".$url."';
+                        // setTimeout(function(){ window.history.back(); }, 3000);
+                    </script>";
                     die();
                 }else if ($infoAccount['point'] >= $price) { // Point đủ thanh toán
                     $flag = 1;
