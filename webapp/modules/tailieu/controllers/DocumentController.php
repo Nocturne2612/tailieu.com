@@ -60,6 +60,7 @@ class DocumentController extends TailieuController {
             'arr_pic'=> $arr_pic,
             'relation' => $relation,
             'admin'=> $admin,
+            'check_login' => $check_login = Yii::app()->user->getState('tAccount')
         ));
     }
 

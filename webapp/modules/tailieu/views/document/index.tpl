@@ -132,8 +132,8 @@ normal share-group circle
             <!-- infor -->
             <div class="dbr-items">
                 <div class="dbr-btnbox clearfix detail-down-click">
-                    <a data-down="{$output.id}_DOWNLOAD" rel="nofollow" href="javascript:;"
-                        class="fl-l btn-free down-no-login">
+                    <a data-down="{$output.id}_DOWNLOAD" rel="nofollow"  {if $check_login}href="{SystemBase::buildUrl('tailieu/download',['id'=>$output.id,'title'=>$output.title])}" {else}href="javascript:;"{/if}
+                        class="fl-l btn-free {if $check_login}down-no-login{/if}">
                         <i class="iconfont icon-xiazai"></i>
                         {if $output.proprice > 0}
                         <span class="oldprice"
@@ -147,7 +147,7 @@ normal share-group circle
                         Free download{/if}
 
                     </a>
-                    <a href="javascript:;" rel="nofollow" class="btn-star fl-r btn-Temstar"><i></i></a>
+                    <a {if $check_login}href="/tailieu/account/favorite/like/{$rs.id}.html" class="btn-star fl-r btn-Temstar"{else}href="javascript:;" class="hbtn-star fl-r btn-Temstar element-list-click"{/if}><i></i></a>
                 </div>
             </div>
 
