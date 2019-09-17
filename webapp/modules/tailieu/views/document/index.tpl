@@ -147,7 +147,7 @@ normal share-group circle
                         Free download{/if}
 
                     </a>
-                    <a {if $check_login}href="/tailieu/account/favorite/like/{$rs.id}.html" class="btn-star fl-r btn-Temstar"{else}href="javascript:;" class="hbtn-star fl-r btn-Temstar element-list-click"{/if}><i></i></a>
+                    <a {if $check_login}href="/tailieu/account/favorite/like/{$output.id}.html" class="btn-star fl-r btn-Temstar"{else}href="javascript:;" class="hbtn-star fl-r btn-Temstar element-list-click"{/if}><i></i></a>
                 </div>
             </div>
 
