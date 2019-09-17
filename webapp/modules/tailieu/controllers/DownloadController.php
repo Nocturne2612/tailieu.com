@@ -9,9 +9,9 @@ class DownloadController extends TailieuController {
         );
     }
 
-    // public function accessRules() {
-    //     return TRoles::getAccessRules($this->id);
-    // }
+    public function accessRules() {
+        return TRoles::getAccessRules($this->id);
+    }
 
     public function init() {
         $id = ObjInput::get('id', 'int', 0);
