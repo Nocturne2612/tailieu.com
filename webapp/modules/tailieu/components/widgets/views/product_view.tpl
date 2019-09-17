@@ -6,10 +6,10 @@
             <li class="li-box grid-sizer search_keyword_statis_js">
                 <div class="hover-show">
                     <span class="commercial-use" title="{$rs.title}"></span>
-                    <a href="/tailieu/account/favorite/like/{$rs.id}.html" data-id="{$rs.id}" data-type="1" title="Add to favorites" class="hs-star" data-like="4773403_like">
+                    <a href="javascript:;" data-id="{$rs.id}" data-type="1" title="Add to favorites" class="hs-star  star-btn-click element-list-click" data-like="4773403_like">
                         <i class="iconfont icon-xin"></i>
                     </a>
-                    <a data-down="{$rs.id}_DOWNLOAD" rel="nofollow" href="/element/down?id=NDc3MzQwMw==&type=1" class="hs-downPng">
+                    <a data-down="{$rs.id}_DOWNLOAD" rel="nofollow" href="javascript:;" class="hs-downPng down-jpg-click element-list-click">
                         <i class="iconfont icon-xiazai"></i>&nbsp;{$rs.count_down|number_format:2:",":"."|replace:',00':''}
                     </a>
                 </div>
