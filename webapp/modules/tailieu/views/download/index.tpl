@@ -122,12 +122,67 @@
     <div class="download-contain">
         <div class="download-detail">
             <div class="download-img">
-                <img src="" alt="">
+            {if $product.picture <> ""}
+                            {$output = $product}
+                            {assign var="arr_pic" value="|"|explode:$output.picture}
+                            <img itemprop="image"
+                                alt="{$output.title}"
+                                src="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_PRODUCT_THUMB}{$arr_pic[0]}"
+                            />
+                            {/if}
             </div>
-            <p class="download-img-title "></p>
+            <p class="download-img-title "><a href="{SystemBase::buildUrl('tailieu/document',['id'=>$product.id,'title'=>$product.title])}">{$output.title}</a></p>
         </div>
         <div class="download-section">
-            <div class="download-tips-box" style="display: none">
+                {if $flag===1}
+                        {CHtml::beginForm('','post',['enctype' => ''])}
+                        <div class="ui-form signin">
+                            {if $errors <> ''}
+                                <div class="error_show">{$errors}</div>
+
+                                {/if}
+                                {if $success <> ''}
+                                    <div class="error_show">{$success}</div>
+                                    {/if}
+                                    <div class="ui-form-item fn-clear">
+
+                                        <label for="" class="ui-label">Mã bảo mật:</label>
+                                        <input class="ui-input" id="verifyCode" name="verifyCode" type="text">
+                                        <div class="col-sm-4 pdl5"> {$this->widget('CCaptcha',['id'=>'ccaptcha'],true)}
+                                        </div>
+                                    </div>
+
+                                    <div class="ui-form-item fn-clear">
+                                        <label class="ui-label">&nbsp;</label>
+                                        <input type="hidden" name="next_url" value="/">
+
+                                        <button class="btn btn-secondary btn-large fn-left" name="dangnhap" type="submit"
+                                            id="signin_button">Download</button>
+
+                                    </div>
+
+                        </div>
+                        {CHtml::endForm()}
+                {else if $flag===2}
+                    <div class="download-article">
+                        <div class="download-premium_AD">
+                            <p class="download-premium_AD-title">Tài khoản của bạn đã hết hạn VIP. Vui lòng Gia hạn để được download tài
+                            liệu!</p>
+                            <p class="download-premium_AD-text">Click <a href="/tailieu/addfund.html"> NẠP POINT</a>
+                                để gia hạn</p>
+                        </div>
+                    </div>
+                {else}
+                     <div class="download-article">
+                        <div class="download-premium_AD">
+                            <p class="download-premium_AD-title">Tài khoản không đủ POINT để download tài liệu này. Vui lòng nạp thêm
+                            POINT để download tài liệu!</p>
+                            <p class="download-premium_AD-text">Click <a href="/tailieu/addfund.html"> NẠP POINT</a>
+                                để Download</p>
+                        </div>
+                    </div>
+                {/if}
+            {* <div class="download-tips-box" style="display: none">
                 <p class="download-tips">Your download will start in <span class="download-timeleft" id="num">0</span>
                     seconds.</p>
                 <p class="download-tips">If your download doesn't start automatically please <a target="_blank"
@@ -155,7 +210,7 @@
                                 class="iconfont icon-pinterest"></i></a>
                     </span>
                 </p>
-            </div>
+            </div> *}
         </div>
     </div>
 </div>
