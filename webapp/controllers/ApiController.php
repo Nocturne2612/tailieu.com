@@ -14,8 +14,7 @@ class ApiController extends CController {
         $data = array(
             
         );
-        $info = Yii::app()->user;
-        var_dump($info);die;
+        $info = Yii::app()->user->getState('tAccount');
         if (!$info) {
             $error_code = 1;
         } else {
@@ -23,7 +22,7 @@ class ApiController extends CController {
         }
         $return = array(
             'error_code'=> $error_code,
-            'data'=> $info,
+            'data'=> $data,
         );
         
         echo json_encode($return);
