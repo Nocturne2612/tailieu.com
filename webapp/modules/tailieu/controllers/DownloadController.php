@@ -26,6 +26,7 @@ class DownloadController extends TailieuController {
     }
 
     public function actionIndex() {
+        Yii::app()->getClientScript()->registerCssFile(Yii::app()->baseUrl . '/assets/tailieuv3/css/down_index.css');
         $id = ObjInput::get('id', 'int', 0);
         if ($id > 0) {
             $product = new Product;
