@@ -139,6 +139,11 @@
             <p class="download-img-title "><a href="{SystemBase::buildUrl('tailieu/document',['id'=>$product.id,'title'=>$product.title])}">{$output.title}</a></p>
         </div>
         <div class="download-section">
+            <div class="download-tips-box" style="display: none">
+                <p class="download-tips">Vui lòng chọn tài liệu cần download trong bộ sưu tập và nhập mã xác nhận vào ô bên dưới.</p>
+                <p class="download-tips">Lưu ý: Phần mềm gõ tiếng việt trên máy có thể nhập không đúng.</a> .
+                </p>
+            </div>
                 {if $flag===1}
                         {CHtml::beginForm('','post',['enctype' => ''])}
                         <div class="download-article">
