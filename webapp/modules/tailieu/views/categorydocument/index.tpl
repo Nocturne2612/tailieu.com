@@ -30,9 +30,9 @@
     </div>
     <div class="w1520 pr">
         <h1 class="title-main">{$data.title}</h1>
-        <p>
+        <div style="color: #999;font-size: 16px;text-align: center;">
             {$data.short}
-        </p>
+        </div>
         {* <p class="detail-breadcrumbs" style="font-size: 12px;">
             {$this->widget('TWidgets',['methodName'=>'breadcrums','data'=>$data],true)}
         </p> *}
