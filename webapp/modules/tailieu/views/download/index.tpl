@@ -119,7 +119,10 @@
 
 *}
 <style>
-#ccaptcha_button{background: url('../images/f5.png');border: none;height: 32px;width: 32px;font-size: 0px; }</style>
+#ccaptcha_button {
+    display: none;
+}
+</style>
 <div class="download-wrap">
     <div class="download-contain">
         <div class="download-detail">
