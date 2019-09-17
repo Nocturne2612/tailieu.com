@@ -30,6 +30,9 @@
     </div>
     <div class="w1520 pr">
         <h1 class="title-main">{$data.title}</h1>
+        <p>
+            {$data.short}
+        </p>
         {* <p class="detail-breadcrumbs" style="font-size: 12px;">
             {$this->widget('TWidgets',['methodName'=>'breadcrums','data'=>$data],true)}
         </p> *}
@@ -123,7 +126,6 @@
 
 
 
-                <!-- 二级菜单结构 -->
                 <div class="subpage-menu-toggleBox " style="display: none ">
                     <a href="javascript:;" class="xs-subpage-menu-sort-title"> <span href="javascript:;"><i class="iconfont icon-triangle"></i></span></a>
                     <span class="lg-subpage-filter-sort-title xs-hide">Usage:</span>
@@ -147,11 +149,6 @@
                         </ul>
                         {$output['pageHtml']}
                     {/if}
-                </div>
-            </div>
-            <div class="subpage-menu new-subpage-menu" style="margin-top: 0;">
-                <div class="subpage-menu-toggleBox" style="display:block; padding: 10px;">
-                    {$data.short}
                 </div>
             </div>
         </div>
