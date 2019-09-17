@@ -132,10 +132,11 @@ class TWidgets extends CWidget {
     }
 
     public function productView() {
+        $check_login = Yii::app()->user->getState('tAccount');
         if ($this->check) {
-            $this->render("product_view", array('data' => $this->product));
+            $this->render("product_view", array('data' => $this->product, 'check_login' => $check_login));
         } else {
-            $this->render("product_view1", array('data' => $this->product));
+            $this->render("product_view1", array('data' => $this->product, 'check_login' => $check_login));
         }
     }
 
