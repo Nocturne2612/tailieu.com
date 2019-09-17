@@ -14,7 +14,8 @@ class ApiController extends CController {
         $data = array(
             
         );
-        $info = Yii::app()->user->getId();
+        $info = Yii::app()->user->getState('tAccount');
+        var_dump($info);die;
         if (!$info) {
             $error_code = 1;
         } else {
