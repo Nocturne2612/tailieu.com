@@ -118,6 +118,8 @@
 
 
 *}
+<style>
+#ccaptcha_button{background: url('../images/f5.png');border: none;height: 32px;width: 32px;font-size: 0px; }</style>
 <div class="download-wrap">
     <div class="download-contain">
         <div class="download-detail">
@@ -143,12 +145,14 @@
                             {if $success <> ''}
                                 <div class="error_show">{$success}</div>
                             {/if}
+                            <p class="file-license-tips">Nhập mã xác thực: </p>
                             <input type="hidden" name="next_url" value="/">
+
                             <div class="file-license-copy-group">
                                 <input id="verifyCode"  name="verifyCode" type="text" class="file-license-copy-link file-copy" value="">
                                 {* <a class="file-license-copy-btn btn-copy">Copy</a> *}
-                                <button class="file-license-copy-btn btn-copy" name="dangnhap" type="submit"
-                                            id="signin_button">Download</button>
+                                <a class="file-license-copy-btn btn-copy" name="dangnhap" type="submit"
+                                            id="signin_button">Download</a>
                             </div>
                             <div class="col-sm-4 pdl5"> {$this->widget('CCaptcha',['id'=>'ccaptcha'],true)}</div>
                         </div>
