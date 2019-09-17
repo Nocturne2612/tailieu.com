@@ -65,12 +65,12 @@
             <span class="cls-btn"></span>
             <div class="register-wrap">
                 <div class="register-asideImage">
-                    <p class="register-asideImage-title">Tài liệu kiến trúc</p>
+                    <p class="register-asideImage-title">Tài liệu KT</p>
                     <p class="register-asideImage-text"><span style="color:#78c972;">1000000+</span> Tài liệu kiên trúc</p>
                 </div>
                 <div class="register-section">
                     <div class="rlg-with-box">
-                        <p class="big-tit">Đăng ký và săn sằng để  tải</p>
+                        <p class="big-tit">Đăng ký và tải tài liệu</p>
                         <p class="small-tit">
 
                         </p>
