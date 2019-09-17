@@ -15,7 +15,7 @@
                     <h1 class="index-banner-text">Kiến trúc, nội thất, thư viện đồ án tốt nghiệp</h1>
                     <form class="index-page index-search js_search pullDown ">
                         <div class="index-search-input">
-                            <input type="text" placeholder="Tìm tài liệu" class="js_search-input " data-type="1" value="">
+                            <input type="text" placeholder="Tìm tài liệu" class="js_search-input " data-type="0" value="">
                         </div>
                         <a href="javascript:;" class="index-search-btn" data-text="Please enter keywords">
                             <i class="iconfont icon-sousuo"></i>

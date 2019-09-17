@@ -133,7 +133,7 @@ normal share-group circle
             <div class="dbr-items">
                 <div class="dbr-btnbox clearfix detail-down-click">
                     <a data-down="{$output.id}_DOWNLOAD" rel="nofollow" href="{SystemBase::buildUrl('tailieu/download',['id'=>$output.id,'title'=>$output.title])}"
-                        class="fl-l btn-free down-no-login">
+                        class="fl-l btn-free">
                         <i class="iconfont icon-xiazai"></i>
                         {if $output.proprice > 0}
                         <span class="oldprice"
