@@ -124,6 +124,7 @@ class DownloadController extends TailieuController {
         $token = ObjInput::get('token', 'str', '');
         $token_make = md5($id . $infoAccount['email'] . Yii::app()->request->getUserHostAddress() . '_ckk');
         if ($token === Yii::app()->session['token'] && $token === $token_make) {
+            var_dump(Yii::app()->session['token_time_' . $id]);die;
             $token_time_out = Yii::app()->session['token_time_' . $id] + SESSION_DOWNLOAD_TIMEOUT;
 
             if ($token_time_out > time()) {
