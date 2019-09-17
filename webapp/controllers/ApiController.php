@@ -14,7 +14,7 @@ class ApiController extends CController {
         $data = array(
             
         );
-        $info = Yii::$app->user->isGuest;
+        $info = Yii::app()->user->isGuest;
         if (!$info) {
             $error_code = 1;
         } else {
