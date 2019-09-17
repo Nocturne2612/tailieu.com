@@ -26,7 +26,7 @@
             </div>
             <div class="foot-item foot-pngtree xs-hide">
                 <dl>
-                    <dt>TRỢ GIÚP</dt>
+                    <dt>HƯỚNG DẪN</dt>
                     {foreach $data as $k=>$item}
                         {if $item.type == 2}
                             <dd>
@@ -38,7 +38,7 @@
             </div>
             <div class="foot-item foot-pngtree xs-hide">
                 <dl>
-                    <dt>PHÁP LÝ</dt>
+                    <dt>TRỢ GIÚP</dt>
                     {foreach $data as $k=>$item}
                         {if $item.type == 3}
                             <dd>
@@ -68,13 +68,13 @@
         </div>
         <div class="foot-bottom">
             <p class="foot-bottom-text">
-                <i class="icon-pngtree"></i><i class="iconfont icon-copyright "></i> 2017-2019 Shanghai HuaiTu Network Technology Co., Ltd. -All Rights Reserved.
+                <i class="icon-pngtree"></i><i class="iconfont icon-copyright "></i> 2014-2019 Thư viện kiến trúc - tài liệu cho kiến trúc sư. All Rights Reserved.
             </p>
             <div class="foot-bottom-payment">
-                <p>Secure Payment:</p>
+                <p>Thanh toán đảm bảo:</p>
                 <figure>
-                    <img data-original="//js.pngtree.com/web3/images/home/jcb.png?code=156775615209" class="" alt="" style="display: inline;" src="//js.pngtree.com/web3/images/home/jcb.png?code=156775615209">
-                    <img data-original="//js.pngtree.com/web3/images/home/footPayment.png?code=156775615209" class="" alt="" style="display: inline;" src="//js.pngtree.com/web3/images/home/footPayment.png?code=156775615209">
+                    <img data-original="/assets/tailieuv3/images/nganluong.png" class="" alt="" style="display: inline;" src="/assets/tailieuv3/images/nganluong.png">
+                    <img data-original="/assets/tailieuv3/images/footPayment.png" class="" alt="" style="display: inline;" src="/assets/tailieuv3/images/footPayment.png">
                 </figure>
             </div>
         </div>
