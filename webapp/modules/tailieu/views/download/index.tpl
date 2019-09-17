@@ -136,32 +136,23 @@
         <div class="download-section">
                 {if $flag===1}
                         {CHtml::beginForm('','post',['enctype' => ''])}
-                        <div class="ui-form signin">
+                        <div class="download-article">
                             {if $errors <> ''}
                                 <div class="error_show">{$errors}</div>
-
-                                {/if}
-                                {if $success <> ''}
-                                    <div class="error_show">{$success}</div>
-                                    {/if}
-                                    <div class="ui-form-item fn-clear">
-
-                                        <label for="" class="ui-label">Mã bảo mật:</label>
-                                        <input class="ui-input" id="verifyCode" name="verifyCode" type="text">
-                                        <div class="col-sm-4 pdl5"> {$this->widget('CCaptcha',['id'=>'ccaptcha'],true)}
-                                        </div>
-                                    </div>
-
-                                    <div class="ui-form-item fn-clear">
-                                        <label class="ui-label">&nbsp;</label>
-                                        <input type="hidden" name="next_url" value="/">
-
-                                        <button class="btn btn-secondary btn-large fn-left" name="dangnhap" type="submit"
+                            {/if}
+                            {if $success <> ''}
+                                <div class="error_show">{$success}</div>
+                            {/if}
+                            <input type="hidden" name="next_url" value="/">
+                            <div class="file-license-copy-group">
+                                <input id="verifyCode"  name="verifyCode" type="text" class="file-license-copy-link file-copy" value="">
+                                {* <a class="file-license-copy-btn btn-copy">Copy</a> *}
+                                <button class="file-license-copy-btn btn-copy" name="dangnhap" type="submit"
                                             id="signin_button">Download</button>
-
-                                    </div>
-
+                            </div>
+                            <div class="col-sm-4 pdl5"> {$this->widget('CCaptcha',['id'=>'ccaptcha'],true)}</div>
                         </div>
+                        
                         {CHtml::endForm()}
                 {else if $flag===2}
                     <div class="download-article">
