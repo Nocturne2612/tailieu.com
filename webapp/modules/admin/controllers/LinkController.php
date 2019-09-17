@@ -8,9 +8,9 @@ class LinkController extends AdminController {
         return array('accessControl');
     }
 
-    // public function accessRules() {
-    //     return AdminRoles::getAccessRules($this->id);
-    // }
+    public function accessRules() {
+        return AdminRoles::getAccessRules($this->id);
+    }
 
     public function init() {
         $this->_model = new Link();
