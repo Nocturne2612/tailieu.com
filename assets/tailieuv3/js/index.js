@@ -60,7 +60,6 @@ $(function () {
 		}
 	}), $(".index-search-btn").on("click", function () {
 		var e = $(".js_search-input").data("type"),
-			// t = $.trim($(".js_search-input").val()),
 			t = $.trim($(this).siblings('.index-search-input').children('input').val());
 		Pngtree.BaseFun.SearchClick(e, t);
 	}), $(".rem-click").on("click", function () {
