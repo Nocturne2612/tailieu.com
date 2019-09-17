@@ -15,6 +15,8 @@ class ApiController extends CController {
             
         );
         $info = Yii::app()->user->getState('tAccount');
+        echo json_encode($info);
+        Yii::app()->end();
         if (!$info) {
             $error_code = 1;
         } else {
@@ -26,10 +28,6 @@ class ApiController extends CController {
         );
         
         echo json_encode($return);
-        
-        
-        
-        
         Yii::app()->end();
     }
     public function actionFav() {
