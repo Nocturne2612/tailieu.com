@@ -139,13 +139,8 @@
             <p class="download-img-title "><a href="{SystemBase::buildUrl('tailieu/document',['id'=>$product.id,'title'=>$product.title])}">{$output.title}</a></p>
         </div>
         <div class="download-section">
-            <div class="download-tips-box" style="display: none">
-                <p class="download-tips">Vui lòng chọn tài liệu cần download trong bộ sưu tập và nhập mã xác nhận vào ô bên dưới.</p>
-                <p class="download-tips">Lưu ý: Phần mềm gõ tiếng việt trên máy có thể nhập không đúng.</a> .
-                </p>
-            </div>
                 {if $flag===1}
-                        {CHtml::beginForm('','post',['enctype' => ''])}
+                        {CHtml::beginForm('','post',['enctype' => '', 'id' => 'myform'])}
                         <div class="download-article">
                             {if $errors <> ''}
                                 <div class="error_show">{$errors}</div>
@@ -153,14 +148,16 @@
                             {if $success <> ''}
                                 <div class="error_show">{$success}</div>
                             {/if}
-                            <p class="file-license-tips">Nhập mã xác thực: </p>
+                            <p class="file-license-title">Vui lòng chọn tài liệu cần download trong bộ sưu tập và nhập mã xác nhận vào ô bên dưới.</p>
+                            <p class="file-license-title">Lưu ý: Phần mềm gõ tiếng việt trên máy có thể nhập không đúng.</p>
+                            <p class="file-license-title">Nhập mã xác thực: </p>
                             <input type="hidden" name="next_url" value="/">
 
                             <div class="file-license-copy-group">
                                 <input id="verifyCode"  name="verifyCode" type="text" class="file-license-copy-link file-copy" value="">
                                 {* <a class="file-license-copy-btn btn-copy">Copy</a> *}
                                 <a class="file-license-copy-btn btn-copy" name="dangnhap" type="submit"
-                                            id="signin_button">Download</a>
+                                            id="signin_button" onclick="document.getElementById('myform').submit()">Download</a>
                             </div>
                             <div class="col-sm-4 pdl5"> {$this->widget('CCaptcha',['id'=>'ccaptcha'],true)}</div>
                         </div>
