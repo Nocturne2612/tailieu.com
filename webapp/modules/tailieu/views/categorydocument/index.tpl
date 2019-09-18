@@ -30,7 +30,7 @@
     </div>
     <div class="w1520 pr">
         <h1 class="title-main">{$data.title}</h1>
-        <div style="color: #999;font-size: 16px;text-align: center;">
+        <div style="color: #999;font-size: 14px;text-align: center;">
             {$data.short}
         </div>
         {* <p class="detail-breadcrumbs" style="font-size: 12px;">

@@ -5,7 +5,7 @@ a {
   -webkit-tap-highlight-color: transparent
 }
 
-b,
+/* b,
 caption,
 em,
 h1,
@@ -17,7 +17,7 @@ h6,
 strong,
 th {
   font-weight: 400
-}
+} */
 
 #wrapper,
 .pr {
@@ -111,14 +111,14 @@ img {
   border: 0
 }
 
-address,
+/* address,
 cite,
 dfn,
 em,
 i,
 var {
   font-style: normal
-}
+} */
 
 [hidefocus],
 summary {
