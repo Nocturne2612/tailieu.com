@@ -190,7 +190,7 @@ $(function () {
 		}), $(".search-dropdown").on("click", "p", function () {
 			var e = $(this).attr("data-val"),
 				a = parseInt($(this).parents(".serach-box").find(".search-type a.on").data("type"));
-			Pngtree.BaseFun.SearchClick(a, e)
+			Pngtree.BaseFun.SearchClick(0, e)
 		}), $(".btn-copy").on("click", function () {
 			var e = $(".un_upgradeInfor-copy-link").val(),
 				a = document.createElement("input");
