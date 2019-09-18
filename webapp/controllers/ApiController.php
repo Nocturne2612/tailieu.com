@@ -57,7 +57,13 @@ class ApiController extends CController {
     }
 
     public function actionIndex() {
-        $this->render('index');
+        $data = "test";
+        $return = array(
+            'status'=> 200,
+            'data'=> $data,
+        );
+        echo json_encode($return);
+        Yii::app()->end();
     }
 
 }
