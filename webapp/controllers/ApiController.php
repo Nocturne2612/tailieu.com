@@ -63,7 +63,7 @@ class ApiController extends CController {
         var_dump($keyWord);
         die;
         $data = '
-        <p data-val="instagram"><span class="value">instagram</span><span class="num">2914 results</span></p>
+        <p data-val="instagram"><span class="value">instagram</span><span class="num">2900 results</span></p>
         ';
         $return = array(
             'status'=> 200,
