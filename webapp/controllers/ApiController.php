@@ -57,12 +57,16 @@ class ApiController extends CController {
     }
 
     public function actionIndex() {
+        $type = ObjInput::get('type', 'int', '');
+        $keyWord = ObjInput::get('keyword', 'int', '');
         $data = '
         <p data-val="instagram"><span class="value">instagram</span><span class="num">2914 results</span></p>
         ';
         $return = array(
             'status'=> 200,
             'data'=> $data,
+            'type' => $type,
+            'keyword' => $keyWord,
         );
         echo json_encode($return);
         Yii::app()->end();
