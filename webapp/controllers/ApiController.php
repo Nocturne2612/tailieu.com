@@ -57,7 +57,9 @@ class ApiController extends CController {
     }
 
     public function actionIndex() {
-        $data = "test";
+        $data = '
+        <p data-val="instagram"><span class="value">instagram</span><span class="num">2914 results</span></p>
+        ';
         $return = array(
             'status'=> 200,
             'data'=> $data,

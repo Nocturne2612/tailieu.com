@@ -16,6 +16,7 @@ $(function () {
 	}), $(".js_search-input").on("focus", function () {
 		var e = $(this).data("type"),
 			t = $.trim($(this).val());
+		// target = $(this).siblings()
 		$.getJSON("/api/index", {
 			type: e,
 			keyword: t
