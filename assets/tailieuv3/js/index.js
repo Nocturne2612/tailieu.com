@@ -14,14 +14,14 @@ $(function () {
 	}).on("mouseleave", ".search-dropdown p", function () {
 		$(".index-search-input .js_search-input").val(t)
 	}), $(".js_search-input").on("focus", function () {
-		var e = $(this).data("type"),
-			t = $.trim($(this).val());
-		// target = $(this).siblings()
+		var e = $.trim($(this).val()),
+			t = $(this).data("type");
+			that = $(this).parent().siblings(".comment-search-dropdown-wrap");
 		$.getJSON("/api/index", {
-			type: e,
-			keyword: t
+			type: t,
+			keyword: e
 		}, function (e) {
-			200 == e.status && "" != e.data && ($(this).parent().siblings(".comment-search-dropdown-wrap").children(".search-dropdown").html(e.data), $(this).parent().siblings(".comment-search-dropdown-wrap").show())
+			200 == e.status && "" != e.data ? (that.children(".search-dropdown").html(e.data), that.show()) : that.hide()
 		})
 	}), $(".search-box-input").on("focus", function () {
 		var e = $(this).parents(".serach-box").find(".search-type a.on").data("type"),
@@ -35,11 +35,12 @@ $(function () {
 	}), $(".js_search-input").on("keyup", function () {
 		var e = $.trim($(this).val()),
 			t = $(this).data("type");
+			that = $(this).parent().siblings(".comment-search-dropdown-wrap");
 		$.getJSON("/api/index", {
 			type: t,
 			keyword: e
 		}, function (e) {
-			200 == e.status && "" != e.data ? ($(this).parent().siblings(".comment-search-dropdown-wrap").children(".search-dropdown").html(e.data), $(".comment-search-dropdown-wrap").show()) : $(".comment-search-dropdown-wrap").hide()
+			200 == e.status && "" != e.data ? (that.children(".search-dropdown").html(e.data), that.show()) : that.hide()
 		})
 	}), $(".search-dropdown").on("click", ".recent-search span", function () {
 		if ("headen" == $(this).parents().parents().attr("data-type")) {
