@@ -39,7 +39,7 @@ $(function () {
 			type: t,
 			keyword: e
 		}, function (e) {
-			200 == e.status && "" != e.data ? ($(".comment-search-dropdown-wrap").children(".search-dropdown").html(e.data), $(".comment-search-dropdown-wrap").show()) : $(".comment-search-dropdown-wrap").hide()
+			200 == e.status && "" != e.data ? ($(this).parent().siblings(".comment-search-dropdown-wrap").children(".search-dropdown").html(e.data), $(".comment-search-dropdown-wrap").show()) : $(".comment-search-dropdown-wrap").hide()
 		})
 	}), $(".search-dropdown").on("click", ".recent-search span", function () {
 		if ("headen" == $(this).parents().parents().attr("data-type")) {
