@@ -37,7 +37,7 @@
 <div id="v2-subpageBan" class="subpageBan new-subpageBan">
     <div class="w1520 pr">
         <h1 class="title-main">{if isset($cache_category['parent_category'][$data.platforms])}{$cache_category['parent_category'][$data.platforms]['title']}: {/if}{$data.title}</h1>
-        <p style="text-align: center;font-size: 16px; color:#666;"> Có {count($output['data'])} kết quả</p>
+        <p style="text-align: center;font-size: 16px; color:#666;"> Có {$output.data.totalRecord} kết quả</p>
     </div>
 </div>
 <div id="v2-content">
