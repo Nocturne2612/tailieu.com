@@ -57,7 +57,8 @@ $(function () {
 				t = Number($(this).parents().parents().parents("").find(".serach-box a.on").attr("data-type"));
 			Pngtree.BaseFun.Ga_Deploy("Home", "Search_Drop_Down_bar", e), Pngtree.BaseFun.SearchClick(t, e)
 		} else {
-			e = $(this).attr("data-val"), t = parseInt($(this).parents(".serach-box").find(".search-type a.on").data("type"));
+			e = $(this).attr("data-val");
+			t = parseInt($(this).parents(".search-dropdown-wrap").siblings('.index-search-input').find("input").attr("data-type"));
 			Pngtree.BaseFun.Ga_Deploy("Home", "Search_Drop_Down_bar", e), Pngtree.BaseFun.SearchClick(t, e)
 		}
 	}), $(".index-search-btn").on("click", function () {
