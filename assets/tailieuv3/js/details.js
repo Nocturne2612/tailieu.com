@@ -182,7 +182,8 @@ $(function () {
 					n = e[a];
 				n.innerText, n.style.animationDelay = t + "s"
 			}
-		}(), $(".search-dropdown").on("click", ".recent-search span", function () {
+		}(),
+		$(".search-dropdown").on("click", ".recent-search span", function () {
 			$(this).css("cursor", "pointer");
 			var e = $(this).attr("data-val"),
 				a = parseInt($(this).parents(".serach-box").find(".search-type a.on").data("type"));
@@ -191,7 +192,8 @@ $(function () {
 			var e = $(this).attr("data-val"),
 				a = parseInt($(this).parents(".search-dropdown-wrap").siblings('.res-search-input').find("input").data("type"));
 			Pngtree.BaseFun.SearchClick(a, e)
-		}), $(".btn-copy").on("click", function () {
+		}), 
+		$(".btn-copy").on("click", function () {
 			var e = $(".un_upgradeInfor-copy-link").val(),
 				a = document.createElement("input");
 			a.value = e, document.body.appendChild(a), a.select(), document.execCommand("Copy"), a.className = "oInput", a.style.display = "none", $(this).html("Successful copy");

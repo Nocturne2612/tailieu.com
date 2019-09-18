@@ -78,7 +78,8 @@ $(function () {
 			t = $(".js_search-select").data("type"),
 			n = $.trim(e.val());
 		Pngtree.BaseFun.SearchClick(t, n)
-	}), $("[data-index-click-type]").on("click", function () {
+	}), 
+	$("[data-index-click-type]").on("click", function () {
 		var e = $(this).data("index-click-type");
 		
 	}), $("#base-new-version").on("click", ".close-span", function () {
