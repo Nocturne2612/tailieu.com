@@ -39,17 +39,17 @@
                         <span>Chia sẻ trang:</span>
                         <div class="share-group circle larger">
                             <a href="javascript:;"
-                               onclick="Pngtree.BaseFun.Base_OpenWin('https://www.facebook.com/share.php?u={SystemBase::buildUrl('tailieu/account/member/id/'.$data['id'].'.html')}?share=2','facebook-share')"
+                               onclick="Pngtree.BaseFun.Base_OpenWin('https://www.facebook.com/share.php?u={SystemBase::buildUrl('tailieu/account/member/id/')}{$data['id']}.html?share=2','facebook-share')"
                                data-type="1" class="share-two bg-facebook share-user-btn">
                                 <i class="iconfont icon-facebook"></i>
                             </a>
                             <a href="javascript:;"
-                               onclick="Pngtree.BaseFun.Base_OpenWin('https://twitter.com/intent/tweet?url={SystemBase::buildUrl('tailieu/account/member/id/'.$data['id'].'.html')}?share=1','twitter-share')"
+                               onclick="Pngtree.BaseFun.Base_OpenWin('https://twitter.com/intent/tweet?url={SystemBase::buildUrl('tailieu/account/member/id/')}{$data['id']}.html?share=1','twitter-share')"
                                data-type="1" class="bg-twitter share-one share-user-btn">
                                 <i class="iconfont icon-twitter"></i>
                             </a>
                             <a href="javascript:;"
-                               onclick="Pngtree.BaseFun.Base_OpenWin('https://www.pinterest.com/pin/create/button/?url={SystemBase::buildUrl('tailieu/account/member/id/'.$data[id].'.html')}?share=3','pinterest-share')"
+                               onclick="Pngtree.BaseFun.Base_OpenWin('https://www.pinterest.com/pin/create/button/?url={SystemBase::buildUrl('tailieu/account/member/id/')}{$data['id']}.html?share=3','pinterest-share')"
                                data-type="1" class="bg-pinterest share-user-btn share-three">
                                 <i class="iconfont icon-pinterest"></i>
                             </a>
