@@ -8,7 +8,7 @@
                 </p>
             </div>
             <div class="inner-search-wrap js_search">
-                <div class="inner-search-input">
+                <div class="inner-search-input" style="left: 5px;">
                     <input class="js_search-input" id="detailsearch-input" type="text"
                         placeholder="Tìm kiếm" data-type="0">
                 </div>
