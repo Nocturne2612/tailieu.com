@@ -23,15 +23,15 @@
                     <ul class="individual-info-main">
                         <li class="individual-info-item">
                             <span class="individual-info-num">{$data.create_time|date_format:"%d-%m-%Y"}</span>
-                            <p class="individual-info-type">Gia nhập từ:</p>
+                            <p class="individual-info-type">Gia nhập từ</p>
                         </li>
                         <li class="individual-info-item">
                             <span class="individual-info-num">{$data.point|number_format:2:",":"."|replace:',00':''}</span>
-                            <p class="individual-info-type">Số Point:</p>
+                            <p class="individual-info-type">Số Point</p>
                         </li>
                         <li class="individual-info-item">
                             <span class="individual-info-num">{$data.count_upload}</span>
-                            <p class="individual-info-type">Upload:</p>
+                            <p class="individual-info-type">Upload</p>
                         </li>
                     </ul>
 
