@@ -65,18 +65,22 @@ class ApiController extends CController {
                     ->from('products')
                     ->where(array('like', 'title', '%'.$keyWord.'%'))
                     ->queryRow();
-        if(count($result) >= 10) {
-            for ($i = 0; $i < 10 ; $i++) {
-                $sub = $result[$i]['title'];
-                $data .= '<p data-val="'.$sub.'"><span class="value">'.$sub.'</span></p>';         
-            }
-        } else {
-            foreach ($result as $res) {
-                $sub = $result[$i]['title'];
-                $data .= '<p data-val="'.$sub.'"><span class="value">'.$sub.'</span></p>';         
-            }
+        $data = '';
+        // if(count($result) >= 10) {
+        //     for ($i = 0; $i < 10 ; $i++) {
+        //         $sub = $result[$i]['title'];
+        //         $data .= '<p data-val="'.$sub.'"><span class="value">'.$sub.'</span></p>';         
+        //     }
+        // } else {
+        //     foreach ($result as $res) {
+        //         $sub = $res['title'];
+        //         $data .= '<p data-val="'.$sub.'"><span class="value">'.$sub.'</span></p>';         
+        //     }
+        // }
+        foreach ($result as $res) {
+            $sub = $res['title'];
+            $data .= '<p data-val="'.$sub.'"><span class="value">'.$sub.'</span></p>';         
         }
-        
         $return = array(
             'status'=> 200,
             'data'=> $data,
