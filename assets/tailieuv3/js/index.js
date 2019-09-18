@@ -69,7 +69,7 @@ $(function () {
 		var e = $(this).data("type");
 		Pngtree.BaseFun.Ga_Deploy("Home", "Recommended_Words", e)
 	}), $(".js_search-input").on("keydown", function (e) {
-		if (13 == e.keyCode) return $(".index-search-btn").trigger("click"), !1
+		if (13 == e.keyCode) return $(".index-search-btn").trigger("click") && $(".res-search-btn").trigger("click"), !1
 	}), $(".click_banner").on("click", function () {
 		var e = $(this).data("id");
 		
