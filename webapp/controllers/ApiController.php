@@ -57,11 +57,14 @@ class ApiController extends CController {
     }
 
     public function actionIndex() {
-        $model = new Search;
+        
         $type = ObjInput::get('type', 'int', '');
         $keyWord = ObjInput::get('keyword', 'str', '');
-        $result = $model->searchKeyword($keyWord, $type);
-        $data = '';
+        $result = Yii::app()->db->createCommand()
+                    ->select('*')
+                    ->from('products')
+                    ->where(array('like', 'title', '%'.$keyWord.'%'))
+                    ->queryRow();
         if(count($result) >= 10) {
             for ($i = 0; $i < 10 ; $i++) {
                 $sub = substr($result[$i]['title'], 25);
