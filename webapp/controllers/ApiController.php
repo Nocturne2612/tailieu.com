@@ -57,16 +57,28 @@ class ApiController extends CController {
     }
 
     public function actionIndex() {
+        $model = new Search;
         $type = ObjInput::get('type', 'int', '');
         $keyWord = ObjInput::get('keyword', 'str', '');
-        $data = '
-        <p data-val="instagram"><span class="value">instagram</span><span class="num">2900 results</span></p>
-        ';
+        $result = $model->searchKeyword($keyword, $type);
+        $data = '';
+        if(count($result) >= 10) {
+            for ($i = 0; $i < 10 ; $i++) {
+                $sub = substr($result[$i]['title'], 25);
+                $data .= '<p data-val="'.$sub.'"><span class="value">'.$sub.'</span></p>';         
+            }
+        } else {
+            foreach ($result as $res) {
+                $sub = substr($res['title'], 25);
+                $data .= '<p data-val="'.$sub.'"><span class="value">'.$sub.'</span></p>';         
+            }
+        }
+        
         $return = array(
             'status'=> 200,
             'data'=> $data,
             'type' => $type,
-            'keyword' => $keyWord,
+            'keyword' => json_encode($result),
         );
         echo json_encode($return);
         Yii::app()->end();
