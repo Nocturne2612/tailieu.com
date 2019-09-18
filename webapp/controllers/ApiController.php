@@ -59,6 +59,9 @@ class ApiController extends CController {
     public function actionIndex() {
         $type = ObjInput::get('type', 'int', '');
         $keyWord = ObjInput::get('keyword', 'int', '');
+        var_dump($type);
+        var_dump($keyWord);
+        die;
         $data = '
         <p data-val="instagram"><span class="value">instagram</span><span class="num">2914 results</span></p>
         ';
