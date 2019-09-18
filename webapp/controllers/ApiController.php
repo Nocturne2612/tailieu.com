@@ -62,7 +62,7 @@ class ApiController extends CController {
         $keyWord = ObjInput::get('keyword', 'str', '');
         $result = Yii::app()->db->createCommand()
                     ->select('*')
-                    ->from('products')
+                    ->from('category_products')
                     ->where(array('like', 'title', '%'.$keyWord.'%'))
                     ->queryRow();
         $data = '';
