@@ -106,7 +106,7 @@ normal share-group circle
 </div>
                         </li>
                         <li>
-                            <span><i class="iconfont icon-i"></i></span>&nbsp; <label> <a style="color:#2e9fe2" href="https://www.messenger.com/t/thuvienkientrucchiase">Report file </a></label>
+                            <span><i class="iconfont icon-i"></i></span>&nbsp; <label> <a style="color:#333" href="https://www.messenger.com/t/thuvienkientrucchiase">Report file </a></label>
                            
                         </li>
 

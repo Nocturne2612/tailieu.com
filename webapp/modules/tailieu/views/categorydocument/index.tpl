@@ -1,4 +1,9 @@
-﻿<div id="v2-subpageBan" class="subpageBan new-subpageBan">
+﻿<style>
+.custom a {
+    color: #96c244;
+}
+</style>
+<div id="v2-subpageBan" class="subpageBan new-subpageBan">
     <div class="res-search js_search w1520">
         <div class="res-search-select js_search-select" data-type="{$data.platforms}">
             <span class="res-search-selected text-overflow js_search-check xs-search-selected " data-type="{$data.platforms}">
@@ -30,7 +35,7 @@
     </div>
     <div class="w1520 pr">
         <h1 class="title-main">{$data.title}</h1>
-        <div style="color: #999;font-size: 14px;text-align: center;">
+        <div style="color: #999;font-size: 14px;text-align: center;" class="custom">
             {$data.short}
         </div>
         {* <p class="detail-breadcrumbs" style="font-size: 12px;">
