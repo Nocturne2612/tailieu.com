@@ -5,7 +5,7 @@
             <span class="res-search-selected text-overflow js_search-check xs-search-selected " data-type="{$data.platforms}">
            {if isset($cache_category['parent_category'][$data.platforms])} {$cache_category['parent_category'][$data.platforms]['title']}  {else}ALL{/if}            </span>
             <ul class="res-search-optgroup ">
-                 <li class="res-search-option" data-placeholder="Search {if isset($cache_category['parent_category'][$data.platforms])} {$cache_category['parent_category'][$data.platforms]['title']}  {else}ALL{/if}" data-type="{$data.platforms}">
+                 <li class="res-search-option" data-placeholder="Search {if isset($cache_category['parent_category'][$data.platforms])} {$cache_category['parent_category'][$data.platforms]['title']}  {else}ALL{/if}" data-type="0">
                     <span>ALL</span><i></i>
                      </li>
                 {foreach item=v from=$cache_category['parent_category'] key =e}
