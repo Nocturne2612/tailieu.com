@@ -85,7 +85,6 @@ class ApiController extends CController {
             'status'=> 200,
             'data'=> $data,
             'type' => $type,
-            'keyword' => json_encode($result),
         );
         echo json_encode($return);
         Yii::app()->end();
