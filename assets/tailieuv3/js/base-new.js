@@ -655,7 +655,7 @@ $(function () {
     }), $(".search-box-input").on("focus", function () {
         var e = $(this).parents(".serach-box").find(".search-type a.on").data("type"),
                 t = $.trim($(this).val());
-        $.getJSON("/api/index/get-keywords", {
+        $.getJSON("/api/index", {
             type: e,
             keyword: t
         }, function (e) {

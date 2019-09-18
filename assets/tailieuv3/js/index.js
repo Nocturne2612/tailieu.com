@@ -16,7 +16,7 @@ $(function () {
 	}), $(".js_search-input").on("focus", function () {
 		var e = $(this).data("type"),
 			t = $.trim($(this).val());
-		$.getJSON("/api/index/get-keywords", {
+		$.getJSON("/api/index", {
 			type: e,
 			keyword: t
 		}, function (e) {
@@ -25,7 +25,7 @@ $(function () {
 	}), $(".search-box-input").on("focus", function () {
 		var e = $(this).parents(".serach-box").find(".search-type a.on").data("type"),
 			t = $.trim($(this).val());
-		$.getJSON("/api/index/get-keywords", {
+		$.getJSON("/api/index", {
 			type: e,
 			keyword: t
 		}, function (e) {
@@ -34,7 +34,7 @@ $(function () {
 	}), $(".js_search-input").on("keyup", function () {
 		var e = $.trim($(this).val()),
 			t = $(this).data("type");
-		$.getJSON("/api/index/get-keywords", {
+		$.getJSON("/api/index", {
 			type: t,
 			keyword: e
 		}, function (e) {
