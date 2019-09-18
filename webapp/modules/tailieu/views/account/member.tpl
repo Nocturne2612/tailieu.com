@@ -7,7 +7,7 @@
                     <div class="level-avatar sliver">
                         <a rel="nofollow" href="javascript:;" class="level-avatar-link">
                             <img onerror="this.src='//js.pngtree.com/web3/user_profile/head_img/014-travel.png'"
-                                 alt="无名者" src="//js.pngtree.com/user_profile/head_img/011-star.png">
+                                 alt="{$data.first_name} {$data.last_name}" src="//js.pngtree.com/user_profile/head_img/011-star.png">
                         </a>
                         <a rel="nofollow" href="javascript:;" class="level-avatar-icon-link">
                             <i class="icon-badge"></i>
@@ -16,23 +16,22 @@
                 </div>
                 <div class="individual-info">
                     <div class="individual-info-title">
-                        <span class="individual-name">无名者</span>
+                        <span class="individual-name">{$data.first_name} {$data.last_name}</span>
 
-                        <a href="javascript:;" data-ifollow="FOLLOW" data-ifollowed="FOLLOWED"
-                           class=" individual-followBtn " data-follow='14063020'>+FOLLOW</a>
+                        <a href="javascript:;" class="individual-followBtn ">{if $data.type == 2}VIP{else}Thường{/if}</a>
                     </div>
                     <ul class="individual-info-main">
                         <li class="individual-info-item">
-                            <span class="individual-info-num">224</span>
-                            <p class="individual-info-type">WORKS</p>
+                            <span class="individual-info-num">{$data.create_time|date_format:"%d-%m-%Y"}</span>
+                            <p class="individual-info-type">Gia nhập từ:</p>
                         </li>
                         <li class="individual-info-item">
-                            <span class="individual-info-num">2.6K</span>
-                            <p class="individual-info-type">DOWNLOAD</p>
+                            <span class="individual-info-num">{$data.point|number_format:2:",":"."|replace:',00':''}</span>
+                            <p class="individual-info-type">Số Point:</p>
                         </li>
                         <li class="individual-info-item">
-                            <span class="individual-info-num">17</span>
-                            <p class="individual-info-type">FOLLOWERS</p>
+                            <span class="individual-info-num">{$data.count_upload}</span>
+                            <p class="individual-info-type">Upload:</p>
                         </li>
                     </ul>
 
