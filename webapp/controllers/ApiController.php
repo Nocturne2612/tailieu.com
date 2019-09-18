@@ -63,7 +63,8 @@ class ApiController extends CController {
         $result = Yii::app()->db->createCommand()
                     ->select('*')
                     ->from('category_products')
-                    ->where(array('like', 'title', '%'.$keyWord.'%'));
+                    ->where(array('like', 'title', '%'.$keyWord.'%'))
+                    ->queryAll();
         $data = '';
         var_dump($result);die;
         // if(count($result) >= 10) {
