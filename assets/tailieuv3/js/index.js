@@ -21,7 +21,7 @@ $(function () {
 			type: e,
 			keyword: t
 		}, function (e) {
-			200 == e.status && "" != e.data && ($(".comment-search-dropdown-wrap").children(".search-dropdown").html(e.data), $(".comment-search-dropdown-wrap").show())
+			200 == e.status && "" != e.data && ($(this).parent().siblings(".comment-search-dropdown-wrap").children(".search-dropdown").html(e.data), $(this).parent().siblings(".comment-search-dropdown-wrap").show())
 		})
 	}), $(".search-box-input").on("focus", function () {
 		var e = $(this).parents(".serach-box").find(".search-type a.on").data("type"),

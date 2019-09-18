@@ -189,8 +189,8 @@ $(function () {
 			Pngtree.BaseFun.SearchClick(a, e)
 		}), $(".search-dropdown").on("click", "p", function () {
 			var e = $(this).attr("data-val"),
-				a = parseInt($(this).parents(".serach-box").find(".search-type a.on").data("type"));
-			Pngtree.BaseFun.SearchClick(0, e)
+				a = parseInt($(this).parents(".search-dropdown-wrap").siblings('.res-search-input').find("input").data("type"));
+			Pngtree.BaseFun.SearchClick(a, e)
 		}), $(".btn-copy").on("click", function () {
 			var e = $(".un_upgradeInfor-copy-link").val(),
 				a = document.createElement("input");
