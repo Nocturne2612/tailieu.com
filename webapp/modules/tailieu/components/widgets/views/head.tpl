@@ -230,7 +230,7 @@
                 <div class="pulldown-title fl-l">
                     {$platforms = ObjInput::get('platforms', 'int')}
                     <span class="sb-val">
-                        Graphic design
+                        Tất cả
                     </span>
                     <div class="searchItems-list tran serach-box">
                         <ul id="fixed-search-tag" class="sTt-bg search-box-item-li" data-search="top">
@@ -245,7 +245,7 @@
                     </div>
                 </div>
                 <div class="index-search-input" style="padding: 0;width: calc(100% - 220px);">
-                    <input type="text" placeholder="Search Png Resource" class="js_search-input " data-type="0"
+                    <input type="text" placeholder="Nhập từ tìm kiếm" class="js_search-input " data-type="0"
                         value="">
                 </div>
                 <a href="javascript:;" class="sb-btn fl-l search-click-btn">
