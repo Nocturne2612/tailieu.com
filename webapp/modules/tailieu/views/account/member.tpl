@@ -36,20 +36,20 @@
                     </ul>
 
                     <div class="individual-share">
-                        <span>Share this page:</span>
+                        <span>Chia sẻ trang:</span>
                         <div class="share-group circle larger">
                             <a href="javascript:;"
-                               onclick="Pngtree.BaseFun.Base_OpenWin('https://www.facebook.com/share.php?u=https%3A%2F%2Fpngtree.com%2F%25E6%2597%25A0%25E5%2590%258D%25E8%2580%2585_14063020%3Ftype%3D1?share=2','facebook-share')"
+                               onclick="Pngtree.BaseFun.Base_OpenWin('https://www.facebook.com/share.php?u={SystemBase::buildUrl('tailieu/account/member/id/'.$data.id.'.html')}?share=2','facebook-share')"
                                data-type="1" class="share-two bg-facebook share-user-btn">
                                 <i class="iconfont icon-facebook"></i>
                             </a>
                             <a href="javascript:;"
-                               onclick="Pngtree.BaseFun.Base_OpenWin('https://twitter.com/intent/tweet?url=https%3A%2F%2Fpngtree.com%2F%25E6%2597%25A0%25E5%2590%258D%25E8%2580%2585_14063020%3Ftype%3D1?share=1&text=Discover+more+works+by+%E6%97%A0%E5%90%8D%E8%80%85','twitter-share')"
+                               onclick="Pngtree.BaseFun.Base_OpenWin('https://twitter.com/intent/tweet?url={SystemBase::buildUrl('tailieu/account/member/id/'.$data.id.'.html')}?share=1','twitter-share')"
                                data-type="1" class="bg-twitter share-one share-user-btn">
                                 <i class="iconfont icon-twitter"></i>
                             </a>
                             <a href="javascript:;"
-                               onclick="Pngtree.BaseFun.Base_OpenWin('https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpngtree.com%2F%25E6%2597%25A0%25E5%2590%258D%25E8%2580%2585_14063020%3Ftype%3D1?share=3&media=//js.pngtree.com/web3/images/design/en.jpg&description=More+than+3+million+PNG+and+graphics+resource+at+Pngtree.+Find+the+best+inspiration+you+need+for+your+project.','pinterest-share')"
+                               onclick="Pngtree.BaseFun.Base_OpenWin('https://www.pinterest.com/pin/create/button/?url={SystemBase::buildUrl('tailieu/account/member/id/'.$data.id.'.html')}?share=3"
                                data-type="1" class="bg-pinterest share-user-btn share-three">
                                 <i class="iconfont icon-pinterest"></i>
                             </a>

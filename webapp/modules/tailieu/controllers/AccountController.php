@@ -648,7 +648,6 @@ class AccountController extends TailieuController {
 
         $id = (int) $id;
         $data = DataHelper::selectOne('accounts', "*", "id='" . $id . "' and active_status = 1");
-        var_dump($data);die();
         if ($data) {
             $conditions = 'status = 1 and account_id = ' . $id;
             $output = Paging::getDataForFunction('products', 'price,proprice,title,id,create_time,picture,sub_category_id,category_id,short,count,count_down,tag,picture', $conditions, 'id desc', '28');
