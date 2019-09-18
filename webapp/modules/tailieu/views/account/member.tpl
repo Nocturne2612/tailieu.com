@@ -66,79 +66,42 @@
                 </a>
             </div>
         </div>
-
-
         <div class="main-con et-photobox">
-
-            <!--imgList-->
-
-            <!-- tem content -->
             <div class="main-con gd-photobox ">
                 <div class="main-body">
                     <ul class="mb-box masonry-element clearfix tpl-ul">
-                        <li class="li-box search_keyword_statis_js" data-id="5049196">
+                        {if $outputs}
+                        {foreach $outputs['data'] as $k=>$t}
+                            <li class="li-box search_keyword_statis_js" data-id="{$t.id}">\
 
-                            <!-- hover -->
-                            <div class="hover-show">
-                                <span class="commercial-use"></span>
-                                <a href="javascript:;" class="element-list-click hs-star star-btn-click "
-                                   data-like="5049196_Like" data-id="5049196" data-type="1">
-                                    <i class="iconfont icon-xin"></i>
-                                </a>
-                                <a target="_blank" rel="nofollow" href="/element/down?id=NTA0OTE5Ng==&type=1&t=0"
-                                   data-t="0" data-down="5049196_PNG"
-                                   class="element-list-click hs-downPng  down-jpg-click ">
-                                    <i class="iconfont icon-xiazai"></i>PNG </a>
+                                <!-- png -->
 
+                                <div class="mb-picbox" style="">
+                                    {if isset($t.picture) && $t.picture != ""}
+                                        {assign var="arr_pic" value="|"|explode:$t.picture}
+                                        <img data-original="{$smarty.const.ROOT_URL}/{$smarty.const.IMG_PRODUCT_THUMB}{$arr_pic[0]}"
+                                             alt="{$t.title}" class="lazy" style="width:100%" height="260">
+                                    {/if}
+                                    <a target="_blank" title="{$t.title}"
+                                       href="{SystemBase::buildUrl('tailieu/document',['title'=>$t.title,'id'=>$t.id])}"
+                                       class="tran">
+                                    </a>
 
-                                <a style="" target="_blank" rel="nofollow" data-ga="5049196_PSD"
-                                   href="/element/down?id=NTA0OTE5Ng==&type=2&t=0" data-t="0"
-                                   class="element-list-click down-jpg-click hs-downEps down-rar-click ">
-                                    <i class="iconfont icon-xiazai"></i>PSD </a>
-
-                            </div>
-                            <!-- png -->
-
-                            <div class="mb-picbox" style="">
-
-                                <img data-original="https://png.pngtree.com/png-clipart/20190916/ourmid/pngtree-3d-internet-social-map-information-icon-png-image_1730516.jpg"
-                                     alt="3d internet social map information icon, Technology, Social Contact, Short Message PNG and PSD"
-                                     class="lazy" style="width:100%" height="260">
-                                <a target="_blank" title="3d internet social map information icon PNG and PSD"
-                                   href="/freepng/3d-internet-social-map-information-icon_5049196.html" class="tran">
-                                </a>
-                                <script type="application/ld+json">
-                                    {
-                                        "@context": "http://schema.org",
-                                        "@type": "ImageObject",
-                                        "contentUrl": "https://png.pngtree.com/png-clipart/20190916/ourmid/pngtree-3d-internet-social-map-information-icon-png-image_1730516.jpg",
-                                        "caption": "3d internet social map information icon PNG and PSD",
-                                        "uploadDate": "2019-09-16T02:09:48+00:00"
-                                    }
-                                </script>
-                            </div>
-                            <p class="pic-detail text-overflow">3d internet social map information icon</p>
-
-                            <div class="pic-infor clearfix">
-
-                                <span class="fl-l">1200*1200</span>
-
-                            </div>
-                        </li>
-                        <div class="gutter-sizer"></div>
+                                </div>
+                                <p class="pic-detail text-overflow">{$t.title}</p>
+                                <div class="pic-infor clearfix">
+                                    <span class="fl-l">{$t.price|number_format:2:",":"."|replace:',00':''} POINT</span>
+                                </div>
+                            </li>
+                            <div class="gutter-sizer"></div>
+                        {/foreach}
+                        {/if}
                     </ul>
                 </div>
             </div>
         </div>
-        <div class='pageList'>
-            <div class='pageCont'><a href='javascript:void(0);' class='prevPage '><i></i></a> <a
-                        href='javascript:void(0);' class='on'>1</a> <a rel='nofollow'
-                                                                       href='/无名者_14063020/2?type=1'>2</a> <a
-                        rel='nofollow' href='/无名者_14063020/3?type=1'>3</a> <a rel='nofollow'
-                                                                              href='/无名者_14063020/4?type=1'>4</a> <a
-                        rel='nofollow' href='/无名者_14063020/5?type=1'>5</a> <a rel='nofollow'
-                                                                              href='/无名者_14063020/6?type=1'>6</a> <a
-                        rel='nofollow' href='/无名者_14063020/2?type=1' class='nextPage '><i></i></a></div>
+        <div class="user-list-wrap">
+            {$outputs['pageHtml']}
         </div>
     </div>
 </div>
