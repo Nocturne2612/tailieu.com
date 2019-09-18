@@ -55,13 +55,7 @@
 <body>
 <div id="wrapper" class="home  UNLOGIN VND">
     {$this->widget('TWidgets',['methodName'=>'head'],true)}
-    <div class="user-wrap">
-        <div class="w1520">
-            <div class="user-inner">
                 {$content}
-            </div>
-        </div>
-    </div>
     {$this->widget('TWidgets',['methodName'=>'footer'],true)}
 </div>
 </body>
