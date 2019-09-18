@@ -66,6 +66,7 @@ class ApiController extends CController {
                     ->where(array('like', 'title', '%'.$keyWord.'%'))
                     ->queryRow();
         $data = '';
+        var_dump($result);die;
         // if(count($result) >= 10) {
         //     for ($i = 0; $i < 10 ; $i++) {
         //         $sub = $result[$i]['title'];
