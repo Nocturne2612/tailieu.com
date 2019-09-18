@@ -23,7 +23,7 @@ class Search extends CFormModel {
         }
 //        var_dump($where);die();
         $data = Paging::getDataForFunction($this->tableName(), '*', $where, 'update_time DESC');
-        
+        var_dump($data);die;
         return $data;
     }
 
