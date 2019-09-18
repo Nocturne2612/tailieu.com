@@ -67,12 +67,12 @@ class ApiController extends CController {
                     ->queryRow();
         if(count($result) >= 10) {
             for ($i = 0; $i < 10 ; $i++) {
-                $sub = substr($result[$i]['title'], 25);
+                $sub = $result[$i]['title'];
                 $data .= '<p data-val="'.$sub.'"><span class="value">'.$sub.'</span></p>';         
             }
         } else {
             foreach ($result as $res) {
-                $sub = substr($res['title'], 25);
+                $sub = $result[$i]['title'];
                 $data .= '<p data-val="'.$sub.'"><span class="value">'.$sub.'</span></p>';         
             }
         }
