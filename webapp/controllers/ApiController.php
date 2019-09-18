@@ -66,7 +66,6 @@ class ApiController extends CController {
                     ->where(array('like', 'title', '%'.$keyWord.'%'))
                     ->queryRow();
         $data = '';
-        var_dump($result);die;
         // if(count($result) >= 10) {
         //     for ($i = 0; $i < 10 ; $i++) {
         //         $sub = $result[$i]['title'];
@@ -80,6 +79,7 @@ class ApiController extends CController {
         // }
         foreach ($result as $res) {
             $sub = $res['title'];
+            var_dump($res);die;
             $data .= '<p data-val="'.$sub.'"><span class="value">'.$sub.'</span></p>';         
         }
         $return = array(
