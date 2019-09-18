@@ -1,8 +1,7 @@
 {if $data}
     {$count = count($data)}
     {if ($count%2) gt 0 }
-    { $d = $data[$count-1]}
-    {$d}
+    {$data[$count-1]}
     {/if}
     {foreach $data as $d}
         <div class="recommend-img-box">
