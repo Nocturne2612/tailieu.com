@@ -643,6 +643,9 @@ class AccountController extends TailieuController {
 
     public function actionMember($id) {
         $this->layout = 'account2';
+        Yii::app()->getClientScript()->registerCssFile(Yii::app()->baseUrl . '/assets/tailieuv3/css/cate_designer.css');
+        Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/assets/tailieuv3/js/cate_designer.js', CClientScript::POS_END);
+
         $id = (int) $id;
         $data = DataHelper::selectOne('accounts', "*", "id='" . $id . "' and active_status = 1");
 
