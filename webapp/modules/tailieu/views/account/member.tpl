@@ -72,7 +72,7 @@
                     <ul class="mb-box masonry-element clearfix tpl-ul">
                         {if $outputs}
                         {foreach $outputs['data'] as $k=>$t}
-                            <li class="li-box search_keyword_statis_js" data-id="{$t.id}">\
+                            <li class="li-box search_keyword_statis_js" data-id="{$t.id}">
 
                                 <!-- png -->
 
