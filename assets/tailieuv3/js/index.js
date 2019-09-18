@@ -14,9 +14,8 @@ $(function () {
 	}).on("mouseleave", ".search-dropdown p", function () {
 		$(".index-search-input .js_search-input").val(t)
 	}), $(".js_search-input").on("focus", function () {
-		var e = $(this).data("data-type"),
+		var e = $(this).data("type"),
 			t = $.trim($(this).val());
-		console.log($(this));
 		$.getJSON("/api/index/get-keywords", {
 			type: e,
 			keyword: t
