@@ -16,7 +16,7 @@
             </ul>
             <i class="iconfont icon-triangle"></i>
         </div>
-        <div class="res-search-input">
+        <div class="res-search-input index-search-input">
             <input type="text" value="{$data.title}" placeholder="Search {$data.title}" data-type="1" class="js_search-input search-keyword-box-input-app search-box-input search_keyword_statis_value">
         </div>
         <a href="javascript:;" class="res-search-btn search-box-input-search-app ">
