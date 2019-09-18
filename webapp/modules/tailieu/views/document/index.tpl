@@ -8,25 +8,9 @@
                 </p>
             </div>
             <div class="inner-search-wrap js_search">
-                <div class="inner-search-select js_search-select" data-type="1">
-                    <span class="inner-search-select-checked js_search-check">Graphic
-                        design</span>
-                    <ul class="inner-search-optgroup">
-                        <li class="inner-search-option on" data-type="1" data-placeholder="Search Graphic Design">
-                            Graphic
-                            design</li>
-                        <li class="inner-search-option" data-type="2" data-placeholder="Search Backgrounds">Backgrounds
-                        </li>
-                        <li class="inner-search-option" data-type="5" data-placeholder="Search Templates">Templates</li>
-                        <li class="inner-search-option" data-type="8" data-placeholder="Search Illustration">
-                            Illustration</li>
-                        <li class="inner-search-option" data-type="7" data-placeholder="Search Fonts">Fonts</li>
-                    </ul>
-                    <i class="iconfont icon-triangle"></i>
-                </div>
                 <div class="inner-search-input">
                     <input class="js_search-input" id="detailsearch-input" type="text"
-                        placeholder="Millions of graphics for free download" data-type="1">
+                        placeholder="Tìm kiếm" data-type="0">
                 </div>
                 <a href="javascript:;" class="inner-search-btn bg-greenLinear js_search-btn"><i
                         class="iconfont icon-sousuo"></i></a>
