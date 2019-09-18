@@ -161,12 +161,6 @@ normal share-group circle
                 </p>
                 <div class="recommend-list-wrap">
                     <div class="recommend-list-page">
-                        <a href="javascript:;" class="recommend-list-page-prev page_prev">
-                            <i class="iconfont icon-arrowLeft"></i>
-                        </a>
-                        <a href="javascript:;" data-page="7" class="recommend-list-page-next page_next js-add-slide">
-                            <i class="iconfont icon-arrowRight"></i>
-                        </a>
                     </div>
                     <div class="recommend-list-box">
                         <div class="recommend-list js_slick">
