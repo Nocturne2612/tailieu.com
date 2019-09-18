@@ -182,7 +182,7 @@
                         </div>
                     </div>
                 {/if}
-                <p class="download-text">chia this:                        
+                <p class="download-text">chia sẻ:                        
                     <span class="share-group">
                         <a href="https://twitter.com/home?status={SystemBase::buildUrl('tailieu/document',['id'=>$product.id,'title'=>$product.title])}?share=1" class="share-tuite twitter" data-type="4"><i class="iconfont icon-tuite"></i></a>
                         <a href="https://www.facebook.com/dialog/share?app_id=141858443049568&amp;display=popup&amp;href={SystemBase::buildUrl('tailieu/document',['id'=>$product.id,'title'=>$product.title])}?share=2" class="share-facebook facebook" data-type="5"><i class="iconfont icon-facebook"></i></a>
