@@ -49,7 +49,7 @@
                                 <i class="iconfont icon-twitter"></i>
                             </a>
                             <a href="javascript:;"
-                               onclick="Pngtree.BaseFun.Base_OpenWin('https://www.pinterest.com/pin/create/button/?url={SystemBase::buildUrl('tailieu/account/member/id/'.$data.id.'.html')}?share=3"
+                               onclick="Pngtree.BaseFun.Base_OpenWin('https://www.pinterest.com/pin/create/button/?url={SystemBase::buildUrl('tailieu/account/member/id/'.$data.id.'.html')}?share=3','pinterest-share')"
                                data-type="1" class="bg-pinterest share-user-btn share-three">
                                 <i class="iconfont icon-pinterest"></i>
                             </a>
