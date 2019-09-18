@@ -1,8 +1,6 @@
 {if $data}
     {$count = count($data)}
-    {if ($count%2) lt 0 }
-        aaaa
-    {/if}
+    {$count%2}
     {foreach $data as $d}
         <div class="recommend-img-box">
             <a href="{SystemBase::buildUrl('tailieu/document',['id'=>$d.id,'title'=>$d.title])}" title="{$d.title}"  alt="{$d.title}"  width="100%">
