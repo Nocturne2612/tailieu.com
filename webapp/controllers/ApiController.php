@@ -78,8 +78,8 @@ class ApiController extends CController {
         //     }
         // }
         foreach ($result as $res) {
-            $sub = $res['title'];
             var_dump($res);die;
+            $sub = $res['title'];
             $data .= '<p data-val="'.$sub.'"><span class="value">'.$sub.'</span></p>';         
         }
         $return = array(
