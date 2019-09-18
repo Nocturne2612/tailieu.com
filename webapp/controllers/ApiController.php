@@ -60,7 +60,7 @@ class ApiController extends CController {
         $model = new Search;
         $type = ObjInput::get('type', 'int', '');
         $keyWord = ObjInput::get('keyword', 'str', '');
-        $result = $model->searchKeyword($keyword, $type);
+        $result = $model->searchKeyword($keyWord, $type);
         $data = '';
         if(count($result) >= 10) {
             for ($i = 0; $i < 10 ; $i++) {
