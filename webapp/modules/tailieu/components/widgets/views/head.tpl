@@ -251,7 +251,7 @@
                 <a href="javascript:;" class="sb-btn fl-l search-click-btn">
                     <i class="iconfont icon-sousuo"></i>
                 </a>
-                <div class="search-dropdown-wrap comment-search-dropdown-wrap" style="display: block;">
+                <div class="search-dropdown-wrap comment-search-dropdown-wrap" style="display: none;">
                     <div class="search-dropdown"></div>
                 </div>
             </form>
