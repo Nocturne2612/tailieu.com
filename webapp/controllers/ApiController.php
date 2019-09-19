@@ -60,7 +60,7 @@ class ApiController extends CController {
         
         $type = ObjInput::get('type', 'int', '');
         $keyWord = ObjInput::get('keyword', 'str', '');
-        $regexp = "REGEXP '[[:<:]]($keyword)[[:>:]]'";
+        $regexp = "REGEXP '[[:<:]]($keyWord)[[:>:]]'";
         $where = " ( UPPER(`full`) $regexp OR " . "`title` $regexp"." OR " . "`tag` $regexp )";
         $query = Yii::app()->db->createCommand()
                     ->select('*')
