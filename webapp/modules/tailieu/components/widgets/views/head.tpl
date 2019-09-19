@@ -428,11 +428,11 @@
             {/if}
             <ul class="xs-nav">
             {if $check_login}
-                <li class="on">
+                <li>
                     <a href="/tailieu/addfund.html">Nạp điểm</a>
                 </li>
             {/if}
-            <li class="on">
+            <li>
                 <a href="/">Trang chủ</a>
             </li>
             {foreach item=v from=$data.parent_category}

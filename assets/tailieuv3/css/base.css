@@ -10704,7 +10704,7 @@ input:checked+.window-report_image-check {
 
   .sb-form,
   .sb-items,
-  .side-navigation,
+  /* .side-navigation, */
   .v2-header {
     display: none
   }

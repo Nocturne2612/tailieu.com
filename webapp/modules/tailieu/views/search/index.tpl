@@ -44,10 +44,10 @@
     <div id="v2-content">
         <div class="xs-contain">
             <div class="xs-subpage-filter">
-                <p class="xs-filter-title">{$v.title}</p>
-                <a href="javascript:;" class="xs-filters-btn">
+                <p class="xs-filter-title">{$data.title}</p>
+                {* <a href="javascript:;" class="xs-filters-btn">
                     <i class="iconfont icon-sort"></i>
-                </a>
+                </a> *}
             </div>
             <div class="xs-subpage-menu-mask" style="display:none;"></div>
         </div>
