@@ -46,7 +46,7 @@
                     </div>
                     <a class="ipt-btn" id="base-sub-Login-Btn">Login</a>
                     <p class="wx-prompt">
-                        <a href="tailieu/lostpass.html" style="">Lấy lại mật khẩu</a>
+                        <a href="{$smarty.const.ROOT_URL}/tailieu/lostpass.html" style="">Lấy lại mật khẩu</a>
                         <span class="fl-r">Nếu bạn chưa là thành viên? Bấm 
                             <a href="javascript:;" rel="nofollow" id="base-reg-trigger" class="reg-trigger">Đăng ký</a>
                         </span>
@@ -388,7 +388,7 @@
     <!--    <div class="xs-nav-mask" onclick="$('.xs-header-box-btn').click()"></div>-->
     <!--head_search_type-->
     <div class="xs-header">
-        <a href="/" class="xs-header-logo"></a>
+        <a href="{$smarty.const.ROOT_URL}" class="xs-header-logo"></a>
         <a href="javascript:;" class="xs-header-box-btn"><i class="iconfont icon-menu"></i></a>
         <a href="javascript:;" class="xs-header-search">
             <i class="iconfont icon-sousuo"></i>
@@ -429,11 +429,11 @@
             <ul class="xs-nav">
             {if $check_login}
                 <li>
-                    <a href="/tailieu/addfund.html">Nạp điểm</a>
+                    <a href="{$smarty.const.ROOT_URL}/tailieu/addfund.html">Nạp điểm</a>
                 </li>
             {/if}
             <li>
-                <a href="/">Trang chủ</a>
+                <a href="{$smarty.const.ROOT_URL}">Trang chủ</a
             </li>
             {foreach item=v from=$data.parent_category}
             <li><a href="{$smarty.const.ROOT_URL}/{$v.acsii}.html">{$v.title}</a></li>
