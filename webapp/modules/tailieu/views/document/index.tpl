@@ -121,7 +121,7 @@ normal share-group circle
             <!-- infor -->
             <div class="dbr-items">
                 <div class="dbr-btnbox clearfix detail-down-click">
-                    <a data-down="{$output.id}_DOWNLOAD" rel="nofollow"  {if $check_login} href="{SystemBase::buildUrl('tailieu/download',['id'=>$output.id,'title'=>$output.title])}" class="fl-l btn-free"{else}href="javascript:;" class="fl-l btn-free down-no-login"{/if}>
+                    <a data-down="{$output.id}_DOWNLOAD" rel="nofollow"  {if $check_login} target="_blank" href="{SystemBase::buildUrl('tailieu/download',['id'=>$output.id,'title'=>$output.title])}" class="fl-l btn-free"{else}href="javascript:;" class="fl-l btn-free down-no-login"{/if}>
                         <i class="iconfont icon-xiazai"></i>
                         {if $output.proprice > 0}
                         <span class="oldprice"
@@ -186,19 +186,19 @@ normal share-group circle
                 <i class="iconfont icon-guanbi"></i>
             </a>
             <p class="xs-detail-share-list-title">Share this</p>
-            <a href="javascript:;" class="xs-detail-share-btn bg-facebook fcc" onclick="Pngtree.BaseFun.Base_OpenWin('https://www.facebook.com/share.php?u=https%3A%2F%2Fpngtree.com%2Ffreepng%2Fminimalistic-abstract-geometric-border_4975018.html?share=2','facebook-share')" data-type="1">
+            <a href="javascript:;" class="xs-detail-share-btn bg-facebook fcc" onclick="Pngtree.BaseFun.Base_OpenWin('https://www.facebook.com/share.php?u={SystemBase::buildUrl('tailieu/document',['id'=>$output.id,'title'=>$output.title])}?share=2','facebook-share')" data-type="1">
                 <span>
                     <i class="iconfont icon-facebook"></i>
                     Facebook
                 </span>
             </a>
-            <a href="javascript:;" class="xs-detail-share-btn bg-twitter fcc" onclick="Pngtree.BaseFun.Base_OpenWin('https://twitter.com/intent/tweet?url=https%3A%2F%2Fpngtree.com%2Ffreepng%2Fminimalistic-abstract-geometric-border_4975018.html?share=1&amp;text=Minimalistic+Abstract+Geometric+Border?status=Minimalistic+Abstract+Geometric+Border https%3A%2F%2Fpngtree.com%2Ffreepng%2Fminimalistic-abstract-geometric-border_4975018.html?share=1','twitter-share')" data-type="1">
+            <a href="javascript:;" class="xs-detail-share-btn bg-twitter fcc" onclick="Pngtree.BaseFun.Base_OpenWin('https://twitter.com/intent/tweet?{SystemBase::buildUrl('tailieu/document',['id'=>$output.id,'title'=>$output.title])}?share=1','twitter-share')" data-type="1">
                 <span>
                     <i class="iconfont icon-twitter"></i>
                     Twitter
                 </span>
             </a>
-            <a href="javascript:;" class="xs-detail-share-btn bg-google fcc" onclick="Pngtree.BaseFun.Base_OpenWin('https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpngtree.com%2Ffreepng%2Fminimalistic-abstract-geometric-border_4975018.html?share=3&amp;media=https://png.pngtree.com/png-vector/20190811/ourlarge/pngtree-minimalistic-abstract-geometric-border-png-image_1689821.jpg&amp;description=abstract%2Csimple%2Carrangement%2Csuperposition%2Cspeed%2Cstreamline%2Ccircular%2Cgeometric%2Csoft+pale%2Ccolor+matching%2Cframe','pinterest-share')">
+            <a href="javascript:;" class="xs-detail-share-btn bg-google fcc" onclick="Pngtree.BaseFun.Base_OpenWin('https://www.pinterest.com/pin/create/button/?url={SystemBase::buildUrl('tailieu/document',['id'=>$output.id,'title'=>$output.title])}?share=3&amp;media=','pinterest-share')">
                 <span>
                     <i class="iconfont icon-pinterest"></i>
                     Pinterest
@@ -207,13 +207,13 @@ normal share-group circle
         </div>
     </div>
     <div class="xs-detail-star-box">
-        <a rel="nofollow" href="javascript:;" class="xs-detail-star fcc star-btn-click " data-id="4975018" data-type="1">
+        <a {if $check_login}href="/tailieu/account/favorite/like/{$output.id}.html" class="xs-detail-star fcc"{else}href="javascript:;" class="xs-detail-star fcc star-btn-click "{/if} >
             <i class="iconfont icon-xin"></i>
             <span>Keep</span>
         </a>
     </div>
         <div class="xs-detail-download-box">
-            <a href="javascript:;" rel="nofollow" class="xs-detail-download bg-greenLinear fcc save-picture" data-url="https://upload.pngtree.com/?r=download&amp;url=https://png.pngtree.com/png-vector/20190811/ourlarge/pngtree-minimalistic-abstract-geometric-border-png-image_1689821.jpg">
+            <a {if $check_login} target="_blank" href="{SystemBase::buildUrl('tailieu/download',['id'=>$output.id,'title'=>$output.title])}" class="xs-detail-download bg-greenLinear fcc"{else}href="javascript:;" class="xs-detail-download bg-greenLinear fcc save-picture"{/if}>
                 <span>Free download</span>
             </a>
             <div class="tkw-window " id="xs-download-dialog" style="display: none;">
