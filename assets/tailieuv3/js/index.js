@@ -67,7 +67,7 @@ $(function () {
 		Pngtree.BaseFun.SearchClick(e, t);
 	}),
 	$(".res-search-btn").on("click", function () {
-		var e = $(".js_search-input").data("type"),
+		var e = $(this).siblings('.res-search-input').find('input').attr("data-type"),
 			t = $.trim($(this).siblings('.res-search-input').children('input').val());
 		Pngtree.BaseFun.SearchClick(e, t);
 	}),
