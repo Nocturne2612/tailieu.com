@@ -1,4 +1,4 @@
-<div id="content">
+{* <div id="content">
     <div class="layout fn-clear">
         <div class="fn-clear" id="signin-wrapper">
 
@@ -44,7 +44,7 @@
                 </div>
             </div>
 
-            <!-- // panel#signup-panel end -->
+            <!-- // panel#signup-panel end --> *}
 
 <style>
     #ccaptcha_button {
