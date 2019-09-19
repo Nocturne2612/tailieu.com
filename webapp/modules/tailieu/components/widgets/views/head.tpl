@@ -135,7 +135,7 @@
         <!-- Topnav -->
         <ul class="fl-l Topnav" style="display: block">
             <li>
-                <a href="{$smarty.const.ROOT_URL}">TRANG CHỦ</a>
+                <a href="/">TRANG CHỦ</a>
             </li>
             <li class="pulldown-box ga-c" data-ga="Danh mục">
                 <a href="#">DANH MỤC</a>
@@ -388,7 +388,7 @@
     <!--    <div class="xs-nav-mask" onclick="$('.xs-header-box-btn').click()"></div>-->
     <!--head_search_type-->
     <div class="xs-header">
-        <a href="{$smarty.const.ROOT_URL}" class="xs-header-logo"></a>
+        <a href="/" class="xs-header-logo"></a>
         <a href="javascript:;" class="xs-header-box-btn"><i class="iconfont icon-menu"></i></a>
         <a href="javascript:;" class="xs-header-search">
             <i class="iconfont icon-sousuo"></i>
@@ -429,14 +429,14 @@
             <ul class="xs-nav">
             {if $check_login}
                 <li>
-                    <a href="{$smarty.const.ROOT_URL}/tailieu/addfund.html">Nạp điểm</a>
+                    <a href="/tailieu/addfund.html">Nạp điểm</a>
                 </li>
             {/if}
             <li>
-                <a href="{$smarty.const.ROOT_URL}">Trang chủ</a
+                <a href="/">Trang chủ</a
             </li>
             {foreach item=v from=$data.parent_category}
-            <li><a href="{$smarty.const.ROOT_URL}/{$v.acsii}.html">{$v.title}</a></li>
+            <li><a href="/{$v.acsii}.html">{$v.title}</a></li>
             {/foreach}
             </ul>
         </div>
