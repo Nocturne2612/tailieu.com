@@ -753,9 +753,9 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .add-recommend.needmore {
+    /* .add-recommend.needmore {
         height: 90px
-    }
+    } */
 
     .add-recommend.needmore .hpnp-Related {
         display: flex;
