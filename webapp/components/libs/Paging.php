@@ -73,7 +73,7 @@ class Paging extends CLinkPager {
                 }
             }
         }
-        if($tmp) {
+        if($tmp!='') {
             $params['type'] = $tmp;
         }
         //Build html page
