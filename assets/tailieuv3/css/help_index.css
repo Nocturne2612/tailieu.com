@@ -42,13 +42,13 @@
   .help-contain{
     width: 100%;
   }
+  .help-contain img {
+    width: 100%;
+    height: auto;
+  }
   .help-contain-list li {
     flex-flow: column nowrap;
   }
-}
-.help-contain img {
-  width: 100%;
-  height: auto;
 }
 .help-banner-search {
   outline: 0;
