@@ -60,11 +60,14 @@ class ApiController extends CController {
         
         $type = ObjInput::get('type', 'int', '');
         $keyWord = ObjInput::get('keyword', 'str', '');
+        $regexp = "REGEXP '[[:<:]]($keyword)[[:>:]]'";
+        $where = " ( UPPER(`full`) $regexp OR " . "`title` $regexp"." OR " . "`tag` $regexp )";
         $query = Yii::app()->db->createCommand()
                     ->select('*')
                     ->from('products')
-                    ->where(array('like', 'title', '%'.$keyWord.'%'))
-                    ->limit(5);
+                    ->where($where)
+                    ->limit(5)
+                    ->order('count desc');
         if($type) {
             $query->andWhere('category_id='.$type);
         }
