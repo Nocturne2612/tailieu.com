@@ -51,6 +51,23 @@
                         {$this->widget('TWidgets',['methodName'=>'head'],true)}
                         {$content}
                         {$this->widget('TWidgets',['methodName'=>'footer'],true)}
+                        <div id="side-navigation" class="side-navigation" style="">
+            <div class="side-group">
+                <div class="side-function-wrap">
+                    <ul class="side-function">
+                        <li class="side-toTop">
+                            <a href="javascript:;">
+                                <i class="iconfont icon-zhiding"></i>
+                            </a>
+                            <a href="javascript:;" rel="nofollow" class="hide-top">TOP</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+        </div>
                     </div>
                 </body>
                 </html>
