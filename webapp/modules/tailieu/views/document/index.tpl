@@ -214,7 +214,16 @@ normal share-group circle
     </div>
         <div class="xs-detail-download-box">
             <a {if $check_login} target="_blank" href="{SystemBase::buildUrl('tailieu/download',['id'=>$output.id,'title'=>$output.title])}" class="xs-detail-download bg-greenLinear fcc"{else}href="javascript:;" class="xs-detail-download bg-greenLinear fcc save-picture"{/if}>
-                <span>Free download</span>
+                {if $output.proprice > 0}
+                        <span class="oldprice"
+                            style="text-decoration: line-through; font-size: small;">{$output.price|number_format:2:",":"."|replace:',00':''}
+                            POINT</span>
+                        <span class="proprice" style="color: #F44359; font-size: medium;">
+                            {$output.proprice|number_format:2:",":"."|replace:',00':''} POINT &nbsp;&nbsp;&nbsp;</span>
+                        {else if $output.proprice == '0' && $output.price > 0}
+                        {$output.price|number_format:2:",":"."|replace:',00':''} POINT
+                        {else}
+                        <span>Free download</span>{/if}
             </a>
             <div class="tkw-window " id="xs-download-dialog" style="display: none;">
                 <div class="tkw-mask"></div>
