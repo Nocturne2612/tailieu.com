@@ -64,7 +64,7 @@ class ApiController extends CController {
                     ->select('*')
                     ->from('products')
                     ->where(array('like', 'title', '%'.$keyWord.'%'))
-                    ->andWhere(array('or', 'category_id='.$type, 'sub_category_id='.$type))
+                    ->andWhere('category_id='.$type)
                     ->limit(5)
                     ->queryAll();
         $data = '';
