@@ -33,7 +33,7 @@ class TWidgets extends CWidget {
     public function ads() {
         $model = new Ads();
         $position = $this->position;
-        $data = getDataCache($position);
+        $data = $model->getDataCache($position);
         var_dump($data);
         $this->render($position, array('data', $data));
     }
