@@ -46,7 +46,7 @@
                     </div>
                     <a class="ipt-btn" id="base-sub-Login-Btn">Login</a>
                     <p class="wx-prompt">
-                        <a href="tailieu/lostpass.html" style="" class="reg-trigger">Lấy lại mật khẩu</a>
+                        <a href="tailieu/lostpass.html" style="">Lấy lại mật khẩu</a>
                         <span class="fl-r">Nếu bạn chưa là thành viên? Bấm 
                             <a href="javascript:;" rel="nofollow" id="base-reg-trigger" class="reg-trigger">Đăng ký</a>
                         </span>
