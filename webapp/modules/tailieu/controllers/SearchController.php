@@ -45,8 +45,6 @@ class SearchController extends TailieuController {
         }
         $cache_category = json_decode(SystemFile::readFile(DIR_CACHE . 'cache_category.cache'),true);
         $data['platforms'] = $platforms;
-        var_dump($data['platforms']);
-        die;
         $this->render('index', array(
             'data' => $data,
             'output' => $output,
