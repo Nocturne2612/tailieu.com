@@ -156,12 +156,12 @@ normal share-group circle
                     </div>
                 </div>
             </div>
-            {* <div class="add-recommend dbr-items ele_recommend needmore">
-                <h3>Related recommendation:</h3>
+            <div class="add-recommend dbr-items ele_recommend needmore">
+                <h3>Quảng cáo</h3>
                 <div class="hpnp-Related">
-                    {$this->widget('TWidgets',['methodName'=>'CategoryMenu','check'=> true],true)}
+                    Hello World
                 </div>
-            </div> *}
+            </div>
         </div>
     </div>
     {* <div class="detail-banner">
