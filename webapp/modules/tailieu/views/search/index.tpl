@@ -17,7 +17,7 @@
             <i class="iconfont icon-triangle"></i>
         </div>
         <div class="res-search-input index-search-input">
-            <input style="color: #333" type="text" value="{$data.title}" placeholder="Search {$data.title}" data-type="1" class="js_search-input search-keyword-box-input-app search-box-input search_keyword_statis_value">
+            <input style="color: #333" type="text" value="{$data.title}" placeholder="Search {$data.title}" data-type="0" class="js_search-input">
         </div>
         <a href="javascript:;" class="res-search-btn search-box-input-search-app ">
             <i class="iconfont icon-sousuo"></i>
