@@ -83,7 +83,11 @@
 
 
 <div class="find-password find-one" style="margin-top: 100px;">
+
     <div class="close-btn"></div>
+    {if $err <> ''}
+        <p class="error_show">{$err}</p>
+    {/if}
     <h3>Đổi Mật khẩu</h3>
     {CHtml::beginForm('','post',['name' => 'changepass','id'=>'changepass'])}
     
