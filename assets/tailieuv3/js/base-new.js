@@ -220,7 +220,7 @@ $(function () {
         })
     }),
     
-    , $("#base-sub-regist-Btn").on("click", function () {
+    $("#base-sub-regist-Btn").on("click", function () {
         if ($(this).hasClass("loading"))
             return !1;
         var data = $('#register_form_header').serializeArray();
