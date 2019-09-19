@@ -139,7 +139,7 @@ normal share-group circle
                 </div>
             </div>
 
-            <div class="recommend-swiper">
+            {* <div class="recommend-swiper">
                 <p class="recommend-swiper-title">
                     <span>Tài liệu liên quan</span>
                 </p>
@@ -155,12 +155,27 @@ normal share-group circle
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> *}
             <div class="add-recommend dbr-items ele_recommend needmore">
-                <h3>Quảng cáo</h3>
-                <div class="hpnp-Related">
-                    {$this->widget('TWidgets',['methodName'=>'ads','position'=>'DETAIL_CENTER'],true)}
+                {* <h3>Quảng cáo</h3> *}
+                <p class="recommend-swiper-title">
+                    <span>Tài liệu liên quan</span>
+                </p>
+                <div class="recommend-list-wrap">
+                    <div class="recommend-list-page">
                     </div>
+                    <div class="recommend-list-box">
+                        <div class="recommend-list js_slick">
+                            <div class="recommend-list-item slide-item">
+                                {$this->widget('TWidgets',['methodName'=>'productView','product'=> $relation,'check'=>
+                                false],true)}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {* <div class="hpnp-Related">
+                    {$this->widget('TWidgets',['methodName'=>'ads','position'=>'DETAIL_CENTER'],true)}
+                </div> *}
             </div>
         </div>
     </div>
