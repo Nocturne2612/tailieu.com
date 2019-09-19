@@ -98,7 +98,7 @@
     </div>
     <div class="col-sm-4 pdl5"> {$this->widget('CCaptcha',['id'=>'ccaptcha'],true)} </div>
 
-    <div><a href="javascript:;" class="reset">Reset password</a></div>
+    <div><a onclick="document.getElementById('changepass').submit();" class="reset">Reset password</a></div>
     {CHtml::endForm()}
 
     <div class="clearfix f-bottom">
