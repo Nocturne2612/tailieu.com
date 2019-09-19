@@ -1,5 +1,5 @@
 
-{* <div class="user-main">
+<div class="user-main">
     <div class="user-main-inner">
         <div class="user-profile">
 
@@ -45,33 +45,5 @@
                     display: none}
             </style>
         {/literal}
-    </div>
-</div> *}
-
-
-<div class="find-password find-one">
-    <div class="close-btn"></div>
-    <h3>Đổi Mật khẩu</h3>
-    {* <p>Enter the email of your account to reset password.</p>
-    <p>Then you will receive a link to email to reset the password.If </p>
-    <p>you have any issue about reset password <span><a style="color: #88b04b;" id="find-contact" href="javascript:;">contact us</a></span></p> *}
-    {CHtml::beginForm('','post',['name' => 'changepass','id'=>'changepass'])}
-    
-    <div id="email-div" class="email">
-        <input type="email" placeholder="Email" pattern="[^ @]*@[^ @]*" class="find-input" id="find-email">
-    </div>
-
-    <div id="send-success" class="new-password clearfix" >
-        <div class="p-right fl-l">
-            <p class="mb12">An e-mail with instructions to create a new </p>
-            <p>password has been sent to you.</p>
-        </div>
-
-    </div>
-    {CHtml::endForm()}
-
-    <div class="clearfix f-bottom">
-        <a href="javascript:;" id="find-login" class="fl-l com-green f-login">Login</a>
-        <p class="fl-r">Not a member? <a href="javascript:;" id="find-register" class="com-green">Register</a></p>
     </div>
 </div>
