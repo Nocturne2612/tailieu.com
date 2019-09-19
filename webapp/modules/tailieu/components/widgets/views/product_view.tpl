@@ -57,7 +57,7 @@
                 <!-- infor -->
             </li>
             <div class="gutter-sizer"></div>
-            {if $no%7 eq 0}
+            {if ($no%7) eq 0}
                 <li class="li-box grid-sizer search_keyword_statis_js">
                     <div class="mb-picbox">
                         {$this->widget('TWidgets',['methodName'=>'ads','position'=>'HOME_LEFT_SLIDER'],true)}
