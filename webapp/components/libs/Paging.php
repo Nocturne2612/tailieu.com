@@ -66,7 +66,6 @@ class Paging extends CLinkPager {
         if (isset($_GET)) {
             foreach ($_GET as $c => $key) {
                 $url = explode('/', $key);
-                var_dump($url);die;
                 $params[$c] = $url[0];
                 if(count($url) > 1) {
                     $tmp = $url[1];
