@@ -1,7 +1,7 @@
 {if $data}
     {$no = 0}
     {$count = count($data)}
-    {if $count <= 2}
+    {if $count <= 6}
         {foreach $data as $rs}
             <li class="li-box grid-sizer search_keyword_statis_js">
                 <div class="hover-show">

@@ -38,7 +38,11 @@
   position: relative;
   width: 100%
 }
-
+@media screen and (max-width: 1080px) {
+  .help-contain {
+    width: 100%;
+  }
+}
 .help-banner-search {
   outline: 0;
   padding: 20px;
