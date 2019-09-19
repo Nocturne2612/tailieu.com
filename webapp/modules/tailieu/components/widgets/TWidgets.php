@@ -31,10 +31,8 @@ class TWidgets extends CWidget {
     }
 
     public function ads() {
-        $model = new Ads();
         $position = $this->position;
-        $data = $model->getDataCache(1);
-        $this->render($position, array('data', $data));
+        $this->render($position, array());
     }
 
     public function ex_link() {
