@@ -61,7 +61,7 @@ class Paging extends CLinkPager {
         $module = Yii::app()->controller->module->id;
         $controller = Yii::app()->controller->id;
         $action = Yii::app()->controller->action->id;
-
+        $tmp='';
         //$params[$controller] = $action;
         if (isset($_GET)) {
             foreach ($_GET as $c => $key) {
