@@ -21,13 +21,20 @@
                 </div>
                 <p class="pic-detail text-overflow">{$rs.title}</p>
                 <!-- infor -->
-            </li>
             <div class="gutter-sizer"></div>
         {/foreach}
+            <li class="li-box grid-sizer search_keyword_statis_js">
+            <div class="mb-picbox">
+                {$this->widget('TWidgets',['methodName'=>'ads','position'=>'HOME_LEFT_SLIDER'],true)}
+            </div>
+            </li>
+
     {else}
         {$count3 = ROUND($count / 2)}
         {$count4 = $count3} 
         {$laplai = 0}
+        {$no = 0}
+
         {foreach $data as $rs}
             {$no = $no + 1}
             <li class="li-box grid-sizer search_keyword_statis_js" data-id="{$rs.id}">
@@ -50,14 +57,12 @@
                 <!-- infor -->
             </li>
             <div class="gutter-sizer"></div>
-            {if $count3 eq $no && $laplai lte 2}
-                {if $count3 > ($count - $count3)}
-                    {$count3 = $count3 + ($count - $count3)}
-                {else}
-                    {$count3 = $count3 + $count4}
-                    {$laplai = $laplai + 1}
-                {/if}
-
+            {if $no%7 eq 0}
+                <li class="li-box grid-sizer search_keyword_statis_js">
+                    <div class="mb-picbox">
+                        {$this->widget('TWidgets',['methodName'=>'ads','position'=>'HOME_LEFT_SLIDER'],true)}
+                    </div>
+                </li>
             {/if}
 
         {/foreach}
