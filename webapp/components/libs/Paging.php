@@ -65,10 +65,9 @@ class Paging extends CLinkPager {
         //$params[$controller] = $action;
         if (isset($_GET)) {
             foreach ($_GET as $c => $key) {
-                $params[$c] = $key;
+                $params[$c] = explode('/'. $key)[0];
             }
         }
-        var_dump($_GET);die;
         //Build html page
         if ($totalPage > 1) {
             if ($module == 'admin') {
