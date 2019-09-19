@@ -60,13 +60,15 @@ class ApiController extends CController {
         
         $type = ObjInput::get('type', 'int', '');
         $keyWord = ObjInput::get('keyword', 'str', '');
-        $result = Yii::app()->db->createCommand()
+        $query = Yii::app()->db->createCommand()
                     ->select('*')
                     ->from('products')
                     ->where(array('like', 'title', '%'.$keyWord.'%'))
-                    ->andWhere('category_id='.$type)
-                    ->limit(5)
-                    ->queryAll();
+                    ->limit(5);
+        if($type) {
+            $query->andWhere('category_id='.$type);
+        }
+        $result = $query->queryAll();
         $data = '';
         foreach ($result as $res) {
             $sub = $res['title'];

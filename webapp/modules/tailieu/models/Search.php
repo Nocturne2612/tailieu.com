@@ -21,7 +21,7 @@ class Search extends CFormModel {
             $where .= ' AND category_id = '.$cate;
 //            var_dump($where);die();
         }
-//        var_dump($where);die();
+       var_dump($where);die();
         $data = Paging::getDataForFunction($this->tableName(), '*', $where, 'update_time DESC');
         return $data;
     }
