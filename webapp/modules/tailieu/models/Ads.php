@@ -5,7 +5,7 @@
  *
  * @author DUCLM
  */
-class Ads extends CkkFormModel {
+class Ads extends CActiveRecord {
 
     public $id;
     public $picture;
