@@ -427,7 +427,7 @@
             </div>
             {/if}
             <ul class="xs-nav">
-            {if !$check_login}
+            {if $check_login}
                 <li class="on">
                     <a href="/tailieu/addfund.html">Nạp điểm</a>
                 </li>
