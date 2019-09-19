@@ -427,12 +427,17 @@
             </div>
             {/if}
             <ul class="xs-nav">
-                {foreach item=v from=$data.parent_category}
-                <li><a href="/">{$v.title}</a></li>
-                {/foreach}
+            {if !$check_login}
                 <li class="on">
-                    <a href="/">Trang chủ</a>
+                    <a href="/tailieu/addfund.html">Nạp điểm</a>
                 </li>
+            {/if}
+            <li class="on">
+                <a href="/">Trang chủ</a>
+            </li>
+            {foreach item=v from=$data.parent_category}
+            <li><a href="{$smarty.const.ROOT_URL}/{$v.acsii}.html">{$v.title}</a></li>
+            {/foreach}
             </ul>
         </div>
     </div>
