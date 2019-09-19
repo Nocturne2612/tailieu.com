@@ -448,11 +448,11 @@
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1)
 }
 
-@media screen and (max-width: 1000px) {
+/* @media screen and (max-width: 1000px) {
     .recommend-swiper {
         display: none
     }
-}
+} */
 
 .recommend-swiper-title {
     position: absolute;
