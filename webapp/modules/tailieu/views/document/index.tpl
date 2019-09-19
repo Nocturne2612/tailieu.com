@@ -74,7 +74,7 @@
                             <span>{$output.count}</span>
                         </li>
                         <li>
-                            <span>Share this:&nbsp;</span>
+                            <span>Chia sẻ bài viết này:&nbsp;</span>
                             <div class="
 normal share-group circle
 ">
@@ -90,7 +90,7 @@ normal share-group circle
 </div>
                         </li>
                         <li>
-                            <span><i class="iconfont icon-i"></i></span>&nbsp; <label> <a target="_blank" style="color:#333" href="https://www.messenger.com/t/thuvienkientrucchiase">Report file </a></label>
+                            <span><i class="iconfont icon-i"></i></span>&nbsp; <label> <a target="_blank" style="color:#333" href="https://www.messenger.com/t/thuvienkientrucchiase">Báo lỗi file </a></label>
                            
                         </li>
 

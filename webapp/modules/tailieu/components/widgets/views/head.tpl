@@ -46,8 +46,8 @@
                     </div>
                     <a class="ipt-btn" id="base-sub-Login-Btn">Login</a>
                     <p class="wx-prompt">
-                        <a href="/password/find" style="" class="reg-trigger">Reset my password</a>
-                        <span class="fl-r">Not a member?
+                        <a href="tailieu/lostpass.html" style="" class="reg-trigger">Lấy lại mật khẩu</a>
+                        <span class="fl-r">Nếu bạn chưa là thành viên? Bấm 
                             <a href="javascript:;" rel="nofollow" id="base-reg-trigger" class="reg-trigger">Đăng ký</a>
                         </span>
                     </p>
@@ -65,13 +65,13 @@
             <span class="cls-btn"></span>
             <div class="register-wrap">
                 <div class="register-asideImage">
-                    <p class="register-asideImage-title">Tài liệu KT</p>
+                    <p class="register-asideImage-title">Thư viện kiến trúc</p>
                     <p class="register-asideImage-text"><span style="color:#78c972;">1000000+</span> Tài liệu kiên trúc</p>
                 </div>
                 <div class="register-section">
                     <div class="rlg-with-box">
                         <p class="big-tit">Đăng ký và tải tài liệu</p>
-                        <p class="small-tit">
+                        <p class="small-tit">dùng mạng xã hội.</p>
 
                         </p>
                         <div class="share-website clearfix ">
@@ -103,14 +103,12 @@
                     <a class="ipt-btn" id="base-sub-regist-Btn">Register</a>
                     {CHtml::endForm()}
 
-                    <p class="window-register-tips">By creating an account, I agree to TLKT's <a
-                            href="/terms-of-service">Terms of Service</a>, <a href="/privacy-policy">Privacy
-                            Policy</a>
-                        and <a href="/protocol">Intellectual Property Rights</a></p>
+                    <p class="window-register-tips">Bằng cách tạo tài khoản, tôi đồng ý với <a
+                            href="/dieu-khoan-su-dung-b115.html">Điều khoản dịch vụ</a>, <a href="/quy-dinh-bao-mat-b114.html">Chính sách bảo mật</a>
+                        và <a href="/ban-quyen-du-lieu-va-giai-quyet-tranh-chap-b128.html">bản quyền dữ liệu trên TLKTNET</a></p>
 
-                    <p class="wx-prompt">Already have an account? <a href="javascript:;" rel="nofollow"
-                            id="base-login-trigger" class="login-trigger">Log
-                            in</a>
+                    <p class="wx-prompt">Đã có tài khoản? <a href="javascript:;" rel="nofollow"
+                            id="base-login-trigger" class="login-trigger">Đăng nhập</a>
                     </p>
                 </div>
 
@@ -168,9 +166,9 @@
             <div class="fl-l top-collect-box pr" style="display: block">
                 <a class="iconfont icon-star"></a>
                 <div class="top-collect-down">
-                    <img src="//js.pngtree.com/v2/images/v2/collect-xx.jpg" alt="">
+                    <img src="/assets/images/v2/luulaiwebsite.jpg" alt="">
                     <p><i class="iconfont icon-star"></i>Ctrl+D</p>
-                    <p>Mark us if you like us</p>
+                    <p>Đánh dấu để lưu lại</p>
                 </div>
             </div>
             {if !$check_login}

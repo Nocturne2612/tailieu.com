@@ -15,7 +15,7 @@
                     <h1 class="index-banner-text">Nơi giao lưu, chia sẻ dành cho Kiến Trúc Sư cũng như Sinh Viên đang còn học trong trường Kiến trúc</h1>
                     <form class="index-page index-search js_search pullDown ">
                         <div class="index-search-input">
-                            <input type="text" placeholder="Tìm kiếm với hơn 5000 tài liệu" class="js_search-input " data-type="0" value="">
+                            <input type="text" placeholder="Tìm kiếm với hơn 10000 tài liệu" class="js_search-input " data-type="0" value="">
                         </div>
                         <a href="javascript:;" class="index-search-btn" data-text="Please enter keywords">
                             <i class="iconfont icon-sousuo"></i>
