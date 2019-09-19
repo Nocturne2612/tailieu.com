@@ -2,12 +2,12 @@
     <div class="w1520">
         <div class="xs-contain">
             <div class="xs-footer-box">
-                <a href="/about" rel="nofollow">
-                    ABOUT
+                <a href="/gioi-thieu-ve-tailieukientrucnet-b109.html" rel="nofollow">
+                    Giới thiệu
                 </a>
                 <span></span>
-                <a href="javascript:;" rel="nofollow" onclick="$('.side-contact').trigger('click')" class="contact-foot">
-                    Contact us
+                <a href="/lien-he-b125.html" rel="nofollow" class="contact-foot">
+                    Liên hệ
                 </a>
             </div>
         </div>
