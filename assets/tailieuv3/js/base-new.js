@@ -209,11 +209,9 @@ $(function () {
         var e = $(this).data("type");
         Pngtree.BaseFun.Base_OpenWin("/login/gologin?type=" + e, e + "-login")
     }), $(".reg-trigger").on("click", function () {
-        Pngtree.BaseFun.captcha(), $("#base-public-login").hide(), Pngtree.BaseFun.RegisterLoadCareer(function (e) {
-            $("#register_career").html(e.data), $("#base-register-window").show().find(".tkw-registerCont").addClass("zoomIn").one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function () {
-                $(this).removeClass("zoomIn")
-            })
-        })
+        $("#base-public-login").hide();
+        $("#base-register-window").show().find(".tkw-registerCont").addClass("zoomIn").one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend");
+        $(this).removeClass("zoomIn");
     }), $("#base-login-trigger").on("click", function () {
         Pngtree.BaseFun.captcha();
         var e = localStorage.getItem("quick_login_email");
