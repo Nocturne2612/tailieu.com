@@ -606,11 +606,11 @@
     border-radius: 6px
 }
 
-@media screen and (max-width: 1000px) {
+/* @media screen and (max-width: 1000px) {
     .recommend-swiper {
         display: none
     }
-}
+} */
 
 .recommend-swiper-title {
     position: absolute;
