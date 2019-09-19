@@ -65,7 +65,13 @@ $(function () {
 		var e = $(".js_search-input").data("type"),
 			t = $.trim($(this).siblings('.index-search-input').children('input').val());
 		Pngtree.BaseFun.SearchClick(e, t);
-	}), $(".rem-click").on("click", function () {
+	}),
+	$(".res-search-btn").on("click", function () {
+		var e = $(".js_search-input").data("type"),
+			t = $.trim($(this).siblings('.res-search-input').children('input').val());
+		Pngtree.BaseFun.SearchClick(e, t);
+	}),
+	$(".rem-click").on("click", function () {
 		var e = $(this).data("type");
 		Pngtree.BaseFun.Ga_Deploy("Home", "Recommended_Words", e)
 	}), $(".js_search-input").on("keydown", function (e) {
