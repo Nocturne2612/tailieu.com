@@ -159,8 +159,8 @@ normal share-group circle
             <div class="add-recommend dbr-items ele_recommend needmore">
                 <h3>Quảng cáo</h3>
                 <div class="hpnp-Related">
-                    Hello World
-                </div>
+                    {$this->widget('TWidgets',['methodName'=>'ads','position'=>'DETAIL_CENTER'],true)}
+                    </div>
             </div>
         </div>
     </div>
