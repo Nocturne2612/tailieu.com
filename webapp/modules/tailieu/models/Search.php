@@ -17,6 +17,7 @@ class Search extends CFormModel {
         # create a MySQL REGEXP for the search:
         $regexp = "REGEXP '[[:<:]]($keyword)[[:>:]]'";
         $where = " ( UPPER(`full`) $regexp OR " . "`title` $regexp"." OR " . "`tag` $regexp )";
+        var_dump($cate);
         if($cate) {
             $where .= ' AND category_id = '.$cate;
 //            var_dump($where);die();
