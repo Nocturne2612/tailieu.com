@@ -88,7 +88,7 @@
     {CHtml::beginForm('','post',['name' => 'changepass','id'=>'changepass'])}
     
     <div id="email-div" class="email">
-        <input class="ui-input find-input" pattern="[^ @]*@[^ @]*" id="email" name="Email" placeholder="" type="email" autocomplete="off" value="{$params.email}">
+        <input class="ui-input find-input" pattern="[^ @]*@[^ @]*" id="email" name="email" placeholder="Email" type="email" autocomplete="off" value="{$params.email}">
     </div>
     <div class="email">
         <input class="ui-input find-input" id="mobile_phone" name="mobile_phone" placeholder="Số điện thoại" type="mobile_phone" data-toggle="popover" autocomplete="off" data-placement="bottom" value="{$params.mobile_phone}">
@@ -102,7 +102,6 @@
     {CHtml::endForm()}
 
     <div class="clearfix f-bottom">
-        <a href="javascript:;" id="find-login" class="fl-l com-green f-login login-trigger">Login</a>
         <p class="fl-r">Không phải là thành viên? <a href="javascript:;" id="find-register" class="com-green reg-trigger">Register</a></p>
     </div>
 </div>

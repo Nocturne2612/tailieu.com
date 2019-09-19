@@ -218,7 +218,9 @@ $(function () {
         e && $("#base-public-login-email-text").val(e), $("#base-register-window").hide(), $("#base-public-login").show().find(".tkw-LoginCont").addClass("zoomIn").one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function () {
             $(this).removeClass("zoomIn")
         })
-    }), $("#base-sub-regist-Btn").on("click", function () {
+    }),
+    
+    , $("#base-sub-regist-Btn").on("click", function () {
         if ($(this).hasClass("loading"))
             return !1;
         var data = $('#register_form_header').serializeArray();
