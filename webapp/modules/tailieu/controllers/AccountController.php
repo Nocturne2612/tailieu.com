@@ -377,7 +377,6 @@ class AccountController extends TailieuController {
     }
 
     public function actionChangepass() {
-        Yii::app()->getClientScript()->registerCssFile(Yii::app()->baseUrl . '/assets/tailieuv3/css/password_find.css');
         $params = array(
             'password_old' => ObjInput::get('password_old', 'str', ''),
             'password' => ObjInput::get('password', 'str', ''),

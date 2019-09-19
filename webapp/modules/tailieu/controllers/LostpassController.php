@@ -16,6 +16,7 @@ class LostpassController extends TailieuController {
     }
 
     public function actionIndex() {
+        Yii::app()->getClientScript()->registerCssFile(Yii::app()->baseUrl . '/assets/tailieuv3/css/password_find.css');
         $errors = '';
         $params = array(
             'email' => ObjInput::get('email', 'str', ''),
