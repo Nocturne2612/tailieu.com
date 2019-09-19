@@ -46,40 +46,39 @@
 
             <!-- // panel#signup-panel end -->
 
-            <div class="ui-box panel sign-panel" id="forgot-psw" style="height: 368px;">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Bạn quên mật khẩu?</h3>
-                </div>
-                <div class="panel-body">
-                    <div class="ui-form">
-
-                        <div class="ui-form-item fn-clear">
-                            
-                            
-                            <a class="btn btn-danger " id="password_button" type="submit" href="{Yii::app()->createUrl('tailieu/login')}">Đăng nhập</a>
-                            <br>
-                            
-                            <a class="btn btn-default " id="password_button" type="submit" href="{Yii::app()->createUrl('tailieu/register')}">Đăng ký</a>
-
-                        </div>
-                    </div>
-                    <!-- ui-form end -->
-                </div>
-            </div>
-            <!-- // panel.forgot-psw end -->
-        </div>
-        <!-- // signin-wrapper end -->
-
-
-    </div>
-    <!-- layout#translation-focus end -->
-</div>
 <style>
     #ccaptcha_button {
         display: none}
     </style>
 
+<div class="find-password find-one" style="margin-top: 100px;">
 
+    <div class="close-btn"></div>
+    
+    <h3>Đổi Mật khẩu</h3>
+    {if $err <> ''}
+        <p style="color: #f05f5c">{$err}</p>
+    {/if}
+    {CHtml::beginForm('','post',['name' => 'register','id'=>'changepass'])}
+    
+    <div id="email-div" class="email">
+        <input class="ui-input find-input" name="password" placeholder="Mật khẩu mới" type="password" placeholder="Email" autocomplete="off">
+    </div>
+    <div class="email">
+        <input class="ui-input find-input"   name="repassword" placeholder="Xác nhận lại" type="password"  data-toggle="popover" autocomplete="off" data-placement="bottom" >
+    </div>
+    <div class="email">
+        <input class="ui-input find-input" id="verify_code"  name="verify_code" placeholder="Mã bảo mật" type="text">
+    </div>
+    <div class="col-sm-4 pdl5"> {$this->widget('CCaptcha',['id'=>'ccaptcha'],true)} </div>
+
+    <div><a onclick="document.getElementById('changepass').submit();" class="reset">Xác nhận</a></div>
+    {CHtml::endForm()}
+
+    <div class="clearfix f-bottom">
+        <p class="fl-r">Không phải là thành viên? <a href="javascript:;" id="find-register" class="com-green reg-trigger">Register</a></p>
+    </div>
+</div>
     
     
     
