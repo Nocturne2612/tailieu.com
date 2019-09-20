@@ -277,6 +277,7 @@
         }
 
         .modal-content {
+            font-size: 15px;
             border: 5px solid rgba(0, 0, 0, 0.3);
             border-radius: 10px;
             -webkit-box-shadow: none;
