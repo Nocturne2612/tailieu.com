@@ -98,6 +98,8 @@ normal share-group circle
                 </div>
             </div>
             <div class="keyWords-wrap needmore">
+            </div>
+            <div class="keyWords-wrap needmore">
                 <div class="dl-keyWords clearfix ele_keyword ">
                     {assign var="arr_tag" value=","|explode:$output.tag}
                     {foreach $arr_tag as $t}
