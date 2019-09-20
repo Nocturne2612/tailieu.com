@@ -103,7 +103,7 @@
                 </div>
 
                 <div class="subpage-menu-toggleBox">
-                    <span class="lg-subpage-filter-sort-title xs-hide" style="width: 120px;">Danh mục con:</span>
+                    <span class="lg-subpage-filter-sort-title" style="width: 120px;">Danh mục con:</span>
                     <div class="subpage-menu-box new-subpage-menu-box">
                         <div class="subpage-menu-inneBox">
                             <h2 style="font-size: 12px" class="sort-btn on">{$data.title}</h2>
