@@ -726,6 +726,9 @@
 }
 
 .add-recommend {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     margin-top: 20px;
     padding: 0 20px 10px;
     position: relative
@@ -1286,6 +1289,7 @@
     }
 
     .add-recommend {
+        position: relative;
         margin-top: 10px;
         padding: 0 20px 10px
     }

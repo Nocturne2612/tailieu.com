@@ -24,7 +24,10 @@
             <div class="gutter-sizer"></div>
         {/foreach}
             <li class="li-box grid-sizer search_keyword_statis_js">
-                {$this->widget('TWidgets',['methodName'=>'ads','position'=>'HOME_LEFT_SLIDER'],true)}
+                {$this->widget('TWidgets',['methodName'=>'ads','position'=>'HOME_RIGHT_1'],true)}
+            </li>
+            <li class="li-box grid-sizer search_keyword_statis_js">
+                {$this->widget('TWidgets',['methodName'=>'ads','position'=>'HOME_RIGHT_2'],true)}
             </li>
 
     {else}
@@ -57,13 +60,13 @@
             <div class="gutter-sizer"></div>
             {if $no eq 7}
                 <li class="li-box grid-sizer search_keyword_statis_js">
-                    {$this->widget('TWidgets',['methodName'=>'ads','position'=>'HOME_LEFT_SLIDER'],true)}
+                    {$this->widget('TWidgets',['methodName'=>'ads','position'=>'HOME_RIGHT_1'],true)}
                 </li>
                 <div class="gutter-sizer"></div>
             {/if}
             {if $no eq 14}
                 <li class="li-box grid-sizer search_keyword_statis_js">
-                    {$this->widget('TWidgets',['methodName'=>'ads','position'=>'HOME_LEFT'],true)}
+                    {$this->widget('TWidgets',['methodName'=>'ads','position'=>'HOME_RIGHT_2'],true)}
                 </li>
                 <div class="gutter-sizer"></div>
             {/if}

@@ -128,7 +128,7 @@
 </div>
 
 
-{$this->widget('TWidgets',['methodName'=>'ads','position'=>'HOME_TOP'],true)}
+
 <div id="v2-head" class="v2-header">
     <div class="header clearfix">
         <!-- logo -->

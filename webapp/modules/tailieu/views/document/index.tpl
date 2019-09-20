@@ -98,6 +98,8 @@ normal share-group circle
                 </div>
             </div>
             <div class="keyWords-wrap needmore">
+                    {$this->widget('TWidgets',['methodName'=>'ads','position'=>'DETAIL_CENTER2'],true)}
+
             </div>
             <div class="keyWords-wrap needmore">
                 <div class="dl-keyWords clearfix ele_keyword ">
@@ -161,8 +163,8 @@ normal share-group circle
             <div class="add-recommend dbr-items ele_recommend needmore">
                 <h3>Quảng cáo</h3>
                 <div class="hpnp-Related">
-                    {$this->widget('TWidgets',['methodName'=>'ads','position'=>'DETAIL_BOTTOM'],true)}
-                    </div>
+                    {$this->widget('TWidgets',['methodName'=>'ads','position'=>'DETAIL_CENTER'],true)}
+                </div>
             </div>
         </div>
     </div>
