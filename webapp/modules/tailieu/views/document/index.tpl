@@ -97,10 +97,10 @@ normal share-group circle
                     </ul>
                 </div>
             </div>
-            <div class="keyWords-wrap needmore">
+            {* <div class="keyWords-wrap needmore">
                     {$this->widget('TWidgets',['methodName'=>'ads','position'=>'DETAIL_CENTER2'],true)}
 
-            </div>
+            </div> *}
             <div class="keyWords-wrap needmore">
                 <div class="dl-keyWords clearfix ele_keyword ">
                     {assign var="arr_tag" value=","|explode:$output.tag}
@@ -110,6 +110,7 @@ normal share-group circle
                     {/foreach}<br />
                     <br />
                 </div>
+                {$this->widget('TWidgets',['methodName'=>'ads','position'=>'DETAIL_CENTER2'],true)}
                 <div style="text-align: left" id="detail-more-more" class="dbl-pictitle">
                     {$output.full}
                 </div>
