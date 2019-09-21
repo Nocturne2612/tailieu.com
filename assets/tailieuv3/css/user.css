@@ -1,13 +1,4 @@
-@media screen and (max-width:1000px) {
-	.user-inner {
-		padding-left: 10px;
-	}
-	.user-aside {
-		position: relative;
-		padding-bottom: 10px;
-		width: 100%;
-	}
-}
+
 .user-panel,
 .user-router {
 	box-shadow: 0 3px 8px 0 rgba(4, 0, 0, .05)
@@ -2762,4 +2753,15 @@
 	font-size: 14px;
 	font-weight: 700;
 	color: #999
+}
+
+@media screen and (max-width:1000px) {
+	.user-inner {
+		padding-left: 10px;
+	}
+	.user-aside {
+		position: relative;
+		padding-bottom: 10px;
+		width: 100%;
+	}
 }
