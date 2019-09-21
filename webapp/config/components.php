@@ -20,7 +20,7 @@ return array(
     ),
     // uncomment the following to use a MySQL database
     'db' => array(
-         'connectionString' => 'mysql:host=localhost;dbname=tailieuk_v01',
+         'connectionString' => 'mysql:host=localhost;dbname=tailieuk_v02',
         'emulatePrepare' => true,
         'username' => 'tailieuk',
         'password' => '3n4EDE7(3si*cK',
