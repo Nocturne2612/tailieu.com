@@ -97,10 +97,10 @@ normal share-group circle
                     </ul>
                 </div>
             </div>
-            <div class="keyWords-wrap needmore">
+            {* <div class="keyWords-wrap needmore">
                     {$this->widget('TWidgets',['methodName'=>'ads','position'=>'DETAIL_CENTER2'],true)}
 
-            </div>
+            </div> *}
             <div class="keyWords-wrap needmore">
                 <div class="dl-keyWords clearfix ele_keyword ">
                     {assign var="arr_tag" value=","|explode:$output.tag}
@@ -110,6 +110,7 @@ normal share-group circle
                     {/foreach}<br />
                     <br />
                 </div>
+                {$this->widget('TWidgets',['methodName'=>'ads','position'=>'DETAIL_CENTER2'],true)}
                 <div style="text-align: left" id="detail-more-more" class="dbl-pictitle">
                     {$output.full}
                 </div>
@@ -125,7 +126,7 @@ normal share-group circle
             <!-- infor -->
             <div class="dbr-items">
                 <div class="dbr-btnbox clearfix detail-down-click">
-                    <a data-down="{$output.id}_DOWNLOAD" rel="nofollow"  {if $check_login} target="_blank" href="{SystemBase::buildUrl('tailieu/download',['id'=>$output.id,'title'=>$output.title])}" class="fl-l btn-free"{else}href="javascript:;" class="fl-l btn-free down-no-login"{/if}>
+                    <a data-down="{$output.id}_DOWNLOAD" rel="nofollow"  {if $check_login} {if $output.price == 0}target="_blank"{/if} href="{SystemBase::buildUrl('tailieu/download',['id'=>$output.id,'title'=>$output.title])}" class="fl-l btn-free"{else}href="javascript:;" class="fl-l btn-free down-no-login"{/if}>
                         <i class="iconfont icon-xiazai"></i>
                         {if $output.proprice > 0}
                         <span class="oldprice"
@@ -143,9 +144,9 @@ normal share-group circle
                 </div>
             </div>
 
-            <div class="recommend-swiper">
+            <div class="recommend-swiper" style="padding-top: 10px">
                 <p class="recommend-swiper-title">
-                    <h3>Tài liệu liên quan</h3>
+                    <h3 style="margin-bottom: 10px">Tài liệu liên quan</h3>
                 </p>
                 <div class="recommend-list-wrap">
                     <div class="recommend-list-page">
@@ -217,7 +218,7 @@ normal share-group circle
         </a>
     </div>
         <div class="xs-detail-download-box">
-            <a {if $check_login} target="_blank" href="{SystemBase::buildUrl('tailieu/download',['id'=>$output.id,'title'=>$output.title])}" class="xs-detail-download bg-greenLinear fcc"{else}href="javascript:;" class="xs-detail-download bg-greenLinear fcc save-picture"{/if}>
+            <a {if $check_login}  {if $output.price == 0}target="_blank"{/if} href="{SystemBase::buildUrl('tailieu/download',['id'=>$output.id,'title'=>$output.title])}" class="xs-detail-download bg-greenLinear fcc"{else}href="javascript:;" class="xs-detail-download bg-greenLinear fcc save-picture"{/if}>
                 {if $output.proprice > 0}
                         <span class="oldprice"
                             style="text-decoration: line-through; font-size: small;">{$output.price|number_format:2:",":"."|replace:',00':''}

@@ -335,8 +335,8 @@
 .hpnp-Related {
   font-size: 14px;
   color: #999;
-  height: 76px;
-  text-align: right
+  /* height: 76px; */
+  /* text-align: right */
 }
 
 .hpnp-Related>span {
