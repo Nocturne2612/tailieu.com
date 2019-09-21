@@ -43,6 +43,6 @@ define('ADMIN_MAX_PAGE_DISPLAY', 10);
 define('ADMIN_MAX_SIZE_PAGE', 20);
 
 define('HOME_MAX_PAGE_DISPLAY', 10);
-define('HOME_MAX_SIZE_PAGE', 20);
+define('HOME_MAX_SIZE_PAGE', 18);
 define('HOME_NEXT_PAGE', '&raquo;');
 define('HOME_PREV_PAGE', '&laquo;');
