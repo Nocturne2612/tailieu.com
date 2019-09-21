@@ -145,7 +145,7 @@ normal share-group circle
 
             <div class="recommend-swiper" style="padding-top: 10px">
                 <p class="recommend-swiper-title">
-                    <h3>Tài liệu liên quan</h3>
+                    <h3 style="margin-bottom: 10px">Tài liệu liên quan</h3>
                 </p>
                 <div class="recommend-list-wrap">
                     <div class="recommend-list-page">
