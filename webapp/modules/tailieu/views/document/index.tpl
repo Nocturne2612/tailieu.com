@@ -125,7 +125,7 @@ normal share-group circle
             <!-- infor -->
             <div class="dbr-items">
                 <div class="dbr-btnbox clearfix detail-down-click">
-                    <a data-down="{$output.id}_DOWNLOAD" rel="nofollow"  {if $check_login} target="_blank" href="{SystemBase::buildUrl('tailieu/download',['id'=>$output.id,'title'=>$output.title])}" class="fl-l btn-free"{else}href="javascript:;" class="fl-l btn-free down-no-login"{/if}>
+                    <a data-down="{$output.id}_DOWNLOAD" rel="nofollow"  {if $check_login} {if $output.proprice == 0}target="_blank"{/if} href="{SystemBase::buildUrl('tailieu/download',['id'=>$output.id,'title'=>$output.title])}" class="fl-l btn-free"{else}href="javascript:;" class="fl-l btn-free down-no-login"{/if}>
                         <i class="iconfont icon-xiazai"></i>
                         {if $output.proprice > 0}
                         <span class="oldprice"
@@ -217,7 +217,7 @@ normal share-group circle
         </a>
     </div>
         <div class="xs-detail-download-box">
-            <a {if $check_login} target="_blank" href="{SystemBase::buildUrl('tailieu/download',['id'=>$output.id,'title'=>$output.title])}" class="xs-detail-download bg-greenLinear fcc"{else}href="javascript:;" class="xs-detail-download bg-greenLinear fcc save-picture"{/if}>
+            <a {if $check_login}  {if $output.proprice == 0}target="_blank"{/if} href="{SystemBase::buildUrl('tailieu/download',['id'=>$output.id,'title'=>$output.title])}" class="xs-detail-download bg-greenLinear fcc"{else}href="javascript:;" class="xs-detail-download bg-greenLinear fcc save-picture"{/if}>
                 {if $output.proprice > 0}
                         <span class="oldprice"
                             style="text-decoration: line-through; font-size: small;">{$output.price|number_format:2:",":"."|replace:',00':''}
