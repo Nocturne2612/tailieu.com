@@ -143,7 +143,7 @@ normal share-group circle
                 </div>
             </div>
 
-            <div class="recommend-swiper">
+            <div class="recommend-swiper" style="padding-top: 10px">
                 <p class="recommend-swiper-title">
                     <h3>Tài liệu liên quan</h3>
                 </p>
